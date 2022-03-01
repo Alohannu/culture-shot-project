@@ -1,6 +1,5 @@
 class RatingsController < ApplicationController
   def index
-    raise
     @ratings = Rating.where(museum = params[:id])
   end
 
@@ -15,6 +14,7 @@ class RatingsController < ApplicationController
     else
       redirect_to museum_ratings_path(@museum)
       # insert ajax remote:true (https://kitt.lewagon.com/camps/813/lectures/05-Rails%2F10-Airbnb-Ajax-in-Rails#source)
+    end
   end
 
   private

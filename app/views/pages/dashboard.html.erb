@@ -1,0 +1,6 @@
+<h2>Dashboard</h2>
+
+<% @bookmarks.each do |bookmark| %>
+  <%= bookmark.museum.name %>
+  <%= bookmark.museum.description %>
+<% end %>

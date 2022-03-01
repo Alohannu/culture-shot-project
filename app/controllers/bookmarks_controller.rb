@@ -1,10 +1,6 @@
 class BookmarksController < ApplicationController
   def index
-    @bookmarks = Bookmark.all
-  end
-
-  def show
-    @bookmark = Bookmark.find(params[:id])
+    @bookmarks = current_user.bookmarks
   end
 
   def destroy
@@ -15,22 +11,16 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new(bookmark_params)
+    @bookmark = Bookmark.new
     @bookmark.user = current_user
-
     @museum = Museum.find(params[:museum_id])
-    @bookmark.museum.id = @museum.id
+
+    @bookmark.museum = @museum
 
     if @bookmark.save
-      redirect_to museum_path(@bookmark)
+      redirect_to museum_path(@museum)
     else
       render :show
     end
-  end
-
-  private
-
-  def bookmark_params
-    params.require(:bookmark).permit(:museum_id)
   end
 end

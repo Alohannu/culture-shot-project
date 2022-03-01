@@ -1,5 +1,7 @@
 <h1><%= @museum.name%></h1>
 
+<h6><%= link_to "save for later", museum_bookmarks_path(@museum), method: :post %></h6>
+
 <h2>Details about the museum</h2>
 <p>Address: <%= @museum.address %></p>
 <p>Description: <%= @museum.description %></p>

@@ -18,8 +18,8 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.user = current_user
 
-    @museum = museum.find(params[:museum_id])
-    @bookmark.museum.id = @musuem.id
+    @museum = Museum.find(params[:museum_id])
+    @bookmark.museum.id = @museum.id
 
     if @bookmark.save
       redirect_to museum_path(@bookmark)

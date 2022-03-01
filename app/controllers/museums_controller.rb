@@ -2,11 +2,14 @@ class MuseumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @museums = Museum.all
+    if params[:query].present?
+      @museums = Museum.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @museums = Museum.all
+    end
   end
 
   def show
     @museum = Museum.find(params[:id])
   end
-
 end

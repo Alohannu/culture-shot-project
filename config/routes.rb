@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :museums, only: [:index, :show] do
     resources :bookmarks, only: :create
     resources :ratings, only: [:index, :create]
+    resources :chatrooms, only: :show do
+      resources :messages, only: :create
+    end
   end
 
   resources :bookmarks, only: :destroy

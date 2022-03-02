@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_115803) do
 
   create_table "ratings", force: :cascade do |t|
     t.text "comment"
-    t.float "stars"
+    t.integer "stars"
     t.string "title"
     t.bigint "user_id", null: false
     t.bigint "museum_id", null: false

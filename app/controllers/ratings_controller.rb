@@ -17,7 +17,6 @@ class RatingsController < ApplicationController
     if @rating.save
       redirect_to museum_path(@museum)
     else
-      raise
       redirect_to museum_path(@museum)
       # insert ajax remote:true (https://kitt.lewagon.com/camps/813/lectures/05-Rails%2F10-Airbnb-Ajax-in-Rails#source)
     end

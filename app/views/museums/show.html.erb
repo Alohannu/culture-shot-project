@@ -7,5 +7,5 @@
 <p>Description: <%= @museum.description %></p>
 
 <h2>Reviews</h2>
-
+<h3><%= link_to "Buy your ticket", @museum.ticket_url %></h3>
 <%= link_to "All museums", museums_path %>

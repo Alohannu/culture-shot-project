@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_02_120235) do
+ActiveRecord::Schema.define(version: 2022_03_02_140137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_120235) do
   create_table "museums", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.integer "recommended_age"
     t.time "open_start"
     t.time "open_end"
     t.text "description"
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_120235) do
     t.string "ticket_url"
     t.string "telephone"
     t.string "website"
-    t.string "price"
+    t.float "price"
     t.string "opening_hours"
   end
 
@@ -67,7 +68,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_120235) do
 
   create_table "ratings", force: :cascade do |t|
     t.text "comment"
-    t.float "stars"
+    t.integer "stars"
     t.string "title"
     t.bigint "user_id", null: false
     t.bigint "museum_id", null: false

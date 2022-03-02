@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :museums, only: [:index, :show] do
     resources :bookmarks, only: :create
-    resources :ratings, only: [:index, :new, :create]
+    resources :ratings, only: [:index, :create]
   end
 
   resources :bookmarks, only: :destroy

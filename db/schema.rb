@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2022_03_02_140137) do
   create_table "museums", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "recommended_age"
     t.time "open_start"
     t.time "open_end"
     t.text "description"
@@ -53,8 +52,9 @@ ActiveRecord::Schema.define(version: 2022_03_02_140137) do
     t.string "ticket_url"
     t.string "telephone"
     t.string "website"
-    t.float "price"
+    t.string "price"
     t.string "opening_hours"
+    t.string "photo_url"
   end
 
   create_table "museums_topics", force: :cascade do |t|

@@ -14,11 +14,13 @@ User.destroy_all
 puts "Destroy all museums..."
 Museum.destroy_all
 puts "Creating user..."
-User.create(first_name: "Sara", last_name: "Sara", email: "Sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
+
+user = User.new(first_name: "Sara", last_name: "Sara", email: "Sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
+user.save
 
 puts "Creating museums..."
 
-Museum.create(
+museum = Museum.new(
   name: 'Alte Nationalgalerie',
   address: "Bodestr. 3, 10178 Berlin",
   telephone: "030 266 42 42 42",
@@ -34,7 +36,9 @@ Museum.create(
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg"
 )
 
-Museum.create(
+museum.save
+
+museum2 = Museum.new(
   name: 'Altes Museum',
   address: 'Am Lustgarten 1, 10178 Berlin',
   telephone: '030 20 90 55 77',
@@ -51,6 +55,8 @@ Museum.create(
   Originally created for all Berlin art collections, the Altes Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned down and was badly damaged, and was only reconstructed by 1966. Since 1998, the Collection of Classical Antiquities in the Altes Museum has shown its Greek collection with the treasure chamber on the ground floor of the building.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg"
 )
+
+museum2.save
 
 Museum.create(
   name: 'Bode-Museum',
@@ -364,6 +370,63 @@ Museum.create(
   opening_hours: "Daily from 10:00 am., last admission is at 18:30.",
   description: "The DDR Museum provides a unique visitor experience, making it one of Berlin’s most popular museums. Engage all of your senses to enjoy an immersive experience of everyday life in the former East Germany. Covering a range of topics based on sound academic research – everyday life, the Berlin Wall, the Stasi and much more – our exhibition encourages its visitors to touch, feel and interact, so as to gain a fun and rich understanding of the past. Explore all aspects of life behind the Berlin Wall and the workings of the state – the DDR at a glance.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221131/Profile%20Pictures%20of%20Museums/DDR_Museum1_pu30vq.jpg"
+)
+
+puts "Creating ratings..... "
+
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "great experience",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 3
+)
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "disappointed",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 4
+)
+
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "strongly recommend",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 5
+)
+
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "satisfactory, that's all",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 2
+)
+
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "an unforgettable journey",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 1
+)
+
+Rating.create!(
+  user: user,
+  museum: museum,
+  title: "good if you want to know more history about technology",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 2
+)
+
+Rating.create!(
+  user: user,
+  museum: museum2,
+  title: "good if you want to know more history about technology",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 0
 )
 
 puts "Done!"

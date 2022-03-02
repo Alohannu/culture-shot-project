@@ -31,18 +31,18 @@ Museum.create(
   Amongst the most important highlights are Casper David Friedrich's 'Der Mönch am Meer' (from 1810) Arnold Böcklin's 'Die Toteninsel' (1883), Adolph Menzel's 'Flötenkonzert Friedrich des Großen in Sanssouci' (1852) and Edouard Manet's 'Im Wintergarten' (1979).
 
   The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876 and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple. The Museum reopened to the public after a thorough restoration in 2001.",
-  photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg
+  photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg"
 )
 
 Museum.create(
   name: 'Altes Museum',
-  address: "Am Lustgarten 1, 10178 Berlin",
-  telephone: "030 20 90 55 77",
+  address: 'Am Lustgarten 1, 10178 Berlin',
+  telephone: '030 20 90 55 77',
   website: 'https://www.smb.museum/en/museums-institutions/altes-museum/home/',
   ticket_url: 'https://shop.smb.museum/#/tickets/list?date=&museum_id=12&at=rp90cJUYPVo&lang=en',
   price: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20, Mon closed",
-  description: "The Altes Museum (Old Museum) is Berlin's oldest museum. It is part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten in Berlin's eastern city centre.
+  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten in Berlin's eastern city centre.
 
   The Altes Museum, built between 1823 and 1830 according to Karl Friedrich Schinkel's designs, is one of the most important buildings of Classicism in Germany. With a clearly structured external form and a precise internal structure based on Greek antiquity, Schinkel is pursuing Humboldt's idea of opening the museum to the public as an educational institution.
   Stately architecture

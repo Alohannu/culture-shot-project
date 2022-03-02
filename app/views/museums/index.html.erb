@@ -15,3 +15,31 @@
   </ul>
 
 <%= link_to "To the Homepage", root_path %>
+
+
+<div class="section mt-4 ">
+  <div class="row">
+
+    <% @museums.each do |museum| %>
+
+      <div class="col-12 col-md-4 mb-3">
+
+          <div class="card-trip">
+            <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
+      width: 400, height: 300, crop: :fill) %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to museum.name, museum %></h2>
+                <p><strong>Location:</strong> <%= museum.address %></p>
+              </div>
+              <div class="card-trip-pricing">
+                <h2>€ <%= link_to museum.price, museum %></h2>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    <% end %>
+
+  </div>
+</div>

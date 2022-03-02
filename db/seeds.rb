@@ -18,7 +18,8 @@ museum = Museum.new(
   name: "Neues Museum",
   address: "Bodestraße 1-3, 10178 Berlin, Germany",
   recommended_age: "20",
-  description: "your journey to ancient civilizations"
+  description: "your journey to ancient civilizations",
+  ticket_url: "https://www.smb.museum/en/museums-institutions/neues-museum/home/"
 )
 museum.save
 
@@ -26,7 +27,8 @@ Museum.create!(
   name: "Deutsches Technikmuseum",
   address: "Trebbiner Str. 9, 10963 Berlin, Germany",
   recommended_age: "15",
-  description: "a hands-on, activity-oriented fun tour of the cultural history of technology located at the Anhalter freight station"
+  description: "a hands-on, activity-oriented fun tour of the cultural history of technology located at the Anhalter freight station",
+  ticket_url: "https://technikmuseum.berlin/en/"
 )
 
 Rating.create!(

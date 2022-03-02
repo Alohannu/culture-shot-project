@@ -11,5 +11,6 @@ class MuseumsController < ApplicationController
 
   def show
     @museum = Museum.find(params[:id])
+    @rating = Rating.new
   end
 end

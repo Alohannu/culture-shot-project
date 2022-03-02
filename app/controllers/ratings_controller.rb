@@ -3,6 +3,11 @@ class RatingsController < ApplicationController
     @ratings = Rating.where(museum = params[:id])
   end
 
+  def new
+    @museum = Museum.find(params[:museum_id])
+    @rating = Rating.new
+  end
+
   def create
     @rating = Rating.new(ratings_params)
     @museum = Museum.find(params[:museum_id])
@@ -10,9 +15,10 @@ class RatingsController < ApplicationController
     @rating.user = current_user
 
     if @rating.save
-      redirect_to museum_ratings_path(@museum)
+      redirect_to museum_path(@museum)
     else
-      redirect_to museum_ratings_path(@museum)
+      raise
+      redirect_to museum_path(@museum)
       # insert ajax remote:true (https://kitt.lewagon.com/camps/813/lectures/05-Rails%2F10-Airbnb-Ajax-in-Rails#source)
     end
   end
@@ -20,6 +26,6 @@ class RatingsController < ApplicationController
   private
 
   def ratings_params
-    params.require(:rating).permit(:title, :comments, :stars)
+    params.require(:rating).permit(:title, :comment, :stars)
   end
 end

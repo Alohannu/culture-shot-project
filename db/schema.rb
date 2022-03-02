@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2022_03_02_140137) do
     t.string "website"
     t.float "price"
     t.string "opening_hours"
-    t.string "photo_url"
   end
 
   create_table "museums_topics", force: :cascade do |t|

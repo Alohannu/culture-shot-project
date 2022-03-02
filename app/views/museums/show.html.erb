@@ -10,9 +10,15 @@
 
 <h2>Reviews</h2>
 
-<% total = 0 %>
-<% @museum.ratings.each { |rating| total += rating.stars } %>
-<%= (total/@museum.ratings.size).round(1) %>
+<%= @museum.average %>
+
+<% @museum.average.to_i.times do %>
+  <i class="fas fa-star"></i>
+<% end %>
+
+<% (5 - @museum.average.to_i).times do %>
+  <i class="far fa-star"></i>
+<% end %>
 
 <% @museum.ratings.first(2).each do |rating|  %>
   <p><strong><%= rating.user.first_name %><br>
@@ -33,10 +39,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-        <% total = 0 %>
-        <% @museum.ratings.each { |rating| total += rating.stars } %>
-        <%= (total/@museum.ratings.size).round(1) %>
 
         <% @museum.ratings.first(6).each do |rating|  %>
           <p><strong><%= rating.user.first_name %><br>

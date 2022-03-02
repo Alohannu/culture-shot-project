@@ -19,6 +19,8 @@ puts "Creating user..."
 
 user = User.new(first_name: "Sara", last_name: "Sara", email: "Sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
 user.save
+user2 = User.new(first_name: "Leo", last_name: "Leo", email: "Leo@leo.com", password: "123456", date_of_birth: "1993,7,9")
+user2.save
 
 puts "Creating museums..."
 

@@ -13,6 +13,8 @@ puts "Destroy all users..."
 User.destroy_all
 puts "Destroy all museums..."
 Museum.destroy_all
+puts "Destroy all chatrooms..."
+Chatroom.destroy_all
 puts "Creating user..."
 
 user = User.new(first_name: "Sara", last_name: "Sara", email: "Sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
@@ -429,4 +431,9 @@ Rating.create!(
   stars: 0
 )
 
+Museum.all.each do |museum_instance|
+  Chatroom.create!(museum: museum_instance)
+end
+
+puts "#{Chatroom.count} Chatrooms were created!"
 puts "Done!"

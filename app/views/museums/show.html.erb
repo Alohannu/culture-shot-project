@@ -6,6 +6,50 @@
 <p>Address: <%= @museum.address %></p>
 <p>Description: <%= @museum.description %></p>
 
+<%= link_to "Buy your ticket", @museum.ticket_url %>
+
 <h2>Reviews</h2>
-<h3><%= link_to "Buy your ticket", @museum.ticket_url %></h3>
+
+<% total = 0 %>
+<% @museum.ratings.each { |rating| total += rating.stars } %>
+<%= (total/@museum.ratings.size).round(1) %>
+
+<% @museum.ratings.first(2).each do |rating|  %>
+  <p><strong><%= rating.user.first_name %><br>
+  <%= rating.title %>:</strong> <%= rating.comment %></p>
+<% end %>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reviews</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <% total = 0 %>
+        <% @museum.ratings.each { |rating| total += rating.stars } %>
+        <%= (total/@museum.ratings.size).round(1) %>
+
+        <% @museum.ratings.first(6).each do |rating|  %>
+          <p><strong><%= rating.user.first_name %><br>
+          <%= rating.title %>:</strong> <%= rating.comment %></p>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <%= link_to "All museums", museums_path %>

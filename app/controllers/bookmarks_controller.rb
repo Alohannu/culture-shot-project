@@ -1,13 +1,9 @@
 class BookmarksController < ApplicationController
-  def index
-    @bookmarks = current_user.bookmarks
-  end
-
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
 
-    redirect_to museum_path(@museum)
+    redirect_to dashboard_path
   end
 
   def create
@@ -20,7 +16,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to museum_path(@museum)
     else
-      render :show
+      redirect_to museum_path(@museum) # to implement an error message
     end
   end
 end

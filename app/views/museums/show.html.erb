@@ -6,6 +6,8 @@
 <p>Address: <%= @museum.address %></p>
 <p>Description: <%= @museum.description %></p>
 
+<%= link_to "Buy your ticket", @museum.ticket_url %>
+
 <h2>Reviews</h2>
 
 <% total = 0 %>

@@ -3,6 +3,7 @@ class Museum < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_many :topics
   has_many_attached :photos
+  has_one :chatroom
 
   def average
     return 0 if ratings.pluck(:stars).sum.zero?

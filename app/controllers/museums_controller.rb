@@ -11,10 +11,7 @@ class MuseumsController < ApplicationController
 
   def show
     @museum = Museum.find(params[:id])
-<<<<<<< HEAD
     @rating = Rating.new
-=======
     @chatroom = @museum.chatroom
->>>>>>> master
   end
 end

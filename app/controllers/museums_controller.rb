@@ -7,6 +7,14 @@ class MuseumsController < ApplicationController
     else
       @museums = Museum.all
     end
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @museums.geocoded.map do |museum|
+      {
+        lat: museum.latitude,
+        lng: museum.longitude
+      }
+    end
   end
 
   def show

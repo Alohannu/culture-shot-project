@@ -5,6 +5,9 @@ class Museum < ApplicationRecord
   has_many_attached :photos
   has_one :chatroom
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   def average
     return 0 if ratings.pluck(:stars).sum.zero?
 

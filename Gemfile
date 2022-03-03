@@ -71,3 +71,7 @@ gem 'cloudinary', '~> 1.16.0'
 # hours
 
 gem 'biz'
+
+# scrape
+
+gem 'watir'

@@ -4,6 +4,11 @@ class MuseumsController < ApplicationController
   def index
     if params[:query].present?
       @museums = Museum.where("name ILIKE ?", "%#{params[:query]}%")
+    elsif params[:filter] == "open"
+      @array = Museum.all.select do |museum|
+        museum.open(museum)
+      end
+      @museums = Museum.where(id: @array.pluck(:id))
     else
       @museums = Museum.all
     end

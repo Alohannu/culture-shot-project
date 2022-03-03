@@ -22,7 +22,7 @@ user.save
 
 puts "Creating museums..."
 
-museum = Museum.new(
+alte_nationalgalerie = Museum.new(
   name: 'Alte Nationalgalerie',
   address: "Bodestr. 3, 10178 Berlin",
   telephone: "030 266 42 42 42",
@@ -38,9 +38,9 @@ museum = Museum.new(
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg"
 )
 
-museum.save
+alte_nationalgalerie.save
 
-museum2 = Museum.new(
+altes_museum = Museum.new(
   name: 'Altes Museum',
   address: 'Am Lustgarten 1, 10178 Berlin',
   telephone: '030 20 90 55 77',
@@ -58,9 +58,9 @@ museum2 = Museum.new(
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg"
 )
 
-museum2.save
+altes_museum.save
 
-Museum.create(
+bode_museum = Museum.create(
   name: 'Bode-Museum',
   address: "Am Kupfergraben, 10117 Berlin",
   telephone: "030 266 424 242",
@@ -76,8 +76,10 @@ Museum.create(
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Bode1_zem2xo.jpg"
 )
 
+bode_museum.save
 
-Museum.create(
+
+friedrichswerdersche_kirche = Museum.create(
   name: 'Friedrichswerdersche Kirche',
   address: "Werderscher Markt 1, 10117 Berlin",
   telephone: "030 266 424 242",
@@ -95,9 +97,10 @@ Museum.create(
   Highlights include the original model for the sculpture of the princesses Louise and Friedericke and portraits from the times of Goethe from Christian Daniel Rauch and contemporaries.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Friedrichwerdersche1_cn1xpk.jpg"
 )
+friedrichswerdersche_kirche.save
 
 
-Museum.create(
+gemäldegalerie = Museum.create(
   name: 'Gemäldegalerie',
   address: "Stauffenbergstraße 40, 10785, Berlin",
   telephone: "030 266 424 242",
@@ -110,9 +113,10 @@ Museum.create(
   Gainsborough and Reynolds as well as Goya and Velasquez are divided between the Great Hall (Hauptgalerie) and the Study Gallery. Highlights include Caravaggio’s Amor Victorius (1602) and Rubens’ Perseus Liberating Andromeda (1622). Excellent audio guides in English are available included in the admission price.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Gema%CC%88ldegalerie_xwh63q.jpg"
 )
+gemäldegalerie.save
 
 
-Museum.create(
+hamburger_bahnhof = Museum.create(
   name: 'Hamburger Bahnhof Museum der Gegenwart',
   address: "Invalidenstr. 50, 10557, Berlin",
   telephone: "030 266 424 242",
@@ -129,8 +133,9 @@ Museum.create(
   The core elements of the museum’s collection stem from the legacy of Berlin collector Dr. Erich Marx who assembled some of the greatest masterpieces of the mid 20th century - works from contemporary giants such as the provocative German ‘enfant terrible’ Joseph Beuys, Andy Warhol, Cy Twombly, Anselm Kiefer. Amongst the key pieces are iconic works of art such as Warhol’s ‘Mao’ and Joseph Beuys’ installations including over 450 drawings from Beuys and 60 sketches from Andy Warhol. Conceived as a showcase for the multi-media dimension of contemporary international art the scope of the museums’ exhibits encompasses other contemporary art forms such as film, video, design and photography with installation work from Nam June Paik and experimental work from artists such as Sol Lewitt, Marchel Duchamp and Sigmar Polke and Jason Rhoades.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Hamburger_Bahnhof_rqwtfq.jpg"
 )
+hamburger_bahnhof.save
 
-Museum.create(
+james_simon = Museum.create(
   name: 'James-Simon-Galerie',
   address: "Bodestraße, 10178, Berlin",
   telephone: "030 266 424 242",
@@ -144,8 +149,9 @@ Museum.create(
   The building was named after the entrepreneur and art collector James Simon (1851-1932) by the British star architect David Chipperfield. Berlin's museums owe some 10,000 objects to his donations. These include the famous bust of Nefertiti, the main wife of the Egyptian pharaoh Akhenaten from the 14th century BC.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/James_Simon1_qyz0lp.jpg"
 )
+james_simon.save
 
-Museum.create(
+kunstgewerbemuseum = Museum.create(
   name: 'Kunstgewerbemuseum',
   address: "Tiergartenstraße 6, 10785, Berlin",
   telephone: "030 266 424 242",
@@ -158,8 +164,9 @@ Museum.create(
   The objects which range from ceramics to furniture, jewellery, glass, silverware; Renaissance Majolica and a smattering of utilitarian, everyday household products are displayed, shedding light on the long historical development of the applied arts from the Middle Ages to Art Nouveau. The present day is represented by the recently acquired fashion collection Kamer-Ruf.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Kunstgewerbemuseum_xqrpzh.jpg"
 )
+kunstgewerbemuseum.save
 
-Museum.create(
+kupferstichkabinett = Museum.create(
   name: 'Kupferstichkabinett',
   address: "Matthäikirchplatz 8, 10785, Berlin",
   telephone: "030 266 424 242",
@@ -174,8 +181,9 @@ Museum.create(
   Highlights include Adolph Menzel’s drawings, prints originating from many ages and schools – modern and contemporary art is represented with Munch, Kirchner, Picasso and Giacometti as well as US Pop art.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646230251/Profile%20Pictures%20of%20Museums/Kupferstichkabinett1_b5mpd0.jpg"
 )
+kupferstichkabinett.save
 
-Museum.create(
+berggrün = Museum.create(
   name: 'Museum Berggrün',
   address: "Schloßstr. 1, 14059, Berlin",
   telephone: "030 266 424 242",
@@ -190,8 +198,9 @@ Museum.create(
   Other exhibits of note are Giacometti’s sculptures and some of the African artefacts which inspired 20th century Modernists. The collector Heinz Berggruen died in 2007 and is buried in Berlin-Dahlem.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Museum_Berggru%CC%88n1_sjgzpk.jpg"
 )
+berggrün.save
 
-Museum.create(
+museum_europäischer_kulturen = Museum.create(
   name: 'Museum Europäischer Kulturen',
   address: "Arnimallee 25, 14195, Berlin",
   telephone: "030 266 424 242",
@@ -208,8 +217,9 @@ Museum.create(
   The Museum of European Cultures was founded in 1999 by merging the 110 year-old Museum of Folklore (Museum für Volkskunde) with the European collection of the Museum of Ethnology (Museum für Völkerkunde).",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museum_Europa%CC%88ischer_Kulturen1_hwrqvt.jpg"
 )
+museum_europäischer_kulturen.save
 
-Museum.create(
+museum_fotografie = Museum.create(
   name: 'Museum für Fotografie, Helmut Newton Foundation',
   address: "Jebensstraße 2, 10623, Berlin",
   telephone: "030 266 424 242",
@@ -226,10 +236,10 @@ Museum.create(
   Collection of Photography of the Kunstbibliothek
   The Photography Collection has 650 square metres of exhibition space and new lighting and air-conditioning technology in the Kaisersaal for the presentation of all forms of photography from the 19th to the 21st century. This is the largest exhibition room of a museum for photography in Berlin.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museum_fu%CC%88r_Fotografie_1_ov7fzg.jpg"
-
 )
+museum_fotografie.save
 
-Museum.create(
+museumsinsel = Museum.create(
   name: 'Museumsinsel',
   address: "Bodestraße 1-3, 10178, Berlin",
   telephone: "030 266 424 242",
@@ -240,9 +250,10 @@ Museum.create(
   description: "Museum Island is a unique ensemble of five museums on Spree Island in the district of Mitte in Berlin. The entire complex is listed by UNESCO as a World Heritage Site.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museumsinsel1_pnzqfb.jpg"
 )
+museumsinsel.save
 
 
-Museum.create(
+neues_museum = Museum.create(
   name: 'Neues Museum',
   address: "Bodestraße 3, 10178, Berlin",
   telephone: "030 266 424 242",
@@ -257,8 +268,9 @@ Museum.create(
   The museum reopened its doors to the public in 2009 and combines geographically and thematically related exhibits pooled together from three separate collections at the Staatliche Museen zu Berlin: the collection of Egyptian art from the Ägyptisches Museum und Papyrussammlung, of prehistoric objects from the Museum für Vor- und Frühgeschichte, and of classical antiquities from the Antikensammlung. This joint exhibition featuring exhibits of unparalleled breadth and diversity allows visitors to trace the development of prehistoric and protohistoric cultures, spanning from the Middle East to the Atlantic, from north Africa to Scandinavia.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Neues_Museum1_uehw8f.jpg"
 )
+neues_museum.save
 
-Museum.create(
+neue_nationalgalerie = Museum.create(
   name: 'Neue Nationalgalerie',
   address: "Potsdamer Str. 50, 10785 Berlin",
   telephone: "030 266 424 242",
@@ -279,8 +291,9 @@ Museum.create(
   The building’s architectural structure has remained virtually unchanged ever since. The urban setting in which it stands, however, has undergone radical changes: the Staatsbibliothek (Berlin State Library) emerged at almost the same time as the Neue Nationalgalerie, on the opposite side of Potsdamer Strasse, and was followed by the Kammermusiksaal (chamber music hall) erected next to the Philharmonie, which by this point was already standing. These buildings were joined over time by a cluster of museums in the form of the Kulturforum, and, after German reunification, by the urban redevelopment of Potsdamer Platz.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Neue_Nationalgalerie_m6glcl.jpg"
 )
+neue_nationalgalerie.save
 
-Museum.create(
+pergamonmuseum = Museum.create(
   name: 'Pergamonmuseum',
   address: "Bodestraße 1-3, 10178, Berlin",
   telephone: "030 266 424 242",
@@ -299,8 +312,9 @@ Museum.create(
   Please note that due to extensive renovations, the Pergamon Altar hall is currently closed to visitors. It is scheduled to reopen in late 2019. The other parts of the Pergamon Museum are not affected and stay open to the public during that time.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Pergamonmuseum1_qkh3v1.jpg"
 )
+pergamonmuseum.save
 
-Museum.create(
+pergamon_panorama = Museum.create(
   name: 'Pergamonmuseum - Das Panorama',
   address: "Am Kupfergraben 2, 10117 Berlin",
   telephone: "030 266 424 242",
@@ -315,8 +329,9 @@ Museum.create(
   The ambitious construction project on the difficult building site across from Museumsinsel Berlin was made possible through the great commitment of the Interimsbau Pergamonmuseum Realisierungsgesellschaft mbH. This enterprise of the WOLFF GRUPPE Stuttgart/Essen contributed to the project’s realisation as well as its funding. Construction of this cultural space represented a major challenge for the Staatliche Museen zu Berlin and our partner, but it has now come to a successful conclusion. We are both convinced that the new building will be very popular with the public.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221490/Profile%20Pictures%20of%20Museums/Pergamonmuseum_Panorama1_ylxf9v.jpg"
 )
+pergamon_panorama.save
 
-Museum.create(
+scharf_gerstenberg = Museum.create(
   name: 'Sammlung Scharf-Gerstenberg',
   address: "Schloßstraße 70, 14059 Berlin",
   telephone: "030 266 424 242",
@@ -331,8 +346,9 @@ Museum.create(
   After being converted by the architect Wils Ebert, the Egyptian Museum moved into the premises in 1967. Ebert joined the separate buildings of the eastern Stülerbau and stables by constructing a connecting corridor between them and it is here that the gate from the Temple of Kalabsha stands today, which was salvaged from its original site in Egypt before the filling of the Aswan Dam. The pillars from the Temple of Sahure are also preserved here, in the room of the same name. After the return of the Egyptian Museum to the Museumsinsel Berlin in 2005, the building was once again converted by the architectural practice Sunder-Plassmann. As well as exposing the original brickwork in the Stülerbau, former stables, and Sahure room, Sunder-Plassmann created a glass entrance hall. The Sammlung Scharf-Gerstenberg opened its doors to the public in summer 2008, featuring an exhibition consisting in a long-term group loan, lent for an agreed period of ten years. In 2018, the loan agreement was extended for another ten years.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221348/Profile%20Pictures%20of%20Museums/Sammlung_Scharf_Gerstenberg1_egzjwb.jpg"
 )
+scharf_gerstenberg.save
 
-Museum.create(
+köpenick = Museum.create(
   name: 'Schloss Köpenick',
   address: "Schlossinsel 1, 12557 Berlin",
   telephone: "030 266 424 242",
@@ -349,8 +365,9 @@ Museum.create(
   A further noteworthy feature of the palace is that the original Baroque plasterwork has survived intact in almost all of its rooms. On the basement level, an exhibition of archaeological findings documents the history of settlement and building on the island of Schloss Köpenick.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Schloss_Ko%CC%88penick1_r0mjoe.jpg"
 )
+köpenick.save
 
-Museum.create(
+wall_museum = Museum.create(
   name: 'The Wall Museum at the East Side Gallery',
   address: "Mühlenstraße 78, 10243 Berlin",
   telephone: "03094512900",
@@ -361,8 +378,9 @@ Museum.create(
   description: "The Wall Museum Berlin - Exciting, thrilling and emotionalThe exhibition covers an audiovisual arc from the division of Germany and the construction of the Berlin Wall, through the Cold War and the fate of the Wall victims, to the significant events that brought about the fall of the Wall.A must for all those who want to understand one of the most dramatic historical events in German history.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221532/Profile%20Pictures%20of%20Museums/The_Wall_Museum_1_kcthvt.jpg"
 )
+wall_museum.save
 
-Museum.create(
+ddr_museum = Museum.create(
   name: 'DDR Museum',
   address: "Karl-Liebknecht-Str. 1, 10178 Berlin",
   telephone: "030847123731",
@@ -373,67 +391,91 @@ Museum.create(
   description: "The DDR Museum provides a unique visitor experience, making it one of Berlin’s most popular museums. Engage all of your senses to enjoy an immersive experience of everyday life in the former East Germany. Covering a range of topics based on sound academic research – everyday life, the Berlin Wall, the Stasi and much more – our exhibition encourages its visitors to touch, feel and interact, so as to gain a fun and rich understanding of the past. Explore all aspects of life behind the Berlin Wall and the workings of the state – the DDR at a glance.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221131/Profile%20Pictures%20of%20Museums/DDR_Museum1_pu30vq.jpg"
 )
+ddr_museum.save
 
 puts "Creating ratings..... "
 
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "great experience",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 3
-)
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "disappointed",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 4
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "great experience",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 3
+# )
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "disappointed",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 4
+# )
 
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "strongly recommend",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 5
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "strongly recommend",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 5
+# )
 
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "satisfactory, that's all",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 2
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "satisfactory, that's all",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 2
+# )
 
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "an unforgettable journey",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 1
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "an unforgettable journey",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 1
+# )
 
-Rating.create!(
-  user: user,
-  museum: museum,
-  title: "good if you want to know more history about technology",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 2
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum,
+#   title: "good if you want to know more history about technology",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 2
+# )
 
-Rating.create!(
-  user: user,
-  museum: museum2,
-  title: "good if you want to know more history about technology",
-  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  stars: 0
-)
+# Rating.create!(
+#   user: user,
+#   museum: museum2,
+#   title: "good if you want to know more history about technology",
+#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+#   stars: 0
+# )
 
 Museum.all.each do |museum_instance|
   Chatroom.create!(museum: museum_instance)
 end
 
 puts "#{Chatroom.count} Chatrooms were created!"
+puts "Done!"
+
+
+ddrtest = Museum.create(
+  name: 'DDR Museum',
+  address: "Karl-Liebknecht-Str. 1, 10178 Berlin",
+  telephone: "030847123731",
+  website: 'https://www.ddr-museum.de/en',
+  ticket_url: 'https://tickets.ddr-museum.de/#/tickets',
+  price: '9,- Euro, red. 6,- Euro',
+  opening_hours: "Daily from 10:00 am., last admission is at 18:30.",
+  description: "The DDR Museum provides a unique visitor experience, making it one of Berlin’s most popular museums. Engage all of your senses to enjoy an immersive experience of everyday life in the former East Germany. Covering a range of topics based on sound academic research – everyday life, the Berlin Wall, the Stasi and much more – our exhibition encourages its visitors to touch, feel and interact, so as to gain a fun and rich understanding of the past. Explore all aspects of life behind the Berlin Wall and the workings of the state – the DDR at a glance.",
+  photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221131/Profile%20Pictures%20of%20Museums/DDR_Museum1_pu30vq.jpg",
+  hours: {
+    mon: {start: '10:00', end: '19:00'},
+    tue: {start: '10:00', end: '19:00'},
+    wed: {start: '10:00', end: '19:00'},
+    thu: {start: '10:00', end: '19:00'},
+    sat: {start: '10:00', end: '19:00'},
+    sun: {start: '10:00', end: '19:00'}
+    }
+
+)
 puts "Done!"

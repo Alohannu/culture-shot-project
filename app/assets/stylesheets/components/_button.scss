@@ -1,0 +1,12 @@
+.white-btn {
+  background-color: #fff;
+  color: $dark-gray;
+  border-radius: 25px;
+  padding: 15px 32px;
+}
+
+
+.white-btn:hover {
+  background-color: $dark-gray;
+  color: #fff;
+}

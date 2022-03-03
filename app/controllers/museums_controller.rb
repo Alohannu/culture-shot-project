@@ -4,6 +4,8 @@ class MuseumsController < ApplicationController
   def index
     if params[:query].present?
       @museums = Museum.where("name ILIKE ?", "%#{params[:query]}%")
+    elsif params[:filter] == "open"
+        @politicians = Politician.all.order(:age)
     else
       @museums = Museum.all
     end

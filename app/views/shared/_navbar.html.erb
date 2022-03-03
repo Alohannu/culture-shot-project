@@ -1,9 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
+    <%= link_to "CultureShot", "/", class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +13,7 @@
               <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle",
               id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://cdn-icons-png.flaticon.com/512/848/848043.png" />
+             <%= image_tag "user-white.png", class: "avatar dropdown-toggle", id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>

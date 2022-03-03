@@ -1,50 +1,64 @@
-<%= form_tag museums_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Location"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
-<h1>List of All Museums </h1>
-  <ul>
-  <% @museums.each do |museum|%>
-    <li><%= link_to museum.name, museum_path(museum) %></li>
-  <% end %>
-  </ul>
+<div class="black-container">
+    <div class="both-margin">
+      <%= render 'shared/navbar' %>
+    </div>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    <div class="single-margin">
+      <div>
+        <h1>Are you looking for something special?</h1>
+        <p>Use our search bar to look for a specific museum in Berlin, an easy way to explore the city and know more about the culture.</p>
 
-<%= link_to "To the Homepage", root_path %>
-
-
-<div class="section mt-4 ">
-  <div class="row">
-
-    <% @museums.each do |museum| %>
-
-      <div class="col-12 col-md-4 mb-3">
-
-          <div class="card-trip">
-            <%= image_tag museum.photo_url,
-      width: 400, height: 300, crop: :fill %>
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= link_to museum.name, museum %></h2>
-                <p><strong>Location:</strong> <%= museum.address %></p>
-              </div>
-              <div class="card-trip-pricing">
-                <h2>€ <%= link_to museum.price, museum %></h2>
-              </div>
+        <%= form_tag museums_path, method: :get do %>
+          <div class="form-inline">
+            <div class="form-item">
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Location"
+              %>
+            </div>
+            <div>
+              <%= submit_tag "Search", class: "white-btn" %>
             </div>
           </div>
-
+        <% end %>
       </div>
-    <% end %>
+      <div class="map" style="width: 100%; height: 600px;"
+           data-controller="mapbox"
+           data-mapbox-markers-value="<%= @markers.to_json %>"
+           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+</div>
 
+<%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
+
+<div class="both-margin">
+  <h1>List of All Museums </h1>
+  <div class="section mt-4 ">
+    <div class="row">
+
+      <% @museums.each do |museum| %>
+
+        <div class="col-12 col-md-4 mb-3">
+
+            <div class="card-trip">
+              <%= image_tag museum.photo_url,
+        width: 400, height: 300, crop: :fill %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= link_to museum.name, museum %></h2>
+                  <p><strong>Location:</strong> <%= museum.address %></p>
+                </div>
+                <div class="card-trip-pricing">
+                  <h2>€ <%= link_to museum.price, museum %></h2>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      <% end %>
+
+    </div>
   </div>
 </div>

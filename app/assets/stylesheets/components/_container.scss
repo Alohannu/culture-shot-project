@@ -1,8 +1,17 @@
 .section {
+  margin: 2rem 2%;
+}
+
+.black-container {
+  background-color: $dark-gray;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.both-margin {
   padding: 2rem 10%;
 }
 
-.black {
-  background-color: $dark-gray;
-  padding: 0 -5%;
+.single-margin {
+  padding: 2rem 0 2rem 10%;
 }

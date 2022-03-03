@@ -80,9 +80,11 @@ ActiveRecord::Schema.define(version: 2022_03_03_101023) do
     t.string "ticket_url"
     t.string "telephone"
     t.string "website"
-    t.string "price"
+    t.float "price"
     t.string "opening_hours"
     t.string "photo_url"
+    t.float "price_reduced"
+    t.string "price_info"
   end
 
   create_table "museums_topics", force: :cascade do |t|

@@ -109,7 +109,7 @@
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     >
-    <h3><%= @chatroom.museum.name %></h3>
+    <h6><%= @chatroom.museum.name %></h6>
 
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
@@ -122,7 +122,7 @@
     %>
       <%= f.input :content,
         label: false,
-        placeholder: "Send a message",
+        placeholder: "Enter your message...",
         wrapper_html: {class: "flex-grow-1"}
       %>
     <% end %>
@@ -131,15 +131,13 @@
   <%# BUTTON. TRIGGERS CHATROOM POPUP %>
   <button id="chat-popup-btn">CLICK HERE</button>
 
+  <script>
+    const button = document.querySelector('#chat-popup-btn')
+    const chatPopUp = document.querySelector('.chat-popup-top')
+    // console.log(button)
+    button.addEventListener('click', (event) => {
+      console.log(event)
+      chatPopUp.classList.toggle('hidden')
+    })
+  </script>
 </div>
-
-
-<script>
-  const button = document.querySelector('#chat-popup-btn')
-  const chatPopUp = document.querySelector('.chat-popup-top')
-  // console.log(button)
-  button.addEventListener('click', (event) => {
-    console.log(event)
-    chatPopUp.classList.toggle('hidden')
-  })
-</script>

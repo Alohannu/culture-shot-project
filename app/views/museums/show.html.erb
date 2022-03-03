@@ -102,3 +102,45 @@
 
 
 <%= link_to "All museums", museums_path %>
+
+
+
+<div class="chat-popup">
+  <div class="container hidden chat-popup-top"
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+    >
+    <h3><%= @chatroom.museum.name %></h3>
+
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+      <% end %>
+    </div>
+    <%= simple_form_for [@museum, @chatroom, @message],
+      remote: true,
+      html: {data: {chatroom_subscription_target: "form"}, class: "d-flex"} do |f|
+    %>
+      <%= f.input :content,
+        label: false,
+        placeholder: "Send a message",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+    <% end %>
+  </div>
+
+  <%# BUTTON. TRIGGERS CHATROOM POPUP %>
+  <button id="chat-popup-btn">CLICK HERE</button>
+
+</div>
+
+
+<script>
+  const button = document.querySelector('#chat-popup-btn')
+  const chatPopUp = document.querySelector('.chat-popup-top')
+  // console.log(button)
+  button.addEventListener('click', (event) => {
+    console.log(event)
+    chatPopUp.classList.toggle('hidden')
+  })
+</script>

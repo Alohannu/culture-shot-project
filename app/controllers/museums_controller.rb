@@ -21,5 +21,6 @@ class MuseumsController < ApplicationController
     @museum = Museum.find(params[:id])
     @rating = Rating.new
     @chatroom = @museum.chatroom
+    @message = Message.new
   end
 end

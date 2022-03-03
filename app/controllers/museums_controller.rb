@@ -5,7 +5,10 @@ class MuseumsController < ApplicationController
     if params[:query].present?
       @museums = Museum.where("name ILIKE ?", "%#{params[:query]}%")
     elsif params[:filter] == "open"
-        @politicians = Politician.all.order(:age)
+      @array = Museum.all.select do |museum|
+        museum.open(museum)
+      end
+      @museums = Museum.where(id: @array.pluck(:id))
     else
       @museums = Museum.all
     end

@@ -37,13 +37,13 @@ alte_nationalgalerie = Museum.new(
   The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876 and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple. The Museum reopened to the public after a thorough restoration in 2001.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 
@@ -67,13 +67,13 @@ altes_museum = Museum.new(
   Originally created for all Berlin art collections, the Altes Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned down and was badly damaged, and was only reconstructed by 1966. Since 1998, the Collection of Classical Antiquities in the Altes Museum has shown its Greek collection with the treasure chamber on the ground floor of the building.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 
@@ -94,13 +94,13 @@ bode_museum = Museum.create(
   The museum’s treasures include the sculpture collection with works of art from the middle ages to the 18th century. Of particular interest are the halls devoted to the Italian Renaissance with the glazed terracottas by Luca della Robbia and other masterworks from Donatello, Desiderio da Settignano and works from the German late Gothic school. The Bode museum is best known for its Byzantine art collection and the coin cabinet. There are over 150 paintings to be seen with a particularly strong presence of Roman and Byzantine works from the 3rd to the 15th century A.D. from regions from the Mediterranean basin ranging from Byzantine Constantinople, Greece and the Balkans to north African countries and Russia’s iconographic art.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Bode1_zem2xo.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 
@@ -123,13 +123,13 @@ friedrichswerdersche_kirche = Museum.create(
   Highlights include the original model for the sculpture of the princesses Louise and Friedericke and portraits from the times of Goethe from Christian Daniel Rauch and contemporaries.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Friedrichwerdersche1_cn1xpk.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 friedrichswerdersche_kirche.save
@@ -150,13 +150,13 @@ gemäldegalerie = Museum.create(
   Gainsborough and Reynolds as well as Goya and Velasquez are divided between the Great Hall (Hauptgalerie) and the Study Gallery. Highlights include Caravaggio’s Amor Victorius (1602) and Rubens’ Perseus Liberating Andromeda (1622). Excellent audio guides in English are available included in the admission price_info.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Gema%CC%88ldegalerie_xwh63q.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 gemäldegalerie.save
@@ -178,13 +178,13 @@ hamburger_bahnhof = Museum.create(
   The core elements of the museum’s collection stem from the legacy of Berlin collector Dr. Erich Marx who assembled some of the greatest masterpieces of the mid 20th century - works from contemporary giants such as the provocative German ‘enfant terrible’ Joseph Beuys, Andy Warhol, Cy Twombly, Anselm Kiefer. Amongst the key pieces are iconic works of art such as Warhol’s ‘Mao’ and Joseph Beuys’ installations including over 450 drawings from Beuys and 60 sketches from Andy Warhol. Conceived as a showcase for the multi-media dimension of contemporary international art the scope of the museums’ exhibits encompasses other contemporary art forms such as film, video, design and photography with installation work from Nam June Paik and experimental work from artists such as Sol Lewitt, Marchel Duchamp and Sigmar Polke and Jason Rhoades.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Hamburger_Bahnhof_rqwtfq.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 hamburger_bahnhof.save
@@ -204,13 +204,13 @@ james_simon = Museum.create(
   The building was named after the entrepreneur and art collector James Simon (1851-1932) by the British star architect David Chipperfield. Berlin's museums owe some 10,000 objects to his donations. These include the famous bust of Nefertiti, the main wife of the Egyptian pharaoh Akhenaten from the 14th century BC.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/James_Simon1_qyz0lp.jpg",
   hours: {
-    mon: {start: '09:30', end: '18:30'},
-    tue: {start: '09:30', end: '18:30'},
-    wed: {start: '09:30', end: '18:30'},
-    thu: {start: '09:30', end: '20:30'},
-    fri: {start: '09:30', end: '18:30'},
-    sat: {start: '09:30', end: '18:30'},
-    sun: {start: '09:30', end: '18:30'}
+    "0": {start: '09:30', end: '18:30'},
+    "1": {start: '09:30', end: '18:30'},
+    "2": {start: '09:30', end: '18:30'},
+    "3": {start: '09:30', end: '20:30'},
+    "4": {start: '09:30', end: '18:30'},
+    "5": {start: '09:30', end: '18:30'},
+    "6": {start: '09:30', end: '18:30'}
     }
 )
 james_simon.save
@@ -229,13 +229,13 @@ kunstgewerbemuseum = Museum.create(
   The objects which range from ceramics to furniture, jewellery, glass, silverware; Renaissance Majolica and a smattering of utilitarian, everyday household products are displayed, shedding light on the long historical development of the applied arts from the Middle Ages to Art Nouveau. The present day is represented by the recently acquired fashion collection Kamer-Ruf.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Kunstgewerbemuseum_xqrpzh.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '18:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '18:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 kunstgewerbemuseum.save
@@ -253,13 +253,13 @@ kupferstichkabinett = Museum.create(
   Highlights include Adolph Menzel’s drawings, prints originating from many ages and schools – modern and contemporary art is represented with Munch, Kirchner, Picasso and Giacometti as well as US Pop art.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646230251/Profile%20Pictures%20of%20Museums/Kupferstichkabinett1_b5mpd0.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '18:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '18:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 kupferstichkabinett.save
@@ -279,13 +279,13 @@ berggrün = Museum.create(
   Other exhibits of note are Giacometti’s sculptures and some of the African artefacts which inspired 20th century Modernists. The collector Heinz Berggruen died in 2007 and is buried in Berlin-Dahlem.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Museum_Berggru%CC%88n1_sjgzpk.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '18:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '18:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 berggrün.save
@@ -306,13 +306,13 @@ museum_europäischer_kulturen = Museum.create(
   The Museum of European Cultures was founded in 1999 by merging the 110 year-old Museum of Folklore (Museum für Volkskunde) with the European collection of the Museum of Ethnology (Museum für Völkerkunde).",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museum_Europa%CC%88ischer_Kulturen1_hwrqvt.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '17:00'},
-    wed: {start: '10:00', end: '17:00'},
-    thu: {start: '10:00', end: '17:00'},
-    fri: {start: '10:00', end: '17:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '17:00'},
+    "2": {start: '10:00', end: '17:00'},
+    "3": {start: '10:00', end: '17:00'},
+    "4": {start: '10:00', end: '17:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 museum_europäischer_kulturen.save
@@ -335,13 +335,13 @@ museum_fotografie = Museum.create(
   The Photography Collection has 650 square metres of exhibition space and new lighting and air-conditioning technology in the Kaisersaal for the presentation of all forms of photography from the 19th to the 21st century. This is the largest exhibition room of a museum for photography in Berlin.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museum_fu%CC%88r_Fotografie_1_ov7fzg.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '11:00', end: '19:00'},
-    wed: {start: '11:00', end: '19:00'},
-    thu: {start: '11:00', end: '20:00'},
-    fri: {start: '11:00', end: '19:00'},
-    sat: {start: '11:00', end: '19:00'},
-    sun: {start: '11:00', end: '19:00'}
+    "0": {start: false, end: false},
+    "1": {start: '11:00', end: '19:00'},
+    "2": {start: '11:00', end: '19:00'},
+    "3": {start: '11:00', end: '20:00'},
+    "4": {start: '11:00', end: '19:00'},
+    "5": {start: '11:00', end: '19:00'},
+    "6": {start: '11:00', end: '19:00'}
     }
 )
 museum_fotografie.save
@@ -359,13 +359,13 @@ museumsinsel = Museum.create(
   description: "Museum Island is a unique ensemble of five museums on Spree Island in the district of Mitte in Berlin. The entire complex is listed by UNESCO as a World Heritage Site.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Museumsinsel1_pnzqfb.jpg",
   hours: {
-    mon: {start: '09:00', end: '16:00'},
-    tue: {start: '09:00', end: '16:00'},
-    wed: {start: '09:00', end: '16:00'},
-    thu: {start: '09:00', end: '16:00'},
-    fri: {start: '09:00', end: '16:00'},
-    sat: {start: '00:00', end: '00:00'},
-    sun: {start: '00:00', end: '00:00'}
+    "0": {start: '09:00', end: '16:00'},
+    "1": {start: '09:00', end: '16:00'},
+    "2": {start: '09:00', end: '16:00'},
+    "3": {start: '09:00', end: '16:00'},
+    "4": {start: '09:00', end: '16:00'},
+    "5": {start: false, end: false},
+    "6": {start: false, end: false}
     }
 )
 museumsinsel.save
@@ -386,13 +386,13 @@ neues_museum = Museum.create(
   The museum reopened its doors to the public in 2009 and combines geographically and thematically related exhibits pooled together from three separate collections at the Staatliche Museen zu Berlin: the collection of Egyptian art from the Ägyptisches Museum und Papyrussammlung, of prehistoric objects from the Museum für Vor- und Frühgeschichte, and of classical antiquities from the Antikensammlung. This joint exhibition featuring exhibits of unparalleled breadth and diversity allows visitors to trace the development of prehistoric and protohistoric cultures, spanning from the Middle East to the Atlantic, from north Africa to Scandinavia.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Neues_Museum1_uehw8f.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 neues_museum.save
@@ -415,13 +415,13 @@ neue_nationalgalerie = Museum.create(
   The building’s architectural structure has remained virtually unchanged ever since. The urban setting in which it stands, however, has undergone radical changes: the Staatsbibliothek (Berlin State Library) emerged at almost the same time as the Neue Nationalgalerie, on the opposite side of Potsdamer Strasse, and was followed by the Kammermusiksaal (chamber music hall) erected next to the Philharmonie, which by this point was already standing. These buildings were joined over time by a cluster of museums in the form of the Kulturforum, and, after German reunification, by the urban redevelopment of Potsdamer Platz.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Neue_Nationalgalerie_m6glcl.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 neue_nationalgalerie.save
@@ -446,13 +446,13 @@ pergamonmuseum = Museum.create(
   Please note that due to extensive renovations, the Pergamon Altar hall is currently closed to visitors. It is scheduled to reopen in late 2019. The other parts of the Pergamon Museum are not affected and stay open to the public during that time.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Pergamonmuseum1_qkh3v1.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '20:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '20:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 pergamonmuseum.save
@@ -472,13 +472,13 @@ pergamon_panorama = Museum.create(
   The ambitious construction project on the difficult building site across from Museumsinsel Berlin was made possible through the great commitment of the Interimsbau Pergamonmuseum Realisierungsgesellschaft mbH. This enterprise of the WOLFF GRUPPE Stuttgart/Essen contributed to the project’s realisation as well as its funding. Construction of this cultural space represented a major challenge for the Staatliche Museen zu Berlin and our partner, but it has now come to a successful conclusion. We are both convinced that the new building will be very popular with the public.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221490/Profile%20Pictures%20of%20Museums/Pergamonmuseum_Panorama1_ylxf9v.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '18:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '10:00', end: '18:00'},
-    sun: {start: '10:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '18:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '10:00', end: '18:00'},
+    "6": {start: '10:00', end: '18:00'}
     }
 )
 pergamon_panorama.save
@@ -498,13 +498,13 @@ scharf_gerstenberg = Museum.create(
   After being converted by the architect Wils Ebert, the Egyptian Museum moved into the premises in 1967. Ebert joined the separate buildings of the eastern Stülerbau and stables by constructing a connecting corridor between them and it is here that the gate from the Temple of Kalabsha stands today, which was salvaged from its original site in Egypt before the filling of the Aswan Dam. The pillars from the Temple of Sahure are also preserved here, in the room of the same name. After the return of the Egyptian Museum to the Museumsinsel Berlin in 2005, the building was once again converted by the architectural practice Sunder-Plassmann. As well as exposing the original brickwork in the Stülerbau, former stables, and Sahure room, Sunder-Plassmann created a glass entrance hall. The Sammlung Scharf-Gerstenberg opened its doors to the public in summer 2008, featuring an exhibition consisting in a long-term group loan, lent for an agreed period of ten years. In 2018, the loan agreement was extended for another ten years.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221348/Profile%20Pictures%20of%20Museums/Sammlung_Scharf_Gerstenberg1_egzjwb.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '10:00', end: '18:00'},
-    wed: {start: '10:00', end: '18:00'},
-    thu: {start: '10:00', end: '18:00'},
-    fri: {start: '10:00', end: '18:00'},
-    sat: {start: '11:00', end: '18:00'},
-    sun: {start: '11:00', end: '18:00'}
+    "0": {start: false, end: false},
+    "1": {start: '10:00', end: '18:00'},
+    "2": {start: '10:00', end: '18:00'},
+    "3": {start: '10:00', end: '18:00'},
+    "4": {start: '10:00', end: '18:00'},
+    "5": {start: '11:00', end: '18:00'},
+    "6": {start: '11:00', end: '18:00'}
     }
 )
 scharf_gerstenberg.save
@@ -525,13 +525,13 @@ köpenick = Museum.create(
   A further noteworthy feature of the palace is that the original Baroque plasterwork has survived intact in almost all of its rooms. On the basement level, an exhibition of archaeological findings documents the history of settlement and building on the island of Schloss Köpenick.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221132/Profile%20Pictures%20of%20Museums/Schloss_Ko%CC%88penick1_r0mjoe.jpg",
   hours: {
-    mon: {start: '00:00', end: '00:00'},
-    tue: {start: '11:00', end: '17:00'},
-    wed: {start: '11:00', end: '18:00'},
-    thu: {start: '11:00', end: '17:00'},
-    fri: {start: '11:00', end: '17:00'},
-    sat: {start: '11:00', end: '17:00'},
-    sun: {start: '11:00', end: '17:00'}
+    "0": {start: false, end: false},
+    "1": {start: '11:00', end: '17:00'},
+    "2": {start: '11:00', end: '18:00'},
+    "3": {start: '11:00', end: '17:00'},
+    "4": {start: '11:00', end: '17:00'},
+    "5": {start: '11:00', end: '17:00'},
+    "6": {start: '11:00', end: '17:00'}
     }
 )
 köpenick.save
@@ -549,13 +549,13 @@ wall_museum = Museum.create(
   description: "The Wall Museum Berlin - Exciting, thrilling and emotionalThe exhibition covers an audiovisual arc from the division of Germany and the construction of the Berlin Wall, through the Cold War and the fate of the Wall victims, to the significant events that brought about the fall of the Wall.A must for all those who want to understand one of the most dramatic historical events in German history.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221532/Profile%20Pictures%20of%20Museums/The_Wall_Museum_1_kcthvt.jpg",
   hours: {
-    mon: {start: '10:00', end: '19:00'},
-    tue: {start: '10:00', end: '19:00'},
-    wed: {start: '10:00', end: '19:00'},
-    thu: {start: '10:00', end: '19:00'},
-    fri: {start: '10:00', end: '19:00'},
-    sat: {start: '10:00', end: '19:00'},
-    sun: {start: '10:00', end: '19:00'}
+    "0": {start: '10:00', end: '19:00'},
+    "1": {start: '10:00', end: '19:00'},
+    "2": {start: '10:00', end: '19:00'},
+    "3": {start: '10:00', end: '19:00'},
+    "4": {start: '10:00', end: '19:00'},
+    "5": {start: '10:00', end: '19:00'},
+    "6": {start: '10:00', end: '19:00'}
     }
 )
 wall_museum.save
@@ -573,13 +573,13 @@ ddr_museum = Museum.create(
   description: "The DDR Museum provides a unique visitor experience, making it one of Berlin’s most popular museums. Engage all of your senses to enjoy an immersive experience of everyday life in the former East Germany. Covering a range of topics based on sound academic research – everyday life, the Berlin Wall, the Stasi and much more – our exhibition encourages its visitors to touch, feel and interact, so as to gain a fun and rich understanding of the past. Explore all aspects of life behind the Berlin Wall and the workings of the state – the DDR at a glance.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221131/Profile%20Pictures%20of%20Museums/DDR_Museum1_pu30vq.jpg",
   hours: {
-    mon: {start: '10:00', end: '19:00'},
-    tue: {start: '10:00', end: '19:00'},
-    wed: {start: '10:00', end: '19:00'},
-    thu: {start: '10:00', end: '19:00'},
-    fri: {start: '10:00', end: '19:00'},
-    sat: {start: '10:00', end: '19:00'},
-    sun: {start: '10:00', end: '19:00'}
+    "0": {start: '10:00', end: '19:00'},
+    "1": {start: '10:00', end: '19:00'},
+    "2": {start: '10:00', end: '19:00'},
+    "3": {start: '10:00', end: '19:00'},
+    "4": {start: '10:00', end: '19:00'},
+    "5": {start: '10:00', end: '19:00'},
+    "6": {start: '10:00', end: '19:00'}
     }
 )
 ddr_museum.save
@@ -644,29 +644,5 @@ puts "Creating ratings..... "
 Museum.all.each do |museum_instance|
   Chatroom.create!(museum: museum_instance)
 end
-
 puts "#{Chatroom.count} Chatrooms were created!"
-puts "Done!"
-
-
-ddrtest = Museum.create(
-  name: 'DDR Museum',
-  address: "Karl-Liebknecht-Str. 1, 10178 Berlin",
-  telephone: "030847123731",
-  website: 'https://www.ddr-museum.de/en',
-  ticket_url: 'https://tickets.ddr-museum.de/#/tickets',
-  price: '9,- Euro, red. 6,- Euro',
-  opening_hours: "Daily from 10:00 am., last admission is at 18:30.",
-  description: "The DDR Museum provides a unique visitor experience, making it one of Berlin’s most popular museums. Engage all of your senses to enjoy an immersive experience of everyday life in the former East Germany. Covering a range of topics based on sound academic research – everyday life, the Berlin Wall, the Stasi and much more – our exhibition encourages its visitors to touch, feel and interact, so as to gain a fun and rich understanding of the past. Explore all aspects of life behind the Berlin Wall and the workings of the state – the DDR at a glance.",
-  photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221131/Profile%20Pictures%20of%20Museums/DDR_Museum1_pu30vq.jpg",
-  hours: {
-    mon: {start: '10:00', end: '19:00'},
-    tue: {start: '10:00', end: '19:00'},
-    wed: {start: '10:00', end: '19:00'},
-    thu: {start: '10:00', end: '19:00'},
-    sat: {start: '10:00', end: '19:00'},
-    sun: {start: '10:00', end: '19:00'}
-    }
-
-)
 puts "Done!"

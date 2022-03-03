@@ -1,10 +1,15 @@
 <div class="black-container">
-  <div class="both-margin">
-    <%= render 'shared/navbar' %>
-  </div>
+  <div class="banner" style="background-image: url(<%= asset_path("banner-image.jpeg") %>)">
+    <div class="both-margin">
+      <%= render 'shared/navbar' %>
+    </div>
 
-  <h1>Go to a museum anytime you want!</h1>
-  <p>something here</p>
+    <div class="blabla">
+      <h1>Go to a museum anytime you want!</h1>
+      <p>something here</p>
+      <%= link_to "See all museums", museums_path, class: "white-btn"%>
+    </div>
+  </div>
 </div>
 
 <%= link_to "List of Museums", museums_path %>

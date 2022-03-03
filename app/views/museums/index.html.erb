@@ -6,7 +6,7 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-
+<%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
 <h1>List of All Museums </h1>
   <ul>
   <% @museums.each do |museum|%>

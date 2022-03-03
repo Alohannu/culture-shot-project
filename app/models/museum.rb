@@ -4,6 +4,7 @@ class Museum < ApplicationRecord
   has_many :topics
   has_many_attached :photos
   has_one :chatroom
+  serialize :hours
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -13,4 +14,15 @@ class Museum < ApplicationRecord
 
     (ratings.pluck(:stars).sum/ratings.size.to_f).round(1)
   end
+
+  def open(museum)
+    if museum.hours[:"#{Time.now.day}"][:start].to_i < Time.now.hour && Time.now.hour < museum.hours[:"#{Time.now.day}"][:end].to_i
+      return true
+    end
+  end
+  # Check which day today is
+  # go to that day of each museum
+  # check if Time.now is between .hours[:mon][:start] and .hours[:mon][:end]
+
+
 end

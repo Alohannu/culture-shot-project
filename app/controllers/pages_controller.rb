@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     @bookmarks = current_user.bookmarks
     @ratings = current_user.ratings
   end
+
+  def my_profile
+  end
+
 end

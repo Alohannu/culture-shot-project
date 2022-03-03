@@ -10,4 +10,18 @@
     <% end %>
 </ul>
 
+<h2>My Reviews</h2>
+<ul>
+    <% @ratings.each do |rating| %>
+      <li>
+      <%= link_to rating.museum.name, museum_path(rating.museum) %>
+      <p><%= rating.stars %>
+      <%= 'Stars' %></p>
+      <h3> <%=  rating.title %></h3>
+      <p><%= rating.comment %></p>
+      <%= link_to "Delete", rating_path(rating), method: :delete %>
+      </li>
+    <% end %>
+</ul>
+
 <%= link_to "To the Homepage", root_path %>

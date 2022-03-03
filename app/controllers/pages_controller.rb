@@ -6,5 +6,6 @@ class PagesController < ApplicationController
 
   def dashboard
     @bookmarks = current_user.bookmarks
+    @ratings = current_user.ratings
   end
 end

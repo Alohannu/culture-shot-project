@@ -12,11 +12,11 @@
   </div>
   <%= simple_form_for [@museum, @chatroom, @message],
     remote: true,
-    html: {class: "d-flex"} do |f|
+    html: {data: {chatroom_subscription_target: "form"}, class: "d-flex"} do |f|
   %>
     <%= f.input :content,
       label: false,
-      placeholder: "Message ##{@chatroom.museum.name}",
+      placeholder: "Send a message",
       wrapper_html: {class: "flex-grow-1"}
     %>
     <%= f.submit "Send", class: "btn btn-primary" %>

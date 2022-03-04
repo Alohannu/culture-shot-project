@@ -2,12 +2,12 @@
     <div class="navbar-margin">
       <%= render 'shared/navbar' %>
     </div>
-  
+
     <div class="single-margin">
       <div>
         <h1>Are you looking for something special??</h1>
         <p>Use our search bar to look for a specific museum in Berlin, an easy way to explore the city and know more about the culture.</p>
-        
+
         <%= form_tag museums_path, method: :get do %>
           <div class="form-inline">
             <div class="form-item">
@@ -20,8 +20,8 @@
             <div>
               <%= submit_tag "Search", class: "white-btn" %>
             </div>
-            
-            
+
+
           <%= form_tag museums_path, method: :get do %>
             <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: true, include_blank: true
             %>
@@ -29,9 +29,9 @@
           <% end %>
 
           <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
-            
-            
-            
+
+
+
           </div>
         <% end %>
       </div>
@@ -42,8 +42,6 @@
     </div>
   </div>
 </div>
-
-<%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
 
 <div class="both-margin">
   <h1>List of All Museums </h1>

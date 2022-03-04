@@ -606,7 +606,7 @@ Rating.create!(
 Rating.create!(
   user: user_barbara,
   museum: altes_museum,
-  title: "An unforgettable journey",
+  title: "An unforgettable journey!",
   comment: "The Ancient Museum (Altes Museum) is the largest and most important museum in the world in the field of ancient art from Greece, Rome and Etruria",
   stars: 5
 )

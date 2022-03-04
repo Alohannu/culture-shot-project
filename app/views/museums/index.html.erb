@@ -6,35 +6,14 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+
+<%= form_tag museums_path, method: :get do %>
+  <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: true, include_blank: true
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
-
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Topic
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <% @topics.each do |topic| %>
-    <a class="dropdown-item" href="#"><%= Topic.name %></a>
-    <a class="dropdown-item" href="#">History</a>
-    <a class="dropdown-item" href="#">National Socialism</a>
-    <a class="dropdown-item" href="#">Ancient Cultures, Archaeology</a>
-    <a class="dropdown-item" href="#">5th to 18th Century</a>
-    <a class="dropdown-item" href="#">AA</a>
-    <% end %>
-  </div>
-</div>
-
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-</div>
-
 
 
 <h1>List of All Museums </h1>

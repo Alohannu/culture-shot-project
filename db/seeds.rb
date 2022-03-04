@@ -6,10 +6,11 @@ puts "Destroy all chatrooms..."
 Chatroom.destroy_all
 puts "Creating user..."
 
-user = User.new(first_name: "Sara", last_name: "Sara", email: "Sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
-user.save
-user2 = User.new(first_name: "Leo", last_name: "Leo", email: "Leo@leo.com", password: "123456", date_of_birth: "1993,7,9")
-user2.save
+user_sara = User.new(first_name: "Sara", last_name: "Sara", email: "sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
+user_leo = User.new(first_name: "Leo", last_name: "Leo", email: "leo@leo.com", password: "123456", date_of_birth: "1993,7,9")
+user_ana = User.new(first_name: "Ana", last_name: "Ana", email: "sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
+user_malvi = User.new(first_name: "Malvi", last_name: "Malvi", email: "malvi@malvi.com", password: "123456", date_of_birth: "1993,7,9")
+user_barbara = User.new(first_name: "Barbara", last_name: "Barbara", email: "barbara@barabra.com", password: "123456", date_of_birth: "1993,7,9")
 
 puts "Creating museums..."
 
@@ -23,9 +24,13 @@ alte_nationalgalerie = Museum.new(
   price_reduced: 5,
   price_info: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20",
-  description: "The Alte Nationalgalerie houses one of the most important collections of 19th century painting in Germany and includes masterpieces by Caspar David Friedrich, Adolph Menzel, Edouard Manet, Claude Monet, not to mention Auguste Renoir and Auguste Rodin.
-  Amongst the most important highlights are Casper David Friedrich's 'Der Mönch am Meer' (from 1810) Arnold Böcklin's 'Die Toteninsel' (1883), Adolph Menzel's 'Flötenkonzert Friedrich des Großen in Sanssouci' (1852) and Edouard Manet's 'Im Wintergarten' (1979).
-  The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876 and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple. The Museum reopened to the public after a thorough restoration in 2001.",
+  description: "The Alte Nationalgalerie houses one of the most important collections of 19th century
+  painting in Germany and includes masterpieces by Caspar David Friedrich, Adolph Menzel,
+  Edouard Manet, Claude Monet, not to mention Auguste Renoir and Auguste Rodin.
+  The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s
+  Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876
+  and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple.
+  The Museum reopened to the public after a thorough restoration in 2001.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg",
   hours: {
     "0": {start: false, end: false},
@@ -35,9 +40,8 @@ alte_nationalgalerie = Museum.new(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-alte_nationalgalerie.save
+    }
+)
 
 altes_museum = Museum.new(
   name: 'Altes Museum',
@@ -49,12 +53,14 @@ altes_museum = Museum.new(
   price_reduced: 5,
   price_info: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20, Mon closed",
-  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten in Berlin's eastern city centre.
-  The Altes Museum, built between 1823 and 1830 according to Karl Friedrich Schinkel's designs, is one of the most important buildings of Classicism in Germany. With a clearly structured external form and a precise internal structure based on Greek antiquity, Schinkel is pursuing Humboldt's idea of opening the museum to the public as an educational institution.
-  Stately architecture
-  The monumental order of the 18 fluted Ionic columns, the wide vestibule, the rotunda - an explicit reference to the Roman pantheon - and finally the flight of stairs are architectural elements that until then were reserved only for stately buildings.
-  Greek Treasures in the Altes Museum
-  Originally created for all Berlin art collections, the Altes Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned down and was badly damaged, and was only reconstructed by 1966. Since 1998, the Collection of Classical Antiquities in the Altes Museum has shown its Greek collection with the treasure chamber on the ground floor of the building.",
+  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is
+  part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten
+  in Berlin's eastern city centre.
+  Built between 1823 and 1830, according to Karl Friedrich Schinkel's designs, The Altes Museum
+  is one of the most important buildings of Classicism in Germany. With a clearly structured external
+  form and a precise internal structure based on Greek antiquity. Originally created for all Berlin art collections, the Altes
+  Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned
+  down and was badly damaged, and was only reconstructed by 1966.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg",
   hours: {
     "0": {start: false, end: false},
@@ -68,8 +74,6 @@ altes_museum = Museum.new(
 
   )
 
-altes_museum.save
-
 bode_museum = Museum.create(
   name: 'Bode-Museum',
   address: "Am Kupfergraben, 10117 Berlin",
@@ -80,9 +84,12 @@ bode_museum = Museum.create(
   price_reduced: 6,
   price_info: '12 Euro, red. 6 Euro',
   opening_hours: "Tue-Wed 10-18, Thu 10-20, Fri-Sun 10-18",
-  description: "The baroque Bode-Museum is home to the Sculpture Collection and Museum of Byzantine Art.
-  The baroque Bode Museum, the fourth museum to be built as part of Berlin’s Museum Island on the Spree was completed in 1904. It was designed by court architect Ernst von Ihne under Kaiser Wilhelm II. Intended as a museum for European Renaissance art, it was named after its first director Wilhelm von Bode (1845-1929) in 1956. Reopening to the public in October 2006, the museum brought together the sculpture and Byzantine art collection.
-  The museum’s treasures include the sculpture collection with works of art from the middle ages to the 18th century. Of particular interest are the halls devoted to the Italian Renaissance with the glazed terracottas by Luca della Robbia and other masterworks from Donatello, Desiderio da Settignano and works from the German late Gothic school. The Bode museum is best known for its Byzantine art collection and the coin cabinet. There are over 150 paintings to be seen with a particularly strong presence of Roman and Byzantine works from the 3rd to the 15th century A.D. from regions from the Mediterranean basin ranging from Byzantine Constantinople, Greece and the Balkans to north African countries and Russia’s iconographic art.",
+  description: "The baroque Bode-Museum, the fourth museum to be built as part of Berlin’s Museum Island on the Spree ,
+  is home to the Sculpture Collection and Museum of Byzantine Art.
+  It was completed in 1904 and designed by court architect Ernst von Ihne under Kaiser Wilhelm II.
+  There are over 150 paintings to be seen with a particularly strong presence of Roman and Byzantine works from the
+  3rd to the 15th century A.D. from regions from the Mediterranean basin ranging from Byzantine
+  Constantinople, Greece and the Balkans to north African countries and Russia’s iconographic art.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Bode1_zem2xo.jpg",
   hours: {
     "0": {start: false, end: false},
@@ -94,9 +101,6 @@ bode_museum = Museum.create(
     "6": {start: '10:00', end: '18:00'}
     },
   )
-
-bode_museum.save
-
 
 friedrichswerdersche_kirche = Museum.create(
   name: 'Friedrichswerdersche Kirche',
@@ -121,12 +125,10 @@ friedrichswerdersche_kirche = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-  friedrichswerdersche_kirche.save
+    }
+)
 
-
-gemäldegalerie = Museum.create(
+gemaldegalerie = Museum.create(
   name: 'Gemäldegalerie',
   address: "Stauffenbergstraße 40, 10785, Berlin",
   telephone: "030 266 424 242",
@@ -148,9 +150,8 @@ gemäldegalerie = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-  gemäldegalerie.save
+    }
+)
 
 hamburger_bahnhof = Museum.create(
   name: 'Hamburger Bahnhof Museum der Gegenwart',
@@ -175,9 +176,8 @@ hamburger_bahnhof = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-  hamburger_bahnhof.save
+    }
+)
 
 james_simon = Museum.create(
   name: 'James-Simon-Galerie',
@@ -201,9 +201,8 @@ james_simon = Museum.create(
     "4": {start: '09:30', end: '18:30'},
     "5": {start: '09:30', end: '18:30'},
     "6": {start: '09:30', end: '18:30'}
-    },
-  )
-james_simon.save
+    }
+)
 
 kunstgewerbemuseum = Museum.create(
   name: 'Kunstgewerbemuseum',
@@ -226,9 +225,9 @@ kunstgewerbemuseum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-kunstgewerbemuseum.save
+    }
+)
+
 
 kupferstichkabinett = Museum.create(
   name: 'Kupferstichkabinett',
@@ -250,11 +249,10 @@ kupferstichkabinett = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-kupferstichkabinett.save
+    }
+)
 
-berggrün = Museum.create(
+berggrun = Museum.create(
   name: 'Museum Berggrün',
   address: "Schloßstr. 1, 14059, Berlin",
   telephone: "030 266 424 242",
@@ -276,11 +274,10 @@ berggrün = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-berggrün.save
+    }
+)
 
-museum_europäischer_kulturen = Museum.create(
+museum_europaischer_kulturen = Museum.create(
   name: 'Museum Europäischer Kulturen',
   address: "Arnimallee 25, 14195, Berlin",
   telephone: "030 266 424 242",
@@ -303,9 +300,8 @@ museum_europäischer_kulturen = Museum.create(
     "4": {start: '10:00', end: '17:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-museum_europäischer_kulturen.save
+    }
+)
 
 museum_fotografie = Museum.create(
   name: 'Museum für Fotografie, Helmut Newton Foundation',
@@ -332,9 +328,8 @@ museum_fotografie = Museum.create(
     "4": {start: '11:00', end: '19:00'},
     "5": {start: '11:00', end: '19:00'},
     "6": {start: '11:00', end: '19:00'}
-    },
-  )
-museum_fotografie.save
+    }
+)
 
 museumsinsel = Museum.create(
   name: 'Museumsinsel',
@@ -356,9 +351,8 @@ museumsinsel = Museum.create(
     "4": {start: '09:00', end: '16:00'},
     "5": {start: false, end: false},
     "6": {start: false, end: false}
-    },
-  )
-museumsinsel.save
+    }
+)
 
 
 neues_museum = Museum.create(
@@ -383,9 +377,8 @@ neues_museum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-neues_museum.save
+    }
+)
 
 neue_nationalgalerie = Museum.create(
   name: 'Neue Nationalgalerie',
@@ -412,9 +405,8 @@ neue_nationalgalerie = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-neue_nationalgalerie.save
+    }
+)
 
 pergamonmuseum = Museum.create(
   name: 'Pergamonmuseum',
@@ -443,9 +435,8 @@ pergamonmuseum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-pergamonmuseum.save
+    }
+)
 
 pergamon_panorama = Museum.create(
   name: 'Pergamonmuseum - Das Panorama',
@@ -469,9 +460,8 @@ pergamon_panorama = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    },
-  )
-pergamon_panorama.save
+    }
+)
 
 scharf_gerstenberg = Museum.create(
   name: 'Sammlung Scharf-Gerstenberg',
@@ -495,11 +485,10 @@ scharf_gerstenberg = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    },
-  )
-scharf_gerstenberg.save
+    }
+)
 
-köpenick = Museum.create(
+kopenick = Museum.create(
   name: 'Schloss Köpenick',
   address: "Schlossinsel 1, 12557 Berlin",
   telephone: "030 266 424 242",
@@ -522,9 +511,8 @@ köpenick = Museum.create(
     "4": {start: '11:00', end: '17:00'},
     "5": {start: '11:00', end: '17:00'},
     "6": {start: '11:00', end: '17:00'}
-    },
-  )
-köpenick.save
+    }
+)
 
 wall_museum = Museum.create(
   name: 'The Wall Museum at the East Side Gallery',
@@ -546,9 +534,8 @@ wall_museum = Museum.create(
     "4": {start: '10:00', end: '19:00'},
     "5": {start: '10:00', end: '19:00'},
     "6": {start: '10:00', end: '19:00'}
-    },
-  )
-wall_museum.save
+    }
+)
 
 ddr_museum = Museum.create(
   name: 'DDR Museum',
@@ -576,60 +563,44 @@ ddr_museum.save
 
 # puts "Creating ratings..... "
 
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "great experience",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 3
-# )
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "disappointed",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 4
-# )
+Rating.create!(
+  user: user_ana,
+  museum: altes_museum,
+  title: "Great experience",
+  comment: "The Altes Museum is an excellent museum to visit. It has a very interesting collection on the Greeks and Romans. For those who like coins, the museum has a small wing intended only for the exhibition of coins used in BC and AD times.",
+  stars: 5
+)
+Rating.create!(
+  user: user_malvi,
+  museum: altes_museum,
+  title: "Strongly recommend",
+  comment: "The square where the museum is located is full of things to do, besides the Cathedral and the river it is possible to visit the garden or just stay on the lawn during the summer reading a book.",
+  stars: 4
+)
 
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "strongly recommend",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 5
-# )
+Rating.create!(
+  user: user_leo,
+  museum: altes_museum,
+  title: "Disappointed",
+  comment: "Very poor and expensive. You have much much much bigger museus in London and they are free. Don't waste your money here.",
+  stars: 1
+)
 
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "satisfactory, that's all",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 2
-# )
+Rating.create!(
+  user: user_malvi,
+  museum: altes_museum,
+  title: "Satisfactory, that's all",
+  comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  stars: 4
+)
 
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "an unforgettable journey",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 1
-# )
-
-# Rating.create!(
-#   user: user,
-#   museum: museum,
-#   title: "good if you want to know more history about technology",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 2
-# )
-
-# Rating.create!(
-#   user: user,
-#   museum: museum2,
-#   title: "good if you want to know more history about technology",
-#   comment: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-#   stars: 0
-# )
+Rating.create!(
+  user: user_barbara,
+  museum: altes_museum,
+  title: "An unforgettable journey!",
+  comment: "The Ancient Museum (Altes Museum) is the largest and most important museum in the world in the field of ancient art from Greece, Rome and Etruria",
+  stars: 5
+)
 
 
 

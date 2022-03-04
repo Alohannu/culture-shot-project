@@ -1,19 +1,49 @@
-// .chatroom {
-//   box-sizing: border-box;
-//   width: 25%;
-//   position: absolute;
-//   bottom: 23px;
-//   right: 28px;
-// }
-
+// the wrapper for the whole chat pop-up
 .chat-popup {
-  box-sizing: border-box;
-  width: 25%;
   position: absolute;
-  bottom: 23px;
+  bottom: 50px;
   right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.fab {
+  font-size: 35px;
+}
+
+// the wrapper for the chatroom(aka top part of the chat-popup)
+.chatroom {
+  background: white;
+  margin-top: 9px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  h1 {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
+  .messages {
+    height: 100%;
+    overflow: scroll;
+    padding: 1rem;
+  }
+
+  #new_message {
+    border-top: 1px solid $gray-200;
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
 }

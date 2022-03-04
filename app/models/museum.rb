@@ -1,11 +1,11 @@
 class Museum < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :ratings, dependent: :destroy
-  has_many :topics
+  has_many :museums_topics
+  has_many :topics, through: :museums_topics
   has_many_attached :photos
   has_one :chatroom
   serialize :hours
-
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
@@ -20,9 +20,4 @@ class Museum < ApplicationRecord
       return true
     end
   end
-  # Check which day today is
-  # go to that day of each museum
-  # check if Time.now is between .hours[:mon][:start] and .hours[:mon][:end]
-
-
 end

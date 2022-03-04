@@ -105,7 +105,7 @@
 
 
 <div class="chat-popup">
-  <div class="container hidden chat-popup-top white"
+  <div class="container hidden chat-popup-top chatroom"
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     >
@@ -127,9 +127,11 @@
       %>
     <% end %>
   </div>
-
   <%# BUTTON. TRIGGERS CHATROOM POPUP %>
-  <button id="chat-popup-btn">CLICK HERE</button>
+  <%# <button id="chat-popup-btn">CLICK HERE</button> %>
+  <i class="fab fa-rocketchat" id="chat-popup-btn"></i>
+</div>
+
 
   <script>
     const button = document.querySelector('#chat-popup-btn')
@@ -138,6 +140,6 @@
     button.addEventListener('click', (event) => {
       console.log(event)
       chatPopUp.classList.toggle('hidden')
+      console.log(chatPopUp)
     })
   </script>
-</div>

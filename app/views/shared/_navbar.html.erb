@@ -13,7 +13,7 @@
               <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle",
               id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-              <%= image_path "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646407007/user-white_rxrymi.png", class: "avatar dropdown-toggle", id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_path ("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646407007/user-white_rxrymi.png"), class: "avatar dropdown-toggle", id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", my_profile_path, class: "dropdown-item" %>

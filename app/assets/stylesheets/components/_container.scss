@@ -17,10 +17,23 @@
   display: flex;
   align-items: center;
   gap: 5rem;
+  overflow: hidden;
+
+  .left {
+    flex: 1 0 40%;
+  }
+  .right {
+    flex: 1 0 60%;
+  }
 }
 
 .map {
   border-radius: 25px 0 0 25px;
+}
+
+.image-museum {
+  border-radius: 25px 0 0 25px;
+  height: 600px;
 }
 
 .form-inline {

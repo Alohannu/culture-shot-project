@@ -34,9 +34,13 @@ alte_nationalgalerie = Museum.new(
   price_reduced: 5,
   price_info: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20",
-  description: "The Alte Nationalgalerie houses one of the most important collections of 19th century painting in Germany and includes masterpieces by Caspar David Friedrich, Adolph Menzel, Edouard Manet, Claude Monet, not to mention Auguste Renoir and Auguste Rodin.
-  Amongst the most important highlights are Casper David Friedrich's 'Der Mönch am Meer' (from 1810) Arnold Böcklin's 'Die Toteninsel' (1883), Adolph Menzel's 'Flötenkonzert Friedrich des Großen in Sanssouci' (1852) and Edouard Manet's 'Im Wintergarten' (1979).
-  The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876 and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple. The Museum reopened to the public after a thorough restoration in 2001.",
+  description: "The Alte Nationalgalerie houses one of the most important collections of 19th century
+  painting in Germany and includes masterpieces by Caspar David Friedrich, Adolph Menzel,
+  Edouard Manet, Claude Monet, not to mention Auguste Renoir and Auguste Rodin.
+  The Alte Nationalgalerie is one of the five museums forming the ensemble known as Berlin’s
+  Museum Island – a UNESCO World Heritage site. The Museum was built between 1866 and 1876
+  and restored in neoclassical style by Friedrich August Stüler in the style of a Greek temple.
+  The Museum reopened to the public after a thorough restoration in 2001.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Alte_Nationalgalerie1a_vba5lr.jpg",
   hours: {
     "0": {start: false, end: false},
@@ -61,12 +65,14 @@ altes_museum = Museum.new(
   price_reduced: 5,
   price_info: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20, Mon closed",
-  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten in Berlin's eastern city centre.
-  The Altes Museum, built between 1823 and 1830 according to Karl Friedrich Schinkel's designs, is one of the most important buildings of Classicism in Germany. With a clearly structured external form and a precise internal structure based on Greek antiquity, Schinkel is pursuing Humboldt's idea of opening the museum to the public as an educational institution.
-  Stately architecture
-  The monumental order of the 18 fluted Ionic columns, the wide vestibule, the rotunda - an explicit reference to the Roman pantheon - and finally the flight of stairs are architectural elements that until then were reserved only for stately buildings.
-  Greek Treasures in the Altes Museum
-  Originally created for all Berlin art collections, the Altes Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned down and was badly damaged, and was only reconstructed by 1966. Since 1998, the Collection of Classical Antiquities in the Altes Museum has shown its Greek collection with the treasure chamber on the ground floor of the building.",
+  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is
+  part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten
+  in Berlin's eastern city centre.
+  Built between 1823 and 1830, according to Karl Friedrich Schinkel's designs, The Altes Museum
+  is one of the most important buildings of Classicism in Germany. With a clearly structured external
+  form and a precise internal structure based on Greek antiquity. Originally created for all Berlin art collections, the Altes
+  Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned
+  down and was badly damaged, and was only reconstructed by 1966.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg",
   hours: {
     "0": {start: false, end: false},
@@ -91,9 +97,12 @@ bode_museum = Museum.create(
   price_reduced: 6,
   price_info: '12 Euro, red. 6 Euro',
   opening_hours: "Tue-Wed 10-18, Thu 10-20, Fri-Sun 10-18",
-  description: "The baroque Bode-Museum is home to the Sculpture Collection and Museum of Byzantine Art.
-  The baroque Bode Museum, the fourth museum to be built as part of Berlin’s Museum Island on the Spree was completed in 1904. It was designed by court architect Ernst von Ihne under Kaiser Wilhelm II. Intended as a museum for European Renaissance art, it was named after its first director Wilhelm von Bode (1845-1929) in 1956. Reopening to the public in October 2006, the museum brought together the sculpture and Byzantine art collection.
-  The museum’s treasures include the sculpture collection with works of art from the middle ages to the 18th century. Of particular interest are the halls devoted to the Italian Renaissance with the glazed terracottas by Luca della Robbia and other masterworks from Donatello, Desiderio da Settignano and works from the German late Gothic school. The Bode museum is best known for its Byzantine art collection and the coin cabinet. There are over 150 paintings to be seen with a particularly strong presence of Roman and Byzantine works from the 3rd to the 15th century A.D. from regions from the Mediterranean basin ranging from Byzantine Constantinople, Greece and the Balkans to north African countries and Russia’s iconographic art.",
+  description: "The baroque Bode-Museum, the fourth museum to be built as part of Berlin’s Museum Island on the Spree ,
+  is home to the Sculpture Collection and Museum of Byzantine Art.
+  It was completed in 1904 and designed by court architect Ernst von Ihne under Kaiser Wilhelm II.
+  There are over 150 paintings to be seen with a particularly strong presence of Roman and Byzantine works from the
+  3rd to the 15th century A.D. from regions from the Mediterranean basin ranging from Byzantine
+  Constantinople, Greece and the Balkans to north African countries and Russia’s iconographic art.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221133/Profile%20Pictures%20of%20Museums/Bode1_zem2xo.jpg",
   hours: {
     "0": {start: false, end: false},

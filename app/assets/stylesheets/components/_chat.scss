@@ -8,11 +8,11 @@
 
 .chat-popup {
   // box-sizing: border-box;
-  width: 25%;
+  // width: 25%;
   position: absolute;
   bottom: 90px;
   right: 28px;
-  background: white;
+  // background: white;
   height: calc(40vh - 35px);
   display: flex;
   flex-direction: column;
@@ -32,6 +32,10 @@
     .form-group {
       margin-bottom: 0;
     }
+  }
+
+  .white {
+    background-color: white;
   }
 }
 

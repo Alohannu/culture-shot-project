@@ -20,6 +20,18 @@
             <div>
               <%= submit_tag "Search", class: "white-btn" %>
             </div>
+
+
+          <%= form_tag museums_path, method: :get do %>
+            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: true, include_blank: true
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+
+          <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
+
+
+
           </div>
         <% end %>
       </div>
@@ -30,8 +42,6 @@
     </div>
   </div>
 </div>
-
-<%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
 
 <div class="both-margin">
   <h1>List of All Museums </h1>

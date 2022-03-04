@@ -1,29 +1,56 @@
-<h2>Dashboard</h2>
+<div class="black-container">
+  <div class="navbar-margin">
+    <%= render 'shared/navbar' %>
+  </div>
 
-<h2>Wishlist</h2>
-<p><%= link_to "To All Museums", museums_path%></p>
+  <div class="both-margin-banner sidebyside">
+    <div class="centered">
+      <div>
+        <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
+      </div>
+      <div>
+        <h1>Hello, <%= current_user.first_name %></h1>
+        <p>In this page you can find all informations about the museums and also the reviews that you wrote.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
-    <% @bookmarks.each do |bookmark| %>
-      <li>
-        <%= link_to bookmark.museum.name, museum_path(bookmark.museum) %>
-        <%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
-      </li>
+<div class="both-margin">
+  <h2>All museums that you have saved:</h2>
+
+    <% if @bookmarks.size.zero? %>
+      <p>You do not save any museum yet.</p>
+    <% else %>
+      <ul>
+        <% @bookmarks.each do |bookmark| %>
+          <li>
+            <%= link_to bookmark.museum.name, museum_path(bookmark.museum) %>
+            <%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-</ul>
 
-<h2>My Reviews</h2>
-<ul>
-    <% @ratings.each do |rating| %>
-      <li>
-      <%= link_to rating.museum.name, museum_path(rating.museum) %>
-      <p><%= rating.stars %>
-      <%= 'Stars' %></p>
-      <h3> <%=  rating.title %></h3>
-      <p><%= rating.comment %></p>
-      <%= link_to "Delete", rating_path(rating), method: :delete %>
-      </li>
+    <p><%= link_to "See all Museums", museums_path, class: "white-btn"%></p>
+
+  <h2>My Reviews</h2>
+    <% if @ratings.size.zero? %>
+      <p>You have not reviewed any museum yet.</p>
+    <% else %>
+      <ul>
+          <% @ratings.each do |rating| %>
+            <li>
+            <%= link_to rating.museum.name, museum_path(rating.museum) %>
+            <p><%= rating.stars %>
+            <%= 'Stars' %></p>
+            <h3> <%=  rating.title %></h3>
+            <p><%= rating.comment %></p>
+            <%= link_to "Delete", rating_path(rating), method: :delete %>
+            </li>
+          <% end %>
+      </ul>
     <% end %>
-</ul>
 
-<%= link_to "To the Homepage", root_path %>
+  <%= link_to "<< Go to the Homepage", root_path %>
+</div>

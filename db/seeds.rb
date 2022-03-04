@@ -1,14 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-require "open-uri"
-require "nokogiri"
-
 puts "Destroy all users..."
 User.destroy_all
 puts "Destroy all museums..."
@@ -81,8 +70,9 @@ altes_museum = Museum.new(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+
+  )
 
 bode_museum = Museum.create(
   name: 'Bode-Museum',
@@ -109,8 +99,8 @@ bode_museum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 
 friedrichswerdersche_kirche = Museum.create(
   name: 'Friedrichswerdersche Kirche',
@@ -237,6 +227,7 @@ kunstgewerbemuseum = Museum.create(
     "6": {start: '11:00', end: '18:00'}
     }
 )
+
 
 kupferstichkabinett = Museum.create(
   name: 'Kupferstichkabinett',
@@ -566,11 +557,11 @@ ddr_museum = Museum.create(
     "4": {start: '10:00', end: '19:00'},
     "5": {start: '10:00', end: '19:00'},
     "6": {start: '10:00', end: '19:00'}
-    }
-)
+    },
+  )
 ddr_museum.save
 
-puts "Creating ratings..... "
+# puts "Creating ratings..... "
 
 Rating.create!(
   user: user_ana,
@@ -611,8 +602,126 @@ Rating.create!(
   stars: 5
 )
 
+
+
 Museum.all.each do |museum_instance|
   Chatroom.create!(museum: museum_instance)
 end
 puts "#{Chatroom.count} Chatrooms were created!"
+
+puts "Creating Topics..."
+Topic.create(name: "19th century to 1945")
+Topic.create(name: "History")
+Topic.create(name: "National Socialism")
+Topic.create(name: "Ancient Cultures, Archaeology")
+Topic.create(name: "5th to 18th Century")
+Topic.create(name: "Architecture, Design")
+Topic.create(name: "Fine Arts")
+Topic.create(name: "Modernism")
+Topic.create(name: "16th to 19th Century")
+Topic.create(name: "Contemporary Arts")
+Topic.create(name: "Photography")
+Topic.create(name: "Post-1945")
+Topic.create(name: "Ancient History to the Middle Ages")
+Topic.create(name: "Berlin")
+Topic.create(name: "Palace")
+Topic.create(name: "Film, T–heatre, Literature, Music")
+Topic.create(name: "Memorials")
+Topic.create(name: "The German Division")
+Topic.create(name: "1945 to the present")
+
+
+puts "Creating MuseumsTopics..."
+MuseumsTopic.create(topic_id: 1, museum_id: 1)
+MuseumsTopic.create(topic_id: 1, museum_id: 4)
+MuseumsTopic.create(topic_id: 1, museum_id: 6)
+MuseumsTopic.create(topic_id: 1, museum_id: 18)
+
+MuseumsTopic.create(topic_id: 2, museum_id: 1)
+MuseumsTopic.create(topic_id: 2, museum_id: 20)
+MuseumsTopic.create(topic_id: 2, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 3, museum_id: 1)
+MuseumsTopic.create(topic_id: 3, museum_id: 2)
+MuseumsTopic.create(topic_id: 3, museum_id: 4)
+MuseumsTopic.create(topic_id: 3, museum_id: 5)
+MuseumsTopic.create(topic_id: 3, museum_id: 6)
+MuseumsTopic.create(topic_id: 3, museum_id: 7)
+MuseumsTopic.create(topic_id: 3, museum_id: 10)
+MuseumsTopic.create(topic_id: 3, museum_id: 11)
+MuseumsTopic.create(topic_id: 3, museum_id: 12)
+MuseumsTopic.create(topic_id: 3, museum_id: 13)
+MuseumsTopic.create(topic_id: 3, museum_id: 14)
+MuseumsTopic.create(topic_id: 3, museum_id: 15)
+MuseumsTopic.create(topic_id: 3, museum_id: 16)
+MuseumsTopic.create(topic_id: 3, museum_id: 17)
+MuseumsTopic.create(topic_id: 3, museum_id: 18)
+MuseumsTopic.create(topic_id: 3, museum_id: 19)
+MuseumsTopic.create(topic_id: 3, museum_id: 20)
+MuseumsTopic.create(topic_id: 3, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 4, museum_id: 2)
+MuseumsTopic.create(topic_id: 4, museum_id: 4)
+MuseumsTopic.create(topic_id: 4, museum_id: 6)
+MuseumsTopic.create(topic_id: 4, museum_id: 13)
+MuseumsTopic.create(topic_id: 4, museum_id: 14)
+MuseumsTopic.create(topic_id: 4, museum_id: 16)
+MuseumsTopic.create(topic_id: 4, museum_id: 17)
+
+MuseumsTopic.create(topic_id: 5, museum_id: 3)
+MuseumsTopic.create(topic_id: 5, museum_id: 4)
+MuseumsTopic.create(topic_id: 5, museum_id: 6)
+
+MuseumsTopic.create(topic_id: 6, museum_id: 3)
+MuseumsTopic.create(topic_id: 6, museum_id: 5)
+MuseumsTopic.create(topic_id: 6, museum_id: 7)
+MuseumsTopic.create(topic_id: 6, museum_id: 19)
+
+MuseumsTopic.create(topic_id: 7, museum_id: 1)
+MuseumsTopic.create(topic_id: 7, museum_id: 3)
+MuseumsTopic.create(topic_id: 7, museum_id: 4)
+MuseumsTopic.create(topic_id: 7, museum_id: 6)
+MuseumsTopic.create(topic_id: 7, museum_id: 9)
+MuseumsTopic.create(topic_id: 7, museum_id: 10)
+MuseumsTopic.create(topic_id: 7, museum_id: 12)
+MuseumsTopic.create(topic_id: 7, museum_id: 13)
+MuseumsTopic.create(topic_id: 7, museum_id: 14)
+MuseumsTopic.create(topic_id: 7, museum_id: 15)
+MuseumsTopic.create(topic_id: 7, museum_id: 16)
+
+
+MuseumsTopic.create(topic_id: 8, museum_id: 10)
+MuseumsTopic.create(topic_id: 8, museum_id: 15)
+MuseumsTopic.create(topic_id: 8, museum_id: 18)
+
+MuseumsTopic.create(topic_id: 9, museum_id: 9)
+MuseumsTopic.create(topic_id: 9, museum_id: 13)
+
+MuseumsTopic.create(topic_id: 10, museum_id: 5)
+
+MuseumsTopic.create(topic_id: 11, museum_id: 5)
+MuseumsTopic.create(topic_id: 11, museum_id: 12)
+
+MuseumsTopic.create(topic_id: 12, museum_id: 5)
+MuseumsTopic.create(topic_id: 12, museum_id: 12)
+MuseumsTopic.create(topic_id: 12, museum_id: 15)
+
+MuseumsTopic.create(topic_id: 13, museum_id: 13)
+MuseumsTopic.create(topic_id: 13, museum_id: 14)
+
+MuseumsTopic.create(topic_id: 14, museum_id: 20)
+MuseumsTopic.create(topic_id: 14, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 15, museum_id: 19)
+
+MuseumsTopic.create(topic_id: 16, museum_id: 11)
+
+MuseumsTopic.create(topic_id: 17, museum_id: 20)
+
+MuseumsTopic.create(topic_id: 18, museum_id: 20)
+MuseumsTopic.create(topic_id: 18, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 19, museum_id: 20)
+MuseumsTopic.create(topic_id: 19, museum_id: 21)
+
 puts "Done!"

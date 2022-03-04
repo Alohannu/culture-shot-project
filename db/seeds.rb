@@ -1,14 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-require "open-uri"
-require "nokogiri"
-
 puts "Destroy all users..."
 User.destroy_all
 puts "Destroy all museums..."
@@ -46,9 +35,8 @@ alte_nationalgalerie = Museum.new(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
-
+    },
+  )
 alte_nationalgalerie.save
 
 altes_museum = Museum.new(
@@ -76,8 +64,9 @@ altes_museum = Museum.new(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+
+  )
 
 altes_museum.save
 
@@ -103,8 +92,8 @@ bode_museum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 
 bode_museum.save
 
@@ -132,9 +121,9 @@ friedrichswerdersche_kirche = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
-friedrichswerdersche_kirche.save
+    },
+  )
+  friedrichswerdersche_kirche.save
 
 
 gemäldegalerie = Museum.create(
@@ -159,10 +148,9 @@ gemäldegalerie = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
-gemäldegalerie.save
-
+    },
+  )
+  gemäldegalerie.save
 
 hamburger_bahnhof = Museum.create(
   name: 'Hamburger Bahnhof Museum der Gegenwart',
@@ -187,9 +175,9 @@ hamburger_bahnhof = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
-hamburger_bahnhof.save
+    },
+  )
+  hamburger_bahnhof.save
 
 james_simon = Museum.create(
   name: 'James-Simon-Galerie',
@@ -213,8 +201,8 @@ james_simon = Museum.create(
     "4": {start: '09:30', end: '18:30'},
     "5": {start: '09:30', end: '18:30'},
     "6": {start: '09:30', end: '18:30'}
-    }
-)
+    },
+  )
 james_simon.save
 
 kunstgewerbemuseum = Museum.create(
@@ -238,8 +226,8 @@ kunstgewerbemuseum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
+    },
+  )
 kunstgewerbemuseum.save
 
 kupferstichkabinett = Museum.create(
@@ -262,8 +250,8 @@ kupferstichkabinett = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
+    },
+  )
 kupferstichkabinett.save
 
 berggrün = Museum.create(
@@ -288,8 +276,8 @@ berggrün = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
+    },
+  )
 berggrün.save
 
 museum_europäischer_kulturen = Museum.create(
@@ -315,8 +303,8 @@ museum_europäischer_kulturen = Museum.create(
     "4": {start: '10:00', end: '17:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
+    },
+  )
 museum_europäischer_kulturen.save
 
 museum_fotografie = Museum.create(
@@ -344,8 +332,8 @@ museum_fotografie = Museum.create(
     "4": {start: '11:00', end: '19:00'},
     "5": {start: '11:00', end: '19:00'},
     "6": {start: '11:00', end: '19:00'}
-    }
-)
+    },
+  )
 museum_fotografie.save
 
 museumsinsel = Museum.create(
@@ -368,8 +356,8 @@ museumsinsel = Museum.create(
     "4": {start: '09:00', end: '16:00'},
     "5": {start: false, end: false},
     "6": {start: false, end: false}
-    }
-)
+    },
+  )
 museumsinsel.save
 
 
@@ -395,8 +383,8 @@ neues_museum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 neues_museum.save
 
 neue_nationalgalerie = Museum.create(
@@ -424,8 +412,8 @@ neue_nationalgalerie = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 neue_nationalgalerie.save
 
 pergamonmuseum = Museum.create(
@@ -455,8 +443,8 @@ pergamonmuseum = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 pergamonmuseum.save
 
 pergamon_panorama = Museum.create(
@@ -481,8 +469,8 @@ pergamon_panorama = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '10:00', end: '18:00'},
     "6": {start: '10:00', end: '18:00'}
-    }
-)
+    },
+  )
 pergamon_panorama.save
 
 scharf_gerstenberg = Museum.create(
@@ -507,8 +495,8 @@ scharf_gerstenberg = Museum.create(
     "4": {start: '10:00', end: '18:00'},
     "5": {start: '11:00', end: '18:00'},
     "6": {start: '11:00', end: '18:00'}
-    }
-)
+    },
+  )
 scharf_gerstenberg.save
 
 köpenick = Museum.create(
@@ -534,8 +522,8 @@ köpenick = Museum.create(
     "4": {start: '11:00', end: '17:00'},
     "5": {start: '11:00', end: '17:00'},
     "6": {start: '11:00', end: '17:00'}
-    }
-)
+    },
+  )
 köpenick.save
 
 wall_museum = Museum.create(
@@ -558,8 +546,8 @@ wall_museum = Museum.create(
     "4": {start: '10:00', end: '19:00'},
     "5": {start: '10:00', end: '19:00'},
     "6": {start: '10:00', end: '19:00'}
-    }
-)
+    },
+  )
 wall_museum.save
 
 ddr_museum = Museum.create(
@@ -582,11 +570,11 @@ ddr_museum = Museum.create(
     "4": {start: '10:00', end: '19:00'},
     "5": {start: '10:00', end: '19:00'},
     "6": {start: '10:00', end: '19:00'}
-    }
-)
+    },
+  )
 ddr_museum.save
 
-puts "Creating ratings..... "
+# puts "Creating ratings..... "
 
 # Rating.create!(
 #   user: user,
@@ -643,8 +631,126 @@ puts "Creating ratings..... "
 #   stars: 0
 # )
 
+
+
 Museum.all.each do |museum_instance|
   Chatroom.create!(museum: museum_instance)
 end
 puts "#{Chatroom.count} Chatrooms were created!"
+
+puts "Creating Topics..."
+Topic.create(name: "19th century to 1945")
+Topic.create(name: "History")
+Topic.create(name: "National Socialism")
+Topic.create(name: "Ancient Cultures, Archaeology")
+Topic.create(name: "5th to 18th Century")
+Topic.create(name: "Architecture, Design")
+Topic.create(name: "Fine Arts")
+Topic.create(name: "Modernism")
+Topic.create(name: "16th to 19th Century")
+Topic.create(name: "Contemporary Arts")
+Topic.create(name: "Photography")
+Topic.create(name: "Post-1945")
+Topic.create(name: "Ancient History to the Middle Ages")
+Topic.create(name: "Berlin")
+Topic.create(name: "Palace")
+Topic.create(name: "Film, T–heatre, Literature, Music")
+Topic.create(name: "Memorials")
+Topic.create(name: "The German Division")
+Topic.create(name: "1945 to the present")
+
+
+puts "Creating MuseumsTopics..."
+MuseumsTopic.create(topic_id: 1, museum_id: 1)
+MuseumsTopic.create(topic_id: 1, museum_id: 4)
+MuseumsTopic.create(topic_id: 1, museum_id: 6)
+MuseumsTopic.create(topic_id: 1, museum_id: 18)
+
+MuseumsTopic.create(topic_id: 2, museum_id: 1)
+MuseumsTopic.create(topic_id: 2, museum_id: 20)
+MuseumsTopic.create(topic_id: 2, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 3, museum_id: 1)
+MuseumsTopic.create(topic_id: 3, museum_id: 2)
+MuseumsTopic.create(topic_id: 3, museum_id: 4)
+MuseumsTopic.create(topic_id: 3, museum_id: 5)
+MuseumsTopic.create(topic_id: 3, museum_id: 6)
+MuseumsTopic.create(topic_id: 3, museum_id: 7)
+MuseumsTopic.create(topic_id: 3, museum_id: 10)
+MuseumsTopic.create(topic_id: 3, museum_id: 11)
+MuseumsTopic.create(topic_id: 3, museum_id: 12)
+MuseumsTopic.create(topic_id: 3, museum_id: 13)
+MuseumsTopic.create(topic_id: 3, museum_id: 14)
+MuseumsTopic.create(topic_id: 3, museum_id: 15)
+MuseumsTopic.create(topic_id: 3, museum_id: 16)
+MuseumsTopic.create(topic_id: 3, museum_id: 17)
+MuseumsTopic.create(topic_id: 3, museum_id: 18)
+MuseumsTopic.create(topic_id: 3, museum_id: 19)
+MuseumsTopic.create(topic_id: 3, museum_id: 20)
+MuseumsTopic.create(topic_id: 3, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 4, museum_id: 2)
+MuseumsTopic.create(topic_id: 4, museum_id: 4)
+MuseumsTopic.create(topic_id: 4, museum_id: 6)
+MuseumsTopic.create(topic_id: 4, museum_id: 13)
+MuseumsTopic.create(topic_id: 4, museum_id: 14)
+MuseumsTopic.create(topic_id: 4, museum_id: 16)
+MuseumsTopic.create(topic_id: 4, museum_id: 17)
+
+MuseumsTopic.create(topic_id: 5, museum_id: 3)
+MuseumsTopic.create(topic_id: 5, museum_id: 4)
+MuseumsTopic.create(topic_id: 5, museum_id: 6)
+
+MuseumsTopic.create(topic_id: 6, museum_id: 3)
+MuseumsTopic.create(topic_id: 6, museum_id: 5)
+MuseumsTopic.create(topic_id: 6, museum_id: 7)
+MuseumsTopic.create(topic_id: 6, museum_id: 19)
+
+MuseumsTopic.create(topic_id: 7, museum_id: 1)
+MuseumsTopic.create(topic_id: 7, museum_id: 3)
+MuseumsTopic.create(topic_id: 7, museum_id: 4)
+MuseumsTopic.create(topic_id: 7, museum_id: 6)
+MuseumsTopic.create(topic_id: 7, museum_id: 9)
+MuseumsTopic.create(topic_id: 7, museum_id: 10)
+MuseumsTopic.create(topic_id: 7, museum_id: 12)
+MuseumsTopic.create(topic_id: 7, museum_id: 13)
+MuseumsTopic.create(topic_id: 7, museum_id: 14)
+MuseumsTopic.create(topic_id: 7, museum_id: 15)
+MuseumsTopic.create(topic_id: 7, museum_id: 16)
+
+
+MuseumsTopic.create(topic_id: 8, museum_id: 10)
+MuseumsTopic.create(topic_id: 8, museum_id: 15)
+MuseumsTopic.create(topic_id: 8, museum_id: 18)
+
+MuseumsTopic.create(topic_id: 9, museum_id: 9)
+MuseumsTopic.create(topic_id: 9, museum_id: 13)
+
+MuseumsTopic.create(topic_id: 10, museum_id: 5)
+
+MuseumsTopic.create(topic_id: 11, museum_id: 5)
+MuseumsTopic.create(topic_id: 11, museum_id: 12)
+
+MuseumsTopic.create(topic_id: 12, museum_id: 5)
+MuseumsTopic.create(topic_id: 12, museum_id: 12)
+MuseumsTopic.create(topic_id: 12, museum_id: 15)
+
+MuseumsTopic.create(topic_id: 13, museum_id: 13)
+MuseumsTopic.create(topic_id: 13, museum_id: 14)
+
+MuseumsTopic.create(topic_id: 14, museum_id: 20)
+MuseumsTopic.create(topic_id: 14, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 15, museum_id: 19)
+
+MuseumsTopic.create(topic_id: 16, museum_id: 11)
+
+MuseumsTopic.create(topic_id: 17, museum_id: 20)
+
+MuseumsTopic.create(topic_id: 18, museum_id: 20)
+MuseumsTopic.create(topic_id: 18, museum_id: 21)
+
+MuseumsTopic.create(topic_id: 19, museum_id: 20)
+MuseumsTopic.create(topic_id: 19, museum_id: 21)
+
 puts "Done!"

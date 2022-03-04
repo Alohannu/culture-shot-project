@@ -11,6 +11,8 @@ class MuseumsController < ApplicationController
       @museums = Museum.where(id: @array.pluck(:id))
     else
       @museums = Museum.all
+      @museums_topics = MuseumsTopic.all
+      @topics = Topic.all
     end
 
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)

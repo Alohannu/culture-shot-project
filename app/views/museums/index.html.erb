@@ -10,25 +10,13 @@
 
         <%= form_tag museums_path, method: :get do %>
           <div class="form-inline">
-            <div class="form-item">
-              <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Location"
-              %>
-            </div>
-            <div>
-              <%= submit_tag "Search", class: "white-btn" %>
-            </div>
-
-
           <%= form_tag museums_path, method: :get do %>
             <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: true, include_blank: true
             %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <%= submit_tag "Search", class: "white-btn" %>
           <% end %>
 
-          <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
+          <%# <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
 
 
 
@@ -52,16 +40,16 @@
 
         <div class="col-12 col-md-4 mb-3">
 
-            <div class="card-trip m-4">
+            <div class="card-trip m-4 img-container">
               <%= image_tag museum.photo_url,
-        width: 400, height: 300, crop: :fill %>
+        width: 350, height: 300, crop: :fill %>
               <div class="card-trip-infos">
                 <div>
-                  <h2><%= link_to museum.name, museum %></h2>
+                  <h3><%= link_to museum.name, museum %></h3>
                   <p><strong>Location:</strong> <%= museum.address %></p>
                 </div>
                 <div class="card-trip-pricing">
-                  <h2>€ <%= link_to museum.price, museum %></h2>
+                  <h5>€ <%= link_to museum.price, museum %></h5>
                 </div>
               </div>
             </div>

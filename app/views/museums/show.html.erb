@@ -5,7 +5,7 @@
 
   <div class="single-margin">
     <div class="left">
-      <h6><%= link_to "save for later", museum_bookmarks_path(@museum), method: :post %></h6>
+       <%= link_to "Save for Later", museum_bookmarks_path(@museum),class: "white-btn d-inline-block", method: :post%>
       <h1><%= @museum.name%></h1>
 
       <h2>Details about the museum</h2>
@@ -41,7 +41,7 @@
     <% end %>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#potato">
+    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#potato">
       See all reviews
     </button>
 
@@ -63,7 +63,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary">Save changes</button>
 
           </div>
         </div>
@@ -75,7 +75,7 @@
   <% end %>
 
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add a rating
   </button>
 
@@ -101,7 +101,7 @@
 
                       <%= f.input :stars, collection: 0..5 %>
                     </div>
-                  <div class="btn btn-primary">
+                  <div class="btn btn-secondary" fontcolor= "white">
                     <%= f.button :submit, "Add Rating" %>
                   </div>
                     <% end %>
@@ -118,6 +118,7 @@
   <%= link_to " << All museums", museums_path %>
 
 </div>
+
  <!-- this one only shows the map without showing the location -->
   <div class="map" style="width: 100%; height: 600px;"
            data-controller="mapbox"
@@ -125,12 +126,13 @@
            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 
-<div class="chat-popup">
-  <div class="container hidden chat-popup-top chatroom"
+<!-- Popup-chat -->
+<div class="chat-popup" data-controller="chatroom-popup">
+  <div class="container hidden chat-popup-top chatroom" data-chatroom-popup-target="chatPopUp"
+
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     >
-    <h6><%= @chatroom.museum.name %></h6>
 
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
@@ -143,6 +145,7 @@
     %>
       <%= f.input :content,
         label: false,
+        input_html: { autocomplete: 'off' },
         placeholder: "Enter your message...",
         wrapper_html: {class: "flex-grow-1"}
       %>
@@ -150,16 +153,23 @@
   </div>
   <%# BUTTON. TRIGGERS CHATROOM POPUP %>
   <%# <button id="chat-popup-btn">CLICK HERE</button> %>
-  <i class="fab fa-rocketchat" id="chat-popup-btn"></i>
-
-
-  <script>
-    const button = document.querySelector('#chat-popup-btn')
-    const chatPopUp = document.querySelector('.chat-popup-top')
-    // console.log(button)
-    button.addEventListener('click', (event) => {
-      console.log(event)
-      chatPopUp.classList.toggle('hidden')
-      console.log(chatPopUp)
-    })
-  </script>
+  <% if user_signed_in? %>
+    <%# <i class="fab fa-rocketchat" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide"></i> %>
+    <div class="chat-button" onclick="this.classList.toggle('active')" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide">
+      <div class="button-background"></div>
+      <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
+        <g class="bubble">
+          <path class="line line1" d="M 30.7873,85.113394 30.7873,46.556405 C 30.7873,41.101961
+          36.826342,35.342 40.898074,35.342 H 59.113981 C 63.73287,35.342
+          69.29995,40.103201 69.29995,46.784744" />
+          <path class="line line2" d="M 13.461999,65.039335 H 58.028684 C
+            63.483128,65.039335
+            69.243089,59.000293 69.243089,54.928561 V 45.605853 C
+            69.243089,40.986964 65.02087,35.419884 58.339327,35.419884" />
+        </g>
+        <circle class="circle circle1" r="1.9" cy="50.7" cx="42.5" />
+        <circle class="circle circle2" cx="49.9" cy="50.7" r="1.9" />
+        <circle class="circle circle3" r="1.9" cy="50.7" cx="57.3" />
+      </svg>
+    </div>
+  <% end %>

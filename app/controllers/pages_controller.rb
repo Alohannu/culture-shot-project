@@ -12,4 +12,6 @@ class PagesController < ApplicationController
   def my_profile
   end
 
+  def redirect
+  end
 end

@@ -5,7 +5,7 @@
 
   <div class="single-margin">
     <div class="left">
-      <h6><%= link_to "save for later", museum_bookmarks_path(@museum), method: :post %></h6>
+       <%= link_to "Save for Later", museum_bookmarks_path(@museum),class: "white-btn d-inline-block", method: :post%>
       <h1><%= @museum.name%></h1>
 
       <h2>Details about the museum</h2>
@@ -41,7 +41,7 @@
     <% end %>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#potato">
+    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#potato">
       See all reviews
     </button>
 
@@ -63,7 +63,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary">Save changes</button>
 
           </div>
         </div>
@@ -75,7 +75,7 @@
   <% end %>
 
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add a rating
   </button>
 
@@ -101,7 +101,7 @@
 
                       <%= f.input :stars, collection: 0..5 %>
                     </div>
-                  <div class="btn btn-primary">
+                  <div class="btn btn-secondary" fontcolor= "white">
                     <%= f.button :submit, "Add Rating" %>
                   </div>
                     <% end %>

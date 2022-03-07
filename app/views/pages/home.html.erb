@@ -1,13 +1,34 @@
 <div class="black-container">
-  <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646406980/banner-image_z2rnzz.jpg") %>)">
+  <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646646823/Scenic%20Photos%20for%20Homepage%20etc/Light-8-1_xozouq.jpg") %>)">
     <div class="navbar-margin">
       <%= render 'shared/navbar' %>
     </div>
 
     <div class="centered_text">
       <h1>Go to a museum anytime you want!</h1>
-      <p>explore berlin now</p><br>
-      <%= link_to "See all museums", museums_path, class: "white-btn"%>
+      <%# <p>explore berlin now</p><br> %>
+      <%# <%= link_to "See all museums", museums_path, class: "white-btn"%>
+    </div>
+  </div>
+</div>
+
+<div class="both-margin">
+  <h2>Popular museum</h2>
+</div>
+
+
+<div class="white-container">
+  <div class="single-margin">
+    <div class="left">
+      <h2>Lorem ipsum dolor sit amet dolourt</h2>
+      <p>
+        The best feature makes you better, with the latest technology to meet your needs. Of course,
+        with such features as organizing schedules and leading assignments, it will make you easier, So
+        get the application now!
+      </p>
+    </div>
+    <div class="right">
+      <%= cl_image_tag("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646659586/Scenic%20Photos%20for%20Homepage%20etc/test2_pivmsx.png", :width=>900, :crop=>"fill") %>
     </div>
   </div>
 </div>

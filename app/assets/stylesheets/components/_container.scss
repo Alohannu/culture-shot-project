@@ -5,7 +5,12 @@
 .black-container {
   background-color: $dark-blue;
   border-radius: 25px;
-  color: #fff;
+}
+
+.white-container {
+  background-color: white;
+  border-radius: 25px;
+  color: #000;
 }
 
 .both-margin {

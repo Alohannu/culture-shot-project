@@ -18,6 +18,7 @@
     <div class="right">
       <%= image_tag @museum.photo_url, class: "image-museum" %>
     </div>
+
   </div>
 </div>
 
@@ -117,9 +118,18 @@
   <%= link_to " << All museums", museums_path %>
 
 </div>
+
+ <!-- this one only shows the map without showing the location -->
+  <div class="map" style="width: 100%; height: 600px;"
+           data-controller="mapbox"
+           data-mapbox-markers-value="<%= @markers.to_json %>"
+           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+
 <!-- Popup-chat -->
 <div class="chat-popup" data-controller="chatroom-popup">
   <div class="container hidden chat-popup-top chatroom" data-chatroom-popup-target="chatPopUp"
+
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     >

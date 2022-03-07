@@ -50,3 +50,21 @@
   display: flex;
   justify-content: center;
 }
+
+
+.container-ex {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "card-1 card-2 card-3"
+    ". . ."
+    ". . .";
+}
+
+.card-1 { grid-area: card-1; }
+
+.card-2 { grid-area: card-2; }
+
+.card-3 { grid-area: card-3; }

@@ -11,7 +11,7 @@
         <%= form_tag museums_path, method: :get do %>
           <div class="form-inline">
           <%= form_tag museums_path, method: :get do %>
-            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: true, include_blank: true
+            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true
             %>
             <%= submit_tag "Search", class: "white-btn" %>
           <% end %>

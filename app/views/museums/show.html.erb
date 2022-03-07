@@ -12,7 +12,7 @@
       <p><%= @museum.description %></p>
 
       <p>Address: <%= @museum.address %></p><br>
-      <%= link_to "Buy your ticket", @museum.ticket_url, class: "white-btn"  %>
+      <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn"  %>
     </div>
 
     <div class="right">

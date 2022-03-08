@@ -46,26 +46,36 @@
 
   <div class="single-margin">
     <div class="left">
-      <div class="d-flex align-items-center">
-        <div><% if @bookmark.exists? %>
-            <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
-            <i id="bookmark-icon" class="fas fa-bookmark"></i>
-            <% end %>
-            <% else %>
-            <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
-            <i id="bookmark-icon" class="far fa-bookmark"></i>
-            <% end %>
-            <% end %></div>
-        <div><h3 class="text-decoration-underline" style="margin-left: 15px"> Save for later</h3></div>
-      </div>
+
+      <% if @bookmark.exists? %>
+        <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
+          <div class="d-flex align-items-center">
+            <div><i id="icon" class="fas fa-bookmark"></i></div>
+            <div><p class="inline-text">This museum is in your list</p></div>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
+          <div class="d-flex align-items-center">
+            <div><i id="icon" class="far fa-bookmark"></i></div>
+            <div><p class="inline-text">Save for later</p></div>
+          </div>
+        <% end %>
+      <% end %>
 
       <h1><%= @museum.name%></h1>
+      <p><%= @museum.description %></p>
 
+      <div class="d-flex align-items-center">
+        <div><i id="icon" class="fas fa-coins"></i></div>
+        <div><p class="inline-text">€ <%= @museum.price %> per adult (<%= @museum.price %> reduced price)</p></div>
+      </div>
 
+      <div class="d-flex align-items-center icon-section">
+        <div><i id="icon" class="far fa-clock"></i></div>
+        <div><p class="inline-text"> <%= @museum.opening_hours %></p></div>
+      </div>
 
-
-
-      <p><i class="far fa-map"></i> <%= @museum.address %></p><br>
       <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn" %>
     </div>
 
@@ -98,8 +108,8 @@
         });
       }
       </script>
-
-  <h2>Reviews</h2>
+  
+  <h2>What people say about <%= @museum.name%></h2>
 
   <% if !@museum.ratings.size.zero? %>
 

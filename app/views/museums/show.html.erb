@@ -1,3 +1,44 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .collapsible {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: $dark-gray;
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: black;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .content {
+      background-color: black;
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+</head>
+
 <div class="black-container">
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
@@ -19,10 +60,12 @@
       </div>
 
       <h1><%= @museum.name%></h1>
-      <h2>Details about the museum</h2>
-      <p><%= @museum.description %></p>
 
-      <p>Address: <%= @museum.address %></p><br>
+
+
+
+
+      <p><i class="far fa-map"></i> <%= @museum.address %></p><br>
       <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn" %>
     </div>
 
@@ -34,6 +77,28 @@
 </div>
 
 <div class="both-margin">
+   <button class="collapsible"> >>  More details about the museum</button>
+        <div class="content">
+        <p><%= @museum.description %></p>
+       </div>
+
+ <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+      </script>
+
   <h2>Reviews</h2>
 
   <% if !@museum.ratings.size.zero? %>

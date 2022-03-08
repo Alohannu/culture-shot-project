@@ -1,0 +1,20 @@
+<div class="col-12 col-md-4 mb-3 card-hover-effect">
+  <div class="container">
+    <div class="card-museum">
+      <div class="imgBx">
+        <%= image_tag museum.photo_url, width: 350, height: 300, crop: :fill %>
+      </div>
+      <div class="museum-content">
+        <h3><%= link_to museum.name, museum %></h3>
+        <div class="museum-location">
+          <i class="far fa-map"></i>
+          <p><%= museum.address %></p>
+        </div>
+        <div class="museum-pricing">
+          <h5>€ <%= link_to museum.price, museum %></h5>
+        </div>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>

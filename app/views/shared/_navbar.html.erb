@@ -1,13 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "culture shot", "/", class: "navbar-brand" %>
+    <%= link_to "culture shot", "/", class: "brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-         <% if user_signed_in? %>
           <li class="nav-item">
           <%= form_tag museums_path, method: :get do %>
         <div class="d-flex justify-content-around align-items-center filter">
@@ -24,7 +23,8 @@
         </div>
       <% end %>
           </li>
-          <li class="nav-item dropdown">
+         <% if user_signed_in? %>
+          <li class="nav-item dropdown" id="dropdown">
             <% if current_user.photo.key %>
               <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle",
               id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': true, 'aria-expanded': false %>

@@ -1,0 +1,59 @@
+<!-- review modal -->
+<div class="modal fade buffer" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content white-container">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">All reviews</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <% @museum.ratings.first(6).each do |rating|  %>
+              <p><strong><%= rating.user.first_name %><br>
+              <%= rating.title %>:</strong> <%= rating.comment %></p>
+            <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- add review modal -->
+<div class="modal fade buffer" id="addReviewModal" tabindex="-1" aria-labelledby="addReviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content white-container">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="addReviewModalLabel">All reviews</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+                    <h2>Add your rating</h2>
+
+                    <%= simple_form_for [@museum, @rating] do |f| %>
+                    <%= f.error_notification %>
+
+                    <div class="form-inputs">
+                      <%= f.input :title %>
+                      <%= f.input :comment %>
+                      <%= f.input :stars, collection: 0..5 %>
+                    </div>
+                  <div class="form-actions">
+                    <%= f.button :submit, "Add" %>
+                  </div>
+                    <% end %>
+
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+
+    </div>
+  </div>
+</div>

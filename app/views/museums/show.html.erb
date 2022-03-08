@@ -1,3 +1,4 @@
+
 <div class="black-container">
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
@@ -18,7 +19,6 @@
     <div class="right">
       <%= image_tag @museum.photo_url, class: "image-museum" %>
     </div>
-
   </div>
 </div>
 
@@ -26,7 +26,6 @@
   <h2>Reviews</h2>
 
   <% if !@museum.ratings.size.zero? %>
-
     <%= @museum.average %>
     <% @museum.average.to_i.times do %><i class="fas fa-star"></i><% end %>
     <% if @museum.average.modulo(1) > 0.5 %><i class="fas fa-star-half-alt"></i><% end %>
@@ -41,98 +40,35 @@
     <% end %>
 
     <!-- Button trigger modal -->
-    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#potato">
+    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#reviewModal">
       See all reviews
     </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="potato" tabindex="-1" aria-labelledby="potatoLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Reviews</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-
-            <% @museum.ratings.first(6).each do |rating|  %>
-              <p><strong><%= rating.user.first_name %><br>
-              <%= rating.title %>:</strong> <%= rating.comment %></p>
-            <% end %>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-secondary">Save changes</button>
-
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#addReviewModal">
+      Add a rating
+    </button>
 
   <% else %>
-    <p>This museum do now have any review yet</p>
+    <p>This museum do not have any review yet</p>
   <% end %>
-
-  <!-- Button trigger modal -->
-  <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add a rating
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add a rating</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-                    <h2>Add your rating</h2>
-
-                    <%= simple_form_for [@museum, @rating] do |f| %>
-                    <%= f.error_notification %>
-
-                    <div class="form-inputs">
-                      <%= f.input :title %>
-
-                      <%= f.input :comment %>
-
-                      <%= f.input :stars, collection: 0..5 %>
-                    </div>
-                  <div class="btn btn-secondary" fontcolor= "white">
-                    <%= f.button :submit, "Add Rating" %>
-                  </div>
-                    <% end %>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br><br>
-  <%= link_to " << All museums", museums_path %>
-
+    <%= link_to "All museums", museums_path %>
 </div>
 
- <!-- this one only shows the map without showing the location -->
-  <div class="map" style="width: 100%; height: 600px;"
-           data-controller="mapbox"
-           data-mapbox-markers-value="<%= @markers.to_json %>"
-           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  </div>
+
+<!-- this one only shows the map without showing the location -->
+<div style="width: 100%; height: 600px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+</div>
 
 <!-- Popup-chat -->
 <div class="chat-popup" data-controller="chatroom-popup">
   <div class="container hidden chat-popup-top chatroom" data-chatroom-popup-target="chatPopUp"
-
-    data-controller="chatroom-subscription"
-    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
-    >
+       data-controller="chatroom-subscription"
+       data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
@@ -151,10 +87,8 @@
       %>
     <% end %>
   </div>
-  <%# BUTTON. TRIGGERS CHATROOM POPUP %>
-  <%# <button id="chat-popup-btn">CLICK HERE</button> %>
+
   <% if user_signed_in? %>
-    <%# <i class="fab fa-rocketchat" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide"></i> %>
     <div class="chat-button" onclick="this.classList.toggle('active')" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide">
       <div class="button-background"></div>
       <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
@@ -173,3 +107,6 @@
       </svg>
     </div>
   <% end %>
+</div>
+
+<%= render 'shared/modal' %>

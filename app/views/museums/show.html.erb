@@ -41,7 +41,7 @@
     <% end %>
 
     <!-- Button trigger modal -->
-    <button type="button" class="white-btn" data-bs-toggle="modal" data-bs-target="#potato">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#potato">
       See all reviews
     </button>
 
@@ -89,26 +89,27 @@
         </div>
         <div class="modal-body">
 
-                    <h2>Add your rating</h2>
+                    <h2 style="color:black">Add your rating</h2>
 
                     <%= simple_form_for [@museum, @rating] do |f| %>
                     <%= f.error_notification %>
 
-                    <div class="form-inputs">
+                    <div class="form-inputs" style="color:black">
                       <%= f.input :title %>
 
                       <%= f.input :comment %>
 
                       <%= f.input :stars, collection: 0..5 %>
                     </div>
-                  <div class="btn btn-secondary" fontcolor= "white">
-                    <%= f.button :submit, "Add Rating" %>
+                  <div class="btn btn-secondary">
+                    <%= f.button :submit, "Add a Rating" %>
                   </div>
                     <% end %>
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

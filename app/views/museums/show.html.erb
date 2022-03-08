@@ -12,7 +12,7 @@
       <p><%= @museum.description %></p>
 
       <p>Address: <%= @museum.address %></p><br>
-      <%= link_to "Buy your ticket", @museum.ticket_url, class: "white-btn"  %>
+      <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn"  %>
     </div>
 
     <div class="right">
@@ -71,7 +71,7 @@
     </div>
 
   <% else %>
-    <p>This museum do now have any review yet</p>
+    <p>This museum does not have any reviews yet</p>
   <% end %>
 
   <!-- Button trigger modal -->
@@ -153,7 +153,7 @@
     <% end %>
   </div>
   <%# BUTTON. TRIGGERS CHATROOM POPUP %>
-  <%# <button id="chat-popup-btn">CLICK HERE</button> %>
+
   <% if user_signed_in? %>
     <%# <i class="fab fa-rocketchat" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide"></i> %>
     <div class="chat-button" onclick="this.classList.toggle('active')" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide">

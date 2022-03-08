@@ -5,22 +5,25 @@
 
   <div class="single-margin">
     <div class="left">
-      <% if @bookmark.exists? %>
-        <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
-          <i id="bookmark-icon" class="fas fa-bookmark"></i>
-        <% end %>
-      <% else %>
-        <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
-          <i id="bookmark-icon" class="far fa-bookmark"></i>
-        <% end %>
-      <% end %>
-      <h1><%= @museum.name%></h1>
+      <div class="d-flex align-items-center">
+        <div><% if @bookmark.exists? %>
+            <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
+            <i id="bookmark-icon" class="fas fa-bookmark"></i>
+            <% end %>
+            <% else %>
+            <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
+            <i id="bookmark-icon" class="far fa-bookmark"></i>
+            <% end %>
+            <% end %></div>
+        <div><h3 class="text-decoration-underline" style="margin-left: 15px"> Save for later</h3></div>
+      </div>
 
+      <h1><%= @museum.name%></h1>
       <h2>Details about the museum</h2>
       <p><%= @museum.description %></p>
 
       <p>Address: <%= @museum.address %></p><br>
-      <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn"  %>
+      <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn" %>
     </div>
 
     <div class="right">

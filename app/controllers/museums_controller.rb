@@ -36,6 +36,7 @@ class MuseumsController < ApplicationController
 
   def show
     @museum = Museum.find(params[:id])
+    @bookmark = Bookmark.where(user: current_user, museum: @museum)
     @rating = Rating.new
     @chatroom = @museum.chatroom
     @message = Message.new

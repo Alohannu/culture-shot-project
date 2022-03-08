@@ -5,7 +5,15 @@
 
   <div class="single-margin">
     <div class="left">
-       <%= link_to "Save for Later", museum_bookmarks_path(@museum),class: "white-btn d-inline-block", method: :post%>
+      <% if @bookmark.exists? %>
+        <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
+          <i id="bookmark-icon" class="fas fa-bookmark"></i>
+        <% end %>
+      <% else %>
+        <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
+          <i id="bookmark-icon" class="far fa-bookmark"></i>
+        <% end %>
+      <% end %>
       <h1><%= @museum.name%></h1>
 
       <h2>Details about the museum</h2>

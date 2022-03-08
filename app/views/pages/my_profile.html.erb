@@ -1,26 +1,45 @@
+<div class="parallax-container">
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4_frzyez.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b2_haq1e5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
+</div>
 
 
 <div class="black-container">
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
   </div>
-
+<div class="container">
+  <div class="row">
   <div class="both-margin-banner sidebyside">
       <div class="centered">
+      <div class="col-12">
         <div class="navbar-margin">
-          <h1>My Profile</h1>
+          <h1><%= current_user.first_name %>'s Profile</h1>
+
           <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
-            <p>Name: <%= current_user.first_name %> <%= current_user.last_name %></p>
-            <p>Email: <%= current_user.email %> </p>
-            <p>Date of Birth: <%= current_user.date_of_birth %> </p>
+          <br>
+            <strong>Name:</strong><p> <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <strong>Email:</strong> <p><%= current_user.email %> </p>
+            <strong>Date of Birth:</strong> <p><%= current_user.date_of_birth %> </p>
         </div>
     </div>
-
-
 </div>
-  <div class = "d-flex justify-content-between">
-    <div style="margin-bottom:100px"><%= link_to "To the Homepage", root_path, class: "white-btn" %></div>
-    <div style="margin-bottom:100px"><%= link_to "To My Dashboard", dashboard_path, class: "white-btn" %></div>
-    <div style="margin-bottom:100px"><%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %>
+  <div class="row">
+    <div class="col-12">
+      <div style="margin-bottom:100px"><%= link_to "To the Homepage", root_path, class: "white-btn" %></div></div>
+
+      <div class="col-12">
+      <div style="margin-bottom:100px"><%= link_to "To My Dashboard", dashboard_path, class: "white-btn" %></div></div>
+
+      <div class="col-12">
+      <div style="margin-bottom:100px"><%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %></div></div>
   </div>
+</div>
+</div>
 </div>

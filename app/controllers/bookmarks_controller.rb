@@ -1,9 +1,16 @@
 class BookmarksController < ApplicationController
   def destroy
+    # raise
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
 
-    redirect_to dashboard_path
+    if params[:from_dashboard] == 'false'
+      redirect_to @bookmark.museum
+    else
+      redirect_to dashboard_path
+    end
+
+    # redirect_to @bookmark.museum
   end
 
   def create

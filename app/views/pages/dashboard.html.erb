@@ -1,3 +1,14 @@
+<div class="parallax-container">
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4_frzyez.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b2_haq1e5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
+</div>
+
 <div class="black-container">
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
@@ -6,17 +17,30 @@
   <div class="both-margin-banner sidebyside">
     <div class="centered">
       <div>
+       <div class="row">
+        <div class="col-12">
+          <div style="margin-bottom:100px"><%= link_to "To the Homepage", root_path, class: "white-btn" %></div></div>
+
+          <div class="col-12">
+          <div style="margin-bottom:100px"><%= link_to "To My Dashboard", dashboard_path, class: "white-btn" %></div></div>
+
+          <div class="col-12">
+          <div style="margin-bottom:100px"><%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %></div></div>
         <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
+            <strong>Name:</strong><p> <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <strong>Email:</strong> <p><%= current_user.email %> </p>
+            <strong>Date of Birth:</strong> <p><%= current_user.date_of_birth %> </p>
       </div>
       <div>
-        <h1>Hello, <%= current_user.first_name %></h1>
-        <p>In this page you can find all informations about the museums and also the reviews that you wrote.</p>
+        <h1>Hello, <%= current_user.first_name %>!</h1>
+        <p>On this page you find all museums of your wishlist and also all the reviews that you wrote. You can also check and change your profile details.</p>
       </div>
     </div>
   </div>
 </div>
+</div>
 
-<div class="both-margin">
+<div class="dashboard-infos">
   <h2>All museums that you have saved:</h2>
 
     <% if @bookmarks.size.zero? %>
@@ -32,7 +56,7 @@
       </ul>
     <% end %>
 
-    <p><%= link_to "See all Museums", museums_path, class: "white-btn"%></p>
+    <p><%= link_to "See all Museums", museums_path, class: "white-btn", style:"margin-bottom: 150px;"%></p>
 
   <h2>My Reviews</h2>
     <% if @ratings.size.zero? %>

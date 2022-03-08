@@ -7,16 +7,14 @@
       <div>
         <h1>Are you looking for something special?</h1>
         <p>Use our search bar to look for a specific museum in Berlin, an easy way to explore the city and know more about the culture.</p>
-
         <%= form_tag museums_path, method: :get do %>
           <div class="form-inline">
           <%= form_tag museums_path, method: :get do %>
-            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true
-            %>
-            <%= submit_tag "Search", class: "white-btn" %>
+            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true %>
+            <%= submit_tag "Search", class: "white-btn m-4" %>
           <% end %>
 
-          <%= link_to "Open?", museums_path(filter: "open"), class: "btn-border-gray" %>
+          <%= link_to "Open?", museums_path(filter: "open"), class: "btn-dark" %>
 
           </div>
         <% end %>

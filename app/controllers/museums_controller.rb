@@ -29,13 +29,15 @@ class MuseumsController < ApplicationController
       {
         lat: museum.latitude,
         lng: museum.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { museum: museum })
+        info_window: render_to_string(partial: "info_window", locals: { museum: museum }),
+        image_url: helpers.asset_url("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646733261/Scenic%20Photos%20for%20Homepage%20etc/marker_rwwgsq.png")
       }
     end
   end
 
   def show
     @museum = Museum.find(params[:id])
+    @bookmark = Bookmark.where(user: current_user, museum: @museum)
     @rating = Rating.new
     @chatroom = @museum.chatroom
     @message = Message.new

@@ -16,7 +16,7 @@ class Museum < ApplicationRecord
   end
 
   def open(museum)
-    if museum.hours[:"#{Time.now.day}"][:start].to_i < Time.now.hour && Time.now.hour < museum.hours[:"#{Time.now.day}"][:end].to_i
+    if museum.hours[:"#{Date.today.wday}"][:start].to_i < Time.now.hour && Time.now.hour < museum.hours[:"#{Date.today.wday}"][:end].to_i
       return true
     end
   end

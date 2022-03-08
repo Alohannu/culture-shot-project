@@ -1,8 +1,8 @@
 .white-btn {
   background-color: #fff;
   color: $dark-gray;
-  border-radius: 25px;
-  padding: 15px 32px;
+  border-radius: 20px;
+  padding: 5px 24px;
   border: none
 }
 
@@ -14,6 +14,19 @@
 }
 
 .btn-dark {
-  padding: 15px;
-  border-radius: 25%;
+  background-color: #fff;
+  color: #212121;
+  border-radius: 20px;
+  padding: 5px 24px;
+  border: none;
+  color: white;
+}
+
+#Topics {
+  padding: 5px 24px;
+  border-radius: 20px;
+  &:click, &:active, &:focus, &:blur {
+    text-decoration: none !important;
+    outline: none;
+  }
 }

@@ -16,4 +16,105 @@
 
 .navbar-brand {
   font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+
+}
+
+.navbar-brand::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffd700;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+#query.form-control {
+  padding: 5px 24px;
+  border-radius: 20px;
+  margin-left: 15px;
+  background-color: transparent;
+  border: solid 2px #ffd700;
+}
+#query.form-control::placeholder {
+ color: white;
+ font-weight: 100;
+ text-shadow: 1px 1px black;
+}
+
+#query.form-control:focus, input:focus {
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-weight: 100;
+
+}
+
+.navbar-btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: #101010;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+  margin: 0px 20px
+}
+
+.navbar-btn:before {
+  content: '';
+  background: linear-gradient(45deg, #ffc800, #ff7300, #fffb00, #ffc800);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.navbar-btn:active {
+  color: #000
+}
+
+.navbar-btn:active:after {
+  background: transparent;
+}
+
+.navbar-btn:hover:before {
+  opacity: 1;
+}
+
+.navbar-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }

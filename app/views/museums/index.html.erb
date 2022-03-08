@@ -10,16 +10,15 @@
         <%= form_tag museums_path, method: :get do %>
           <div class="form-inline">
           <%= form_tag museums_path, method: :get do %>
-            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true %>
+            <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true, prompt: "Select a Genre" %>
             <%= submit_tag "Search", class: "white-btn m-4" %>
           <% end %>
-
-          <%= link_to "Open?", museums_path(filter: "open"), class: "btn-dark" %>
+          <%= link_to "Open", museums_path(filter: "open"), class: "white-btn" %>
 
           </div>
         <% end %>
       </div>
-      <div class="map" style="width: 100%; height: 600px;"
+      <div class="map" style="width: 100%; height: 600px; border: 1px solid #FFD700"
            data-controller="mapbox"
            data-mapbox-markers-value="<%= @markers.to_json %>"
            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

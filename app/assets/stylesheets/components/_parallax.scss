@@ -63,27 +63,27 @@ from{
 .parallax-container {
   :nth-child(1) {
     @include parallax(-.4);
+    width: 250px;
     top: 1000px;
     left: 700px;
-    width: 250px;
   }
   :nth-child(2) {
     @include parallax(-.2);
-    top: 200px;
+    width: 350px;
+    top: 600px;
     left: 350px;
-    width: 650px;
   }
   :nth-child(3) {
     @include parallax(-.3);
-    top: 40px;
-    left: 0px;
     width: 250px;
+    top: 640px;
+    left: 0px;
   }
   :nth-child(4) {
     @include parallax(-.1);
+    width: 250px;
     top: 500px;
     left: 650px;
-    width: 250px;
   }
   :nth-child(5) {
     @include parallax(-2);
@@ -93,7 +93,7 @@ from{
   }
   :nth-child(6) {
     @include parallax(-.4);
-    width: 450px;
+    width: 250px;
     top: 600px;
     left: -50px;
   }
@@ -106,7 +106,7 @@ from{
   :nth-child(8) {
     @include parallax(-.4);
     width: 250px;
-    top: 20px;
+    top: 420px;
     left: 600px;
   }
   :nth-child(9) {
@@ -124,6 +124,7 @@ from{
   padding: 10%;
   max-width: 40em;
   margin: auto;
+  margin-top: -295px;
   > * {
     position: absolute;
   }

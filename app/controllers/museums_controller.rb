@@ -41,11 +41,12 @@ class MuseumsController < ApplicationController
     @rating = Rating.new
     @chatroom = @museum.chatroom
     @message = Message.new
+    # raise
     @markers = [{
         lat: @museum.latitude,
         lng: @museum.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { museum: @museum })
+        info_window: render_to_string(partial: "info_window", locals: { museum: @museum }),
+        image_url: helpers.asset_url("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646733261/Scenic%20Photos%20for%20Homepage%20etc/marker_rwwgsq.png")
       }]
-      # raise
   end
 end

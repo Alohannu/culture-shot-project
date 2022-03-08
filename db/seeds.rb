@@ -53,14 +53,11 @@ altes_museum = Museum.new(
   price_reduced: 5,
   price_info: '10 Euro, red. 5 Euro',
   opening_hours: "Tue-Sun 10-18, Thu 10-20, Mon closed",
-  description: "The Altes Museum (Old Museum) is Berlin’s oldest museum. It is
-  part of the UNESCO-listed heritage site known as Museum Island opposite the Lustgarten
-  in Berlin's eastern city centre.
-  Built between 1823 and 1830, according to Karl Friedrich Schinkel's designs, The Altes Museum
-  is one of the most important buildings of Classicism in Germany. With a clearly structured external
-  form and a precise internal structure based on Greek antiquity. Originally created for all Berlin art collections, the Altes
-  Museum has housed the Collection of Classical Antiquities since 1904. Between 1943 and 1945 the building burned
-  down and was badly damaged, and was only reconstructed by 1966.",
+  description: "The Altes Museum is Berlin’s oldest museum. It is
+  part of the UNESCO-listed heritage site known as Museum Island.
+  Built between 1823 and 1830, The Altes Museum is one of the most important buildings of Classicism in
+  Germany. Originally created for all Berlin art collections, the Altes
+  Museum has housed the Collection of Classical Antiquities since 1904.",
   photo_url: "https://res.cloudinary.com/dpi7g4swb/image/upload/v1646221134/Profile%20Pictures%20of%20Museums/Altes_Museum1_rfqpll.jpg",
   hours: {
     "0": {start: "00:00", end: "00:00"},

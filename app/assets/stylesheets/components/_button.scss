@@ -25,8 +25,24 @@
 #Topics {
   padding: 5px 24px;
   border-radius: 20px;
-  &:click, &:active, &:focus, &:blur {
-    text-decoration: none !important;
-    outline: none;
+  margin-left: 15px;
+  background-color: transparent;
+  border: solid 1px #ffd700;
   }
-}
+#Topics::placeholder {
+  color: white;
+  font-weight: 100;
+  text-shadow: 1px 1px black;
+  }
+
+#Topics:focus, input:focus {
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-weight: 100;
+  }
+
+  select {
+    color: white;
+    font-weight: 100;
+    text-shadow: 1px 1px black;
+  }

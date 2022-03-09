@@ -18,10 +18,11 @@
 
 #query.form-control {
   padding: 5px 24px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-left: 15px;
   background-color: transparent;
   border: solid 1px #ffd700;
+  float: left;
 }
 #query.form-control::placeholder {
  color: white;
@@ -34,6 +35,20 @@
   text-shadow: 1px 1px gray;
   font-weight: 100;
 
+}
+
+.form-control {
+  color: white;
+  font-weight: 100;
+  text-shadow: 1px 1px black;
+}
+
+.fa-search{
+  position: relative;
+  float: right;
+  top: 25px;
+  right: 2px;
+  color: rgb(229, 229, 229);
 }
 
 .navbar-btn {

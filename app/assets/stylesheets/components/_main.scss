@@ -14,7 +14,7 @@ a, a:hover, a:focus, a:active {
   color: inherit;
 }
 
-h1, p, h2, cite {
+h1, p, h2, h3, a, cite {
   font-family: "Optima";
 }
 p {
@@ -24,20 +24,15 @@ h2 {
   font-size: 2.5rem;
 }
 
-.navbar-brand {
+.navbar-brand, .footer-brand {
   font-weight: 600;
   font-family: 'Playfair Display', serif;
   position: relative;
   font-size: 24px;
-
 }
 
 .footer-brand {
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-  position: relative;
   font-size: 16px;
-
 }
 
 .footer-brand::before, .navbar-brand::before {
@@ -56,4 +51,60 @@ h2 {
 .footer-brand:hover::before, .navbar-brand:hover::before {
   transform: scaleX(0);
   transform-origin: bottom right;
+}
+
+.article-link {
+  font-weight: 600;
+  font-family: 'Optima', serif;
+  position: relative;
+  font-size: 14px;
+}
+
+
+.article-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffd700;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-link:hover::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+
+
+.devise {
+  background: #101010, 0.35;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+  // margin: 20px;
+  margin-top: 16vh;
+  // width: 300px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  padding: 50px;
+  }
+
+#exhibitions {
+  margin-top: 300px;
+}
+
+.devise:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s ease;
+}
+
+label {
+  font-family: "Optima";
 }

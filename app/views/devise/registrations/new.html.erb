@@ -1,39 +1,64 @@
-<div class="section mt-3">
-  <h2>Sign up</h2>
+<div class="navbar-margin">
+  <%= render 'shared/navbar' %>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+<div class="parallax-container">
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4_frzyez.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b2_haq1e5.png" alt=" " />
+  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
+    <img src="  https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/ecce_mono_fdhqgc.png
+" alt=" " />
+</div>
 
-    <div class="form-inputs">
-      <%= f.input :first_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "first_name" }%>
-      <%= f.input :last_name,
-                  required: true,
-                  input_html: { autocomplete: "last_name" }%>
-      <%= f.input :date_of_birth,
-                  as: :date, start_year: Date.today.year - 100,
-                                            end_year: Date.today.year,
-                    input_html: { autocomplete: "date_of_birth" }%>
-      <%= f.input :email,
-                  required: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :photo, as: :file %>
 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="section col-6">
+    <div class="devise">
+      <h2>Sign up</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :first_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "first_name" }%>
+          <%= f.input :last_name,
+                      required: true,
+                      input_html: { autocomplete: "last_name" }%>
+          <%= f.input :date_of_birth,
+                      as: :date, start_year: Date.today.year - 100,
+                                                end_year: Date.today.year,
+                        input_html: { autocomplete: "date_of_birth" }%>
+          <%= f.input :email,
+                      required: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :photo, as: :file %>
+
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: "white-btn" %>
+        </div>
+      <% end %>
+      <br>
+        <%= render "devise/shared/links" %>
+        <%= link_to "Back to Homepage", root_path %>
+        </div>
+      </div>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: "white-btn" %>
-    </div>
-  <% end %>
   </div>
-
-<%= render "devise/shared/links" %>
+</div>

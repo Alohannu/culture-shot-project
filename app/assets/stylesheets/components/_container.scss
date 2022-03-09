@@ -38,6 +38,11 @@
   border-radius: 25px 0 0 25px;
 }
 
+.map-museum {
+  border-radius: 60px 60px 60px 0;
+  border: 1px solid #FFD700;
+}
+
 .image-museum {
   border-radius: 25px 0 0 25px;
   height: 600px;
@@ -57,7 +62,6 @@
   display: flex;
   justify-content: center;
 }
-
 
 .container-ex {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;

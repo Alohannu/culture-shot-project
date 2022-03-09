@@ -11,18 +11,24 @@
     <div class="item">
       <h4>Explore</h4>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Chat</li>
+        <li>
+          <%= link_to "Home", "/" %>
+        </li>
+        <li>
+          <%= link_to "About", "/" %>
+        </li>
       </ul>
     </div>
 
     <div class="item">
       <h4>My account</h4>
       <ul>
-        <li>Log in</li>
-        <li>My profile</li>
-        <li>Dashboard</li>
+        <li>
+          <%= link_to "Login", new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to "Dashboard", dashboard_path %>
+        </li>
       </ul>
     </div>
   </div>

@@ -19,7 +19,6 @@
 
 .card-trip-home {
   background: #101010, 0.35;
-  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );
   border-radius: 10px;
@@ -28,7 +27,7 @@
   margin-top: 100px;
   width: 300px;
   overflow: hidden;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
   }
 
 #exhibitions {
@@ -37,11 +36,12 @@
 
 .card-trip-home:hover {
   transform: translateY(-20px);
-  transition: transform 0.5s ease;
-}
+  transition: transform 0.5s, box-shadow 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  }
 
 .white-container {
-  background: white, 0.35;
+  background: rgba(255, 255,255, 0.6);
   box-shadow: 0 8px 32px 0 rgba(57, 57, 57, 0.37);
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );

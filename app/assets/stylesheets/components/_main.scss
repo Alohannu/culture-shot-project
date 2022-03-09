@@ -15,7 +15,7 @@ a, a:hover, a:focus, a:active {
 }
 
 h1, p, h2, cite {
-  font-family: "century gothic";
+  font-family: "Optima";
 }
 p {
   font-weight: 100;
@@ -24,14 +24,23 @@ h2 {
   font-size: 2.5rem;
 }
 
-.brand {
+.navbar-brand {
   font-weight: 600;
   font-family: 'Playfair Display', serif;
   position: relative;
+  font-size: 24px;
 
 }
 
-.brand::before {
+.footer-brand {
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  font-size: 16px;
+
+}
+
+.footer-brand::before, .navbar-brand::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -44,7 +53,7 @@ h2 {
   transition: transform 0.3s ease-in-out;
 }
 
-.brand:hover::before {
+.footer-brand:hover::before, .navbar-brand:hover::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }

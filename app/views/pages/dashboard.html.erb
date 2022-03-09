@@ -23,25 +23,42 @@
 </div>
 </div>
 
-<div class="dashboard-infos">
+<div class="both-margin">
   <h2>All museums that you have saved:</h2>
 
     <% if @bookmarks.size.zero? %>
       <p>You do not save any museum yet.</p>
     <% else %>
-      <ul>
-        <% @bookmarks.each do |bookmark| %>
-          <li>
-            <%= link_to bookmark.museum.name, museum_path(bookmark.museum) %>
-            <%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
-          </li>
-        <% end %>
-      </ul>
+      <div class="mt-4 row">
+      <% @bookmarks.each do |bookmark| %>
+
+        <div class="col-12 col-md-4 mb-3 card-hover-effect">
+          <div class="cards-container">
+            <div class="card-museum">
+              <%= image_tag bookmark.museum.photo_url, class: "object-fit" %>
+              <div class="contentBx">
+                <h3><%= link_to bookmark.museum.name, museum_path(bookmark.museum) %> - <%= link_to "Delete", bookmark_path(bookmark), method: :delete %></h3>
+                <div class="location d-flex align-items-start">
+                  <i class="far fa-map"></i><p><%= bookmark.museum.address %></p>
+                </div>
+                <div class="price">
+                  <% if bookmark.museum.price == 0 %>
+                    <p class="inline-text">Free entrance</p>
+                  <% else %>
+                    <h5><%= link_to bookmark.museum.price.to_i, museum_path(bookmark.museum) %> € </h5>
+                  <% end %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+      </div>
     <% end %>
 
-    <p><%= link_to "See all Museums", museums_path, class: "white-btn", style:"margin-bottom: 150px;"%></p>
-
-  <h2>My Reviews</h2>
+  <h2>All reviews that you wrote:</h2>
     <% if @ratings.size.zero? %>
       <p>You have not reviewed any museum yet.</p>
     <% else %>
@@ -59,5 +76,4 @@
       </ul>
     <% end %>
 
-  <%= link_to "<< Go to the Homepage", root_path %>
 </div>

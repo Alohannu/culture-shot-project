@@ -21,7 +21,7 @@
   border-radius: 5px;
   margin-left: 12px;
   background-color: rgba(21, 21, 21, 0.3);
-  border: solid 1px #ffd700;
+  border: 1px solid #ffd700;
   float: left;
   min-width: 210px;
 }
@@ -51,6 +51,7 @@
   top: 25px;
   right: 2px;
   color: rgb(229, 229, 229);
+  z-index: 1;
 }
 
 .fa-caret-down {

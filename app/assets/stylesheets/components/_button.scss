@@ -28,8 +28,9 @@
   padding: 5px 8px;
   border-radius: 5px;
   background-color: transparent;
-  background: linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) 50% 50% / calc(100% - 3px) calc(100% - 2px) no-repeat, linear-gradient(59deg, rgb(195, 128, 39) 6%, rgb(251, 240, 124) 33%, rgb(228, 172, 59) 72%, rgb(111, 71, 12) 97%);
+  border: 1px solid #ffd700;
   }
+
 #Topics::placeholder {
   color: white;
   font-weight: 100;

@@ -40,7 +40,8 @@
 
 .map-museum {
   border-radius: 60px 60px 60px 0;
-  border: 1px solid #FFD700;
+  background: linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) 50% 50% / calc(100% - 1px) calc(100% - 1px) no-repeat, linear-gradient(59deg, rgb(195, 128, 39) 6%, rgb(251, 240, 124) 33%, rgb(228, 172, 59) 72%, rgb(111, 71, 12) 97%);
+
 }
 
 .image-museum {

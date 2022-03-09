@@ -10,7 +10,8 @@
 
     <div class="item">
       <h4>Explore</h4>
-      <ul>
+
+      <ul class="footer-ul">
         <li>
           <%= link_to "Home", "/" %>
         </li>
@@ -22,7 +23,7 @@
 
     <div class="item">
       <h4>My account</h4>
-      <ul>
+      <ul class="footer-ul">
         <li>
           <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>

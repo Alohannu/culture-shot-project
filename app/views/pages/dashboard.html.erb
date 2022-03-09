@@ -9,30 +9,23 @@
   <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
 </div>
 
-<div class="black-container">
+<div class="black-container grow-pad">
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
   </div>
   <div class="both-margin-banner sidebyside">
     <div class="centered">
-      <div>
-       <div class="row">
-        <div class="col-12">
-          <div style="margin-bottom:100px"><%= link_to "To the Homepage", root_path, class: "white-btn" %></div></div>
-
-          <div class="col-12">
-          <div style="margin-bottom:100px"><%= link_to "To My Dashboard", dashboard_path, class: "white-btn" %></div></div>
-
-          <div class="col-12">
-          <div style="margin-bottom:100px"><%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %></div></div>
-        <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
-            <strong>Name:</strong><p> <%= current_user.first_name %> <%= current_user.last_name %></p>
-            <strong>Email:</strong> <p><%= current_user.email %> </p>
-            <strong>Date of Birth:</strong> <p><%= current_user.date_of_birth %> </p>
+      <div class="center-text left">
+        <% if current_user.photo.key %>
+          <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
+        <% end %>
+            <p class="profile-info neg-pad"><strong>Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <p class="profile-info"><strong>Email:</strong> <%= current_user.email %> </p>
+            <%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %>
       </div>
-      <div>
+      <div class="right">
         <h1>Hello, <%= current_user.first_name %>!</h1>
-        <p>On this page you find all museums of your wishlist and also all the reviews that you wrote. You can also check and change your profile details.</p>
+        <p class="profile-description">On this page you find all museums of your wishlist and also all the reviews that you wrote. You can also check and change your profile details.</p>
       </div>
     </div>
   </div>

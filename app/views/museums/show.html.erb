@@ -30,7 +30,7 @@
       <div class="d-flex align-items-center">
         <div><i id="icon" class="fas fa-coins"></i></div>
         <% if @museum.price == 0 %>
-          <div><p class="inline-text">for free</p></div>
+          <div><p class="inline-text">Free entry</p></div>
         <% else %>
           <div><p class="inline-text">€ <%= @museum.price.to_i %> per adult (<%= @museum.price.to_i %> reduced price)</p></div>
         <% end %>
@@ -43,6 +43,8 @@
 
       <div class="mt-4">
       <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn" %>
+      <%= link_to "Back to all museums", museums_path, class: "white-btn" %>
+
       </div>
     </div>
 
@@ -165,7 +167,7 @@
       <h2>Getting here</h2>
       <p>In this map you can see your current location. We'd also like to encourage visitors,
       where possible, to walk, cycle or drive in to visit. </p>
-      <p><strong>Address:</strong> <%=  @museum.address %></p>
+      <p><strong><i class="far fa-map"></i> </strong>  <%=  @museum.address %></p>
     </div>
 </div>
 

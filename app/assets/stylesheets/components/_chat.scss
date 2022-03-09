@@ -20,8 +20,7 @@
 
 // the wrapper for the chatroom(aka top part of the chat-popup)
 .chatroom {
-  background: white;
-  color: #000000;
+  color: white;
   margin-top: 9px;
   height: 50vh;
   display: flex;
@@ -56,6 +55,35 @@
     }
   }
 }
+
+.chatroom {
+  background: rgba(21, 21, 21, 0.7);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+  margin: 20px;
+  margin-top: 100px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+.form-control:focus {
+  background-color: rgba(21, 21, 21, 0.7);
+
+}
+
+#exhibitions {
+  margin-top: 300px;
+}
+
+.chatroom:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s, box-shadow 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  }
+
 
 // pop-up chat button
 

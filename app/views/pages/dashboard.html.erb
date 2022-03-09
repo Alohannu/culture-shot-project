@@ -16,7 +16,7 @@
       </div>
       <div class="right">
         <h1>Hello, <%= current_user.first_name %>!</h1>
-        <p class="profile-description">On this page you find all museums of your wishlist and also all the reviews that you wrote. You can also check and change your profile details.</p>
+        <p class="profile-description">On this page you find all museums of your wishlist and also all the reviews that you have written. You can also check and change your profile details.</p>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
 </div>
 
 <div class="dashboard-infos">
-  <h2>All museums that you have saved:</h2>
+  <h2>All museums that you have saved</h2>
 
     <% if @bookmarks.size.zero? %>
       <p>You do not save any museum yet.</p>

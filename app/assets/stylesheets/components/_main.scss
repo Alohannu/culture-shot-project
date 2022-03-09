@@ -14,7 +14,7 @@ a, a:hover, a:focus, a:active {
   color: inherit;
 }
 
-h1, p, h2, h3, a, cite {
+h1, p, h2, h3, a, cite, span {
   font-family: "Optima";
 }
 p {
@@ -107,4 +107,8 @@ h2 {
 
 label {
   font-family: "Optima";
+}
+
+#user_date_of_birth_1i, #user_date_of_birth_2i, #user_date_of_birth_3i, #message_content {
+  text-shadow: 0px 0px white;
 }

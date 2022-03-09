@@ -13,9 +13,10 @@
           <%= form_tag museums_path, method: :get do %>
             <%= select_tag "Topics", options_for_select(Topic.pluck(:name)), multiple: false, include_blank: true, prompt: "Select a Genre" %>
           <i class="fas fa-caret-down"></i>
-            <%= submit_tag "Search", class: "white-btn m-4" %>
+            <%= submit_tag "Search", class: "white-btn m-4", style: "font-family:'optima'" %>
           <% end %>
           <%= link_to "Open", museums_path(filter: "open"), class: "white-btn" %>
+          <%= link_to "Random", museum_path(rand(1..Museum.count)), class: "white-btn m-4" %>
 
           </div>
         <% end %>
@@ -29,7 +30,7 @@
 </div>
 
 <div class="both-margin">
-  <h1>List of All Museums </h1>
+  <h2 class="navbar-brand" style="font-size: 30px">List of All Museums</h2>
   <div class="mt-4 row">
 
       <% @museums.each do |museum| %>

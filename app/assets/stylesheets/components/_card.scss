@@ -7,7 +7,7 @@
   transition: transform 0.5s ease;
 }
 
-.container {
+.cards-container {
   position: relative;
 	z-index: 1;
 	display: flex;
@@ -17,7 +17,7 @@
 	margin: 40px 0;
 }
 
-.container .card-museum {
+.cards-container .card-museum {
 	position: relative;
 	width: 400px;
 	height: 400px;
@@ -29,7 +29,7 @@
   overflow: hidden;
 }
 
-.container .card-museum .contentBx {
+.cards-container .card-museum .contentBx {
 	position: absolute;
   text-align: center;
   width: 100%;
@@ -39,7 +39,7 @@
   z-index: 10;
 }
 
-.container .card-museum .imgBx {
+.cards-container .card-museum .imgBx {
   overflow: hidden;
 }
 
@@ -48,11 +48,11 @@
   height: 75%;
 }
 
-.container .card-museum:hover .contentBx{
+.cards-container .card-museum:hover .contentBx{
   height: 160px;
 }
 
-.container .card-museum .contentBx h3 {
+.cards-container .card-museum .contentBx h3 {
 	color: #fff;
 	letter-spacing: 1px;
 	font-weight: 400;
@@ -61,8 +61,8 @@
   font-size: 21px;
 }
 
-.container .card-museum .contentBx .location,
-.container .card-museum .contentBx .price {
+.cards-container .card-museum .contentBx .location,
+.cards-container .card-museum .contentBx .price {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,20 +73,20 @@
   padding-bottom: 0;
 }
 
-.container .card-museum:hover .contentBx .location {
+.cards-container .card-museum:hover .contentBx .location {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
 }
 
-.container .card-museum:hover .contentBx .price {
+.cards-container .card-museum:hover .contentBx .price {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-.container .card-museum .contentBx .location p,
-.container .card-museum .contentBx .price h5 {
+.cards-container .card-museum .contentBx .location p,
+.cards-container .card-museum .contentBx .price h5 {
   color: #fff;
   font-weight: 300;
   font-size: 14px;

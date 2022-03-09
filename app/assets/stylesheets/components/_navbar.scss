@@ -28,20 +28,21 @@
 #query.form-control::placeholder {
  color: white;
  font-weight: 100;
- text-shadow: 1px 1px black;
 }
 
 #query.form-control:focus, input:focus {
   color: white;
-  text-shadow: 1px 1px gray;
   font-weight: 100;
 
 }
 
+.text-shadow {
+  text-shadow: 1px 1px black;
+
+}
 .form-control {
   color: white;
   font-weight: 100;
-  text-shadow: 1px 1px black;
 }
 
 .fa-search, .fa-caret-down {

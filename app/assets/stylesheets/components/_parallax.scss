@@ -107,8 +107,8 @@ from{
   :nth-child(8) {
     @include parallax(-.4);
     width: 250px;
-    top: 420px;
-    left: 1100px;
+    top: 1051px;
+    right: 700px;
   }
   :nth-child(9) {
     @include parallax(-.4);

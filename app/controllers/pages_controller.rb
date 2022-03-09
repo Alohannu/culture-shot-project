@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    @quotes = Quote.all
+    @quote = Quote.find(rand(1..Quote.count))
   end
 
   def dashboard

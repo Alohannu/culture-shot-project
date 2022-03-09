@@ -4,6 +4,8 @@ puts "Destroy all museums..."
 Museum.destroy_all
 puts "Destroy all chatrooms..."
 Chatroom.destroy_all
+puts "Destroy all quotes..."
+Quote.destroy_all
 puts "Creating user..."
 
 user_sara = User.new(first_name: "Sara", last_name: "Sara", email: "sara@sara.com", password: "123456", date_of_birth: "1993,7,9")
@@ -720,5 +722,21 @@ MuseumsTopic.create(topic_id: 18, museum_id: 21)
 
 MuseumsTopic.create(topic_id: 19, museum_id: 20)
 MuseumsTopic.create(topic_id: 19, museum_id: 21)
+
+puts "Create quotes..."
+
+Quote.create(author: "Frida Kahlo", text: "I paint flowers so they will not die.")
+Quote.create(author: "Maira Kalman", text: "A visit to a museum is a search for beauty, truth, and meaning in our lives. Go to museums as often as you can.")
+Quote.create(author: "Pablo Picasso", text: "Every child is an artist. The problem is how to remain an artist once you we grow up.")
+Quote.create(author: "Michelangelo", text: "I saw the angel in the marble and carved until I set him free.")
+Quote.create(author: "Paul Cézanne", text: "I want to make of Impressionism an art as solid as that of the museums.")
+Quote.create(author: "George Orwell", text: "The most effective way to destroy people is to deny and obliterate their own understanding of their history.")
+Quote.create(author: "Andy Warhol", text: "You can’t do a painting without a drip.")
+Quote.create(author: "Shakira", text: "I’m a closet nerd. I love to study history and visit museums.")
+Quote.create(author: "Pablo Picasso", text: "Give me a museum, and I’ll fill it.")
+Quote.create(author: "Vincent Van Gogh", text: "I am always doing what I cannot do yet, in order to learn how to do it.")
+Quote.create(author: "Pablo Picasso", text: "Everything you can imagine is real.")
+Quote.create(author: "Leon Trotsky", text: "Art is not a mirror to hold up to society, but a hammer with which to shape it.")
+
 
 puts "Done!"

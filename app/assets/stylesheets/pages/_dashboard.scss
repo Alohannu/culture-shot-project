@@ -14,12 +14,43 @@
 }
 
 .centered {
-  width: 60%;
+  width: 70%;
   display: flex;
   gap: 5rem;
+  align-items: center;
 
-  p {
+  .profile-description {
     font-size: 1.5rem;
     font-weight: 300;
   }
+
+  .profile-info {
+    font-size: 1rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  strong {
+    font-weight: 700;
+  }
+
+  .left {
+    flex: 1 0 30%
+  }
+
+  .right {
+    flex: 1 0 60%
+  }
+}
+
+
+.neg-pad {
+  margin-bottom: -0.2rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.grow-pad {
+  padding-bottom: 2rem;
 }

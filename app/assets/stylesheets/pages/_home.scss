@@ -16,31 +16,35 @@
 
 .card-trip-home {
   background: #101010, 0.35;
-box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
-backdrop-filter: blur( 3px );
--webkit-backdrop-filter: blur( 3px );
-border-radius: 10px;
-border: 1px solid #ffd700 !important;
-margin: 20px;
-margin-top: 100px;
-width: 300px;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+  margin: 20px;
+  margin-top: 100px;
+  width: 300px;
+  }
+.card-trip-home:hover {
+
 }
+
 .white-container {
   background: white, 0.35;
-box-shadow: 0 8px 32px 0 rgba(57, 57, 57, 0.37);
-backdrop-filter: blur( 3px );
--webkit-backdrop-filter: blur( 3px );
-border-radius: 10px;
-border: 1px solid #ffd700 !important;
+  box-shadow: 0 8px 32px 0 rgba(57, 57, 57, 0.37);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
 }
 
 
 .card-trip-home img {
-border-radius: 10px;
-object-fit: cover;
-overflow: hidden;
-width: 300px;
-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
 }
 
 .card-trip-infos {
@@ -48,4 +52,76 @@ height: 250px;
 }
 .row {
   align-content: space-around;
+}
+
+.animated-border-quote {
+  display:inline-block;
+  margin:2em;
+  max-width:80em;
+  min-width:60em;
+  overflow:hidden;
+  blockquote {
+    background: rgba(16, 16, 16, 0.2);
+    border: solid 1px #ffd700;
+    text-shadow: 1px 1px black;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    &:before {
+      animation:clockwise 30s infinite linear;
+      background: rgba(16, 16, 16, 0.2);
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    &:after {
+      animation:counter 30s infinite linear;
+      background: rgba(16, 16, 16, 0.2);
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes counter {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(-360deg);
+  }
 }

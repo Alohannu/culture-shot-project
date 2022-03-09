@@ -116,12 +116,13 @@ from{
     top: 1300px;
     left: 950px;
   }
-  :nth-child(10) {
-    @include parallax(-1);
-    width: 250px;
-    top: 1600px;
-    left: 100px;
-  }
+  // :nth-child(10) {
+  //   @include parallax(-1);
+  //   width: 250px;
+  //   top: 1600px;
+  //   left: 100px;
+  // }
+
   padding: 10%;
   max-width: 40em;
   margin: auto;
@@ -129,4 +130,16 @@ from{
   > * {
     position: absolute;
   }
+}
+
+.dali {
+  @include parallax(-1);
+  top: 2711px;
+  right: 755px;
+}
+.picasso {
+  @include parallax(-1);
+  width: 300px;
+  top: 3000px;
+  left: 1300px;
 }

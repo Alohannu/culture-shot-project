@@ -19,8 +19,8 @@
 #query.form-control {
   padding: 5px 24px;
   border-radius: 5px;
-  margin-left: 15px;
-  background-color: transparent;
+  margin-left: 12px;
+  background-color: rgba(21, 21, 21, 0.3);
   border: solid 1px #ffd700;
   float: left;
   min-width: 210px;
@@ -44,12 +44,20 @@
   text-shadow: 1px 1px black;
 }
 
-.fa-search{
+.fa-search, .fa-caret-down {
   position: relative;
   float: right;
   top: 25px;
   right: 2px;
   color: rgb(229, 229, 229);
+}
+
+.fa-caret-down {
+  position: absolute;
+  float: right;
+  top: 34px;
+  right: 257px;
+  color: #ffd700;
 }
 
 .navbar-btn {
@@ -114,4 +122,8 @@
 }
 #id {
   border-radius: 20px;
+}
+
+#login {
+  margin: 22px 0px 0px 10px;
 }

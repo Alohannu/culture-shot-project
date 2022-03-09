@@ -1,31 +1,32 @@
 .white-btn {
   background-color: #fff;
   color: $dark-gray;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px 24px;
-  border: none
+  border: none;
+  transition: background-color 300ms linear;
 }
 
 
 .white-btn:hover {
   background-color: $dark-gray;
   color: #fff;
-  border: none
+  border: none;
+  transition: background-color 300ms linear;
 }
 
 .btn-dark {
   background-color: #fff;
   color: #212121;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px 24px;
   border: none;
   color: white;
 }
 
 #Topics {
-  padding: 5px 24px;
-  border-radius: 20px;
-  margin-left: 15px;
+  padding: 5px 8px;
+  border-radius: 5px;
   background-color: transparent;
   border: solid 1px #ffd700;
   }
@@ -45,4 +46,5 @@
     color: white;
     font-weight: 100;
     text-shadow: 1px 1px black;
+    appearance: none;
   }

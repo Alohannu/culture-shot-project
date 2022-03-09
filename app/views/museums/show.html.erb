@@ -32,7 +32,7 @@
         <% if @museum.price == 0 %>
           <div><p class="inline-text">for free</p></div>
         <% else %>
-          <div><p class="inline-text">€ <%= @museum.price %> per adult (<%= @museum.price %> reduced price)</p></div>
+          <div><p class="inline-text">€ <%= @museum.price.to_i %> per adult (<%= @museum.price.to_i %> reduced price)</p></div>
         <% end %>
       </div>
 

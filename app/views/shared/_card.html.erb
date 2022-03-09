@@ -9,7 +9,11 @@
 
         </div>
         <div class="price">
-          <h5><%= link_to museum.price.to_i, museum %> € </h5>
+          <% if museum.price == 0 %>
+            <p class="inline-text">Free entrance</p>
+          <% else %>
+            <h5><%= link_to museum.price.to_i, museum %> € </h5>
+          <% end %>
         </div>
       </div>
     </div>

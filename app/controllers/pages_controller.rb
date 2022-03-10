@@ -20,6 +20,6 @@ class PagesController < ApplicationController
   def cn
     @quotes = Quote.all
     @quote = Quote.find(rand(1..Quote.count))
-    @disable_nav = true
+    @disable_footer = true
   end
 end

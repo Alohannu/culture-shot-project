@@ -35,6 +35,7 @@
 .reviews-btn-container {
   display: flex;
   justify-content: center;
+
 }
 
 .padding {
@@ -107,20 +108,77 @@ span:hover::before {
   }
 }
 
-.change-color {
-  color: black;
-}
+// .change-color {
+//   color: black;
+// }
 
 
 .btn-dark-white {
-  background-color: black;
+  background-color: white;
+  color: black;
   padding: 0.5rem 4rem;
   text-align: center;
   border: none;
   border-radius: 0.5rem;
+  transition: background-color 0.3s linear;
+}
+.btn.white:hover {
   color: white !important;
 }
 
-.white {
-  color: white !important;
+.btn-dark-white:hover {
+  background-color: #101010;
+  padding: 0.5rem 4rem;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s linear;
+}
+
+// .white {
+//   color: white;
+// }
+
+.modal-body {
+  background-color: rgba(16, 16, 16, 0.7);
+  border-left: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+  border-bottom: 1px solid #ffd700;
+  border-radius: 0px 0px 10px 10px;
+
+}
+
+
+.modal-header {
+  background-color: rgba(16, 16, 16, 0.7);
+  border-left: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+  border-top: 1px solid #ffd700;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid #ffd700;
+
+}
+.modal-content {
+background-color: rgba(16, 16, 16, 0.7);
+}
+
+
+#exampleModalLabel {
+  font-family: "Optima";
+  color: white;
+}
+#rating_comment {
+
+}
+
+#rating_title {
+
+}
+
+#rating_stars {
+
+}
+
+.form-label.string.required, .form-label.text.required, .form-label.select.required {
+  color: white;
 }

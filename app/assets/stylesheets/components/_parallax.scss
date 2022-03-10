@@ -64,7 +64,8 @@ from{
   :nth-child(1) {
     @include parallax(-1.4);
     width: 250px;
-    right: 75vh;
+    right: -31vh;
+    top: 115vh;
   }
   :nth-child(2) { //done
     @include parallax(-.2);
@@ -88,7 +89,7 @@ from{
   :nth-child(5) {
     @include parallax(-2);
     width: 250px;
-    top: 45vh;
+    top: 103vh;
     right: 270vh;
   }
   :nth-child(6) {
@@ -99,6 +100,7 @@ from{
   }
   :nth-child(7) {
     @include parallax(-1);
+    display: none;
     width: 29vh;
     top: 34vh;
     left: 68vh;

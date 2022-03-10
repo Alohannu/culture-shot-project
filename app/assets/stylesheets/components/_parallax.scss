@@ -67,10 +67,10 @@ from{
     top: 1000px;
     right: 635px;
   }
-  :nth-child(2) {
+  :nth-child(2) { //done
     @include parallax(-.2);
     width: 350px;
-    top: 2176px;
+    top: 676px;
     left: 700px;
   }
   :nth-child(3) {
@@ -134,13 +134,13 @@ from{
 
 .dali {
   @include parallax(-1);
-  top: 2711px;
+  top: 1211px;
   right: 755px;
 }
 .picasso {
   @include parallax(-1);
   width: 300px;
-  top: 3200px;
+  top: 1700px;
   left: 1300px;
 }
 

@@ -149,3 +149,19 @@
 #idNavbarDropdown a:focus {
   color: black;
 }
+
+.navbar-nav .dropdown-menu {
+  border-radius: 10px 0px 10px 10px;
+  background-color: rgba(16, 16, 16, 0.7);
+  transition: background-color 0.3s linear;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #1e2125;
+  background-color: #e9ecef;
+  transition: background-color 0.3s linear;
+}

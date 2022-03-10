@@ -1,1 +1,144 @@
 // Specific CSS for your home-page
+.single-margin {
+  padding: 2rem 0 2rem 10%;
+  .left p {
+      margin-top: 3rem;
+      font-size: 1.1rem;
+      line-height: 2rem;
+  }
+}
+
+.centered_text h1{
+  text-shadow: 1px 1px black;
+}
+.home-image {
+  width: 900px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.card-trip-home {
+  background: #101010, 0.35;
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+  margin: 20px;
+  margin-top: 100px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+#exhibitions {
+  margin-top: 300px;
+}
+
+.card-trip-home:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s, box-shadow 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  }
+
+.white-container {
+  background: rgba(255, 255,255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(57, 57, 57, 0.37);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+}
+
+
+.card-trip-home img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 300px;
+  height: 250px;
+}
+
+.card-trip-infos {
+  padding: 10px;
+}
+.row {
+  align-content: space-around;
+}
+
+.animated-border-quote {
+  display:inline-block;
+  margin:2em;
+  max-width:80em;
+  min-width:60em;
+  overflow:hidden;
+  border-radius: 2px;
+  blockquote {
+    background: rgba(16, 16, 16, 0.5);
+    // background-color: #101010;
+    border: solid 1px #ffd700;
+    text-shadow: 1px 1px black;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    border-radius: 2px;
+    &:before {
+      animation:clockwise 30s infinite linear;
+      background: rgba(16, 16, 16, 0.5);
+      // background-color: #101010;
+
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    &:after {
+      animation:counter 30s infinite linear;
+      background: rgba(16, 16, 16, 0.5);
+      // background-color: #101010;
+
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes counter {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(-360deg);
+  }
+}

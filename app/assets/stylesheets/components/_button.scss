@@ -1,0 +1,51 @@
+.white-btn {
+  background-color: #fff;
+  color: $dark-gray;
+  border-radius: 5px;
+  padding: 5px 24px;
+  border: none;
+  transition: background-color 300ms linear;
+}
+
+
+.white-btn:hover {
+  background-color: $dark-gray;
+  color: #fff;
+  border: none;
+  transition: background-color 300ms linear;
+}
+
+.btn-dark {
+  background-color: #fff;
+  color: #212121;
+  border-radius: 5px;
+  padding: 5px 24px;
+  border: none;
+  color: white;
+}
+
+#Topics {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ffd700;
+  }
+
+#Topics::placeholder {
+  color: white;
+  font-weight: 100;
+  text-shadow: 1px 1px black;
+  }
+
+#Topics:focus, input:focus {
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-weight: 100;
+  }
+
+  select {
+    color: white;
+    font-weight: 100;
+    text-shadow: 1px 1px black;
+    appearance: none;
+  }

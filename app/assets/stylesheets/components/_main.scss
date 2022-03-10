@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, p, h2, h3, a, cite, span {
+  font-family: "Optima";
+}
+p {
+  font-weight: 100;
+}
+h2 {
+  font-size: 2.5rem;
+}
+
+.navbar-brand, .footer-brand {
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  font-size: 24px;
+}
+
+.footer-brand {
+  font-size: 16px;
+}
+
+.footer-brand::before, .navbar-brand::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffd700;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-brand:hover::before, .navbar-brand:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.article-link {
+  font-weight: 600;
+  font-family: 'Optima', serif;
+  position: relative;
+  font-size: 14px;
+}
+
+
+.article-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffd700;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-link:hover::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+
+
+.devise {
+  background: #101010, 0.35;
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid #ffd700 !important;
+  // margin: 20px;
+  margin-top: 16vh;
+  // width: 300px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  padding: 50px;
+  }
+
+#exhibitions {
+  margin-top: 300px;
+}
+
+.devise:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s ease;
+}
+
+label {
+  font-family: "Optima";
+}
+
+#user_date_of_birth_1i, #user_date_of_birth_2i, #user_date_of_birth_3i, #message_content {
+  text-shadow: 0px 0px white;
+}

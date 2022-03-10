@@ -1,0 +1,44 @@
+<div class="footer-both-margin">
+  <div class="footer-container">
+
+    <div class="item item-1">
+      <h3><%= link_to "culture shot", "/", class: "footer-brand"%></h3>
+      <p>
+        Culture Shot aims to ease the pain of having to check each museum's webpage individually. May it help you find a nice museum to lose yourself in!
+      </p>
+    </div>
+
+    <div class="item">
+      <h4>Explore</h4>
+
+      <ul class="footer-ul">
+        <li>
+          <%= link_to "Home", "/" %>
+        </li>
+        <li>
+          <%= link_to "About", "/" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h4>My account</h4>
+      <ul class="footer-ul">
+        <li>
+          <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= link_to "Login", new_user_session_path %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "Dashboard", dashboard_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="credits">
+    <p>Copyright © 2022 CULTURE SHOT - All Rights Reserved</p>
+  </div>
+</div>

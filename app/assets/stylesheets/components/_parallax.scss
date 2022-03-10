@@ -1,0 +1,145 @@
+// Magic parallax mixins
+
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@keyframes rotation{
+
+
+from{
+  transform: rotate(0deg);
+
+}
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+@mixin parallax-init(
+  $perspective  : $parallax-perspective,
+  $element      : $parallax-element,
+  $parallax-ios : $parallax-ios
+  ) {
+  @if $element == "body" {
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  }
+  #{$element} {
+    overflow-x: hidden;
+    perspective: $perspective * 1px;
+    transform-style: preserve-3d;
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : $parallax-perspective
+  ) {
+  transform:
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  ;
+  z-index: $distance * 1000;
+}
+
+// End of magic parallax mixins
+
+@include parallax-init;
+
+.parallax-container {
+  :nth-child(1) {
+    @include parallax(-1.4);
+    width: 250px;
+    top: 1000px;
+    right: 635px;
+  }
+  :nth-child(2) {
+    @include parallax(-.2);
+    width: 350px;
+    top: 2176px;
+    left: 700px;
+  }
+  :nth-child(3) {
+    @include parallax(-.3);
+    width: 250px;
+    top: 840px;
+    right: 2000px;
+
+  }
+  :nth-child(4) {
+    @include parallax(-.1);
+    width: 250px;
+    top: 500px;
+    left: 650px;
+  }
+  :nth-child(5) {
+    @include parallax(-2);
+    width: 250px;
+    top: 1400px;
+    right: 2000px;
+  }
+  :nth-child(6) {
+    @include parallax(-.6);
+    width: 250px;
+    top: 600px;
+    right: 1500px;
+  }
+  :nth-child(7) {
+    @include parallax(-1);
+    width: 250px;
+    top: 1600px;
+    left: 530px;
+  }
+  :nth-child(8) {
+    @include parallax(-.3);
+    width: 250px;
+    top: 1051px;
+    right: 700px;
+  }
+  :nth-child(9) {
+    @include parallax(-.4);
+    width: 300px;
+    top: 1300px;
+    left: 950px;
+  }
+  // :nth-child(10) {
+  //   @include parallax(-1);
+  //   width: 250px;
+  //   top: 1600px;
+  //   left: 100px;
+  // }
+
+  padding: 10%;
+  max-width: 40em;
+  margin: auto;
+  margin-top: -295px;
+  > * {
+    position: absolute;
+  }
+}
+
+.dali {
+  @include parallax(-1);
+  top: 2711px;
+  right: 755px;
+}
+.picasso {
+  @include parallax(-1);
+  width: 300px;
+  top: 3200px;
+  left: 1300px;
+}

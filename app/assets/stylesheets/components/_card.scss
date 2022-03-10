@@ -1,0 +1,102 @@
+.card-hover-effect {
+  transition: transform 0.5s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-20px);
+  transition: transform 0.5s ease;
+}
+
+.cards-container {
+  position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 40px 0;
+  border: 1px solid #FFD700;
+  border-radius: 20px;
+}
+
+.cards-container .card-museum {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 5px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.cards-container .card-museum .contentBx {
+	position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+	transition: 1s;
+  bottom: 0;
+  z-index: 10;
+  padding-top: 30px;
+}
+
+.cards-container .card-museum .imgBx {
+  overflow: hidden;
+}
+
+.object-fit {
+  object-fit: cover;
+  height: 75%;
+}
+
+.cards-container .card-museum:hover .contentBx{
+  height: 160px;
+}
+
+.cards-container .card-museum .contentBx h3 {
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 400;
+  position: relative;
+  margin-bottom: 5px;
+  font-size: 21px;
+}
+
+.cards-container .card-museum .contentBx .location,
+.cards-container .card-museum .contentBx .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.cards-container .card-museum:hover .contentBx .location {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.cards-container .card-museum:hover .contentBx .price {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.cards-container .card-museum .contentBx .location p,
+.cards-container .card-museum .contentBx .price h5 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.contentBx:hover {
+  background: rgba(18,18,18,.5);
+}

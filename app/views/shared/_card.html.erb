@@ -1,0 +1,21 @@
+<div class="col-12 col-md-4 mb-3 card-hover-effect">
+  <div class="cards-container">
+    <div class="card-museum">
+      <%= image_tag museum.photo_url, class: "object-fit" %>
+      <div class="contentBx">
+        <h3><%= link_to museum.name, museum %></h3>
+        <div class="location d-flex align-items-start">
+          <i class="far fa-map"></i><p><%= museum.address %></p>
+
+        </div>
+        <div class="price">
+          <% if museum.price == 0 %>
+            <p class="inline-text">Free entrance</p>
+          <% else %>
+            <h5><%= link_to museum.price.to_i, museum %> € </h5>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

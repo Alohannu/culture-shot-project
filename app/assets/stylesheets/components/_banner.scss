@@ -1,0 +1,22 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 40rem;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.centered_text {
+  display: inline-block;
+  width: 30rem;
+  text-align: center;
+  margin-top: 3rem;
+  h1 {
+    font-size: 3.5vw;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  p {
+    font-size: 2vw;
+    font-weight: 200;
+  }
+}

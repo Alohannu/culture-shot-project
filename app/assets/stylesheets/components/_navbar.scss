@@ -1,12 +1,143 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-margin {
+  padding: 2rem 10%;
+  position: relative;
+  z-index: 100;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#query.form-control {
+  padding: 5px 24px;
+  border-radius: 5px;
+  margin-left: 12px;
+  background-color: rgba(21, 21, 21, 0.3);
+  border: 1px solid #ffd700;
+  float: left;
+  min-width: 210px;
+}
+#query.form-control::placeholder {
+ color: white;
+ font-weight: 100;
+}
+
+#query.form-control:focus, input:focus {
+  color: white;
+  font-weight: 100;
+
+}
+
+.text-shadow {
+  text-shadow: 1px 1px black;
+
+}
+.form-control {
+  color: white;
+  font-weight: 100;
+}
+
+.fa-search, .fa-caret-down {
+  position: relative;
+  float: right;
+  top: 25px;
+  right: 2px;
+  color: rgb(229, 229, 229);
+  z-index: 1;
+}
+
+.fa-caret-down {
+  position: absolute;
+  float: right;
+  top: 34px;
+  right: 407px;
+  color: #ffd700;
+}
+
+.navbar-btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: #101010;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+  margin: 0px 20px
+}
+
+.navbar-btn:before {
+  content: '';
+  background: linear-gradient(45deg, #ffc800, #ff7300, #fffb00, #ffc800);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.navbar-btn:active {
+  color: #000
+}
+
+.navbar-btn:active:after {
+  background: transparent;
+}
+
+.navbar-btn:hover:before {
+  opacity: 1;
+}
+
+.navbar-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+#id {
+  border-radius: 20px;
+}
+
+#login {
+  margin: 22px 0px 0px 10px;
+}
+
+
+.space-top{
+  margin-top: 18px;
+}
+
+.btn-navbar {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  justify-content: space-evenly;
 }

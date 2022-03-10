@@ -1,0 +1,82 @@
+.section {
+  margin: 2rem 2%;
+}
+
+.black-container {
+  background-color: #101010;
+  border-radius: 25px;
+}
+
+.white-container {
+  background: rgba(255, 255,255, 0.6);
+  border-radius: 25px;
+  color: #000;
+  margin: 3rem 10%;
+}
+
+.both-margin {
+  padding: 5rem 10%;
+}
+
+.single-margin {
+  padding: 1rem 0 5rem 10%;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .left {
+    flex: 1 0 40%;
+  }
+  .right {
+    flex: 1 0 60%;
+  }
+}
+
+.map {
+  border-radius: 25px 0 0 25px;
+}
+
+.map-museum {
+  border-radius: 60px 60px 60px 0;
+  background: linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) 50% 50% / calc(100% - 1px) calc(100% - 1px) no-repeat, linear-gradient(59deg, rgb(195, 128, 39) 6%, rgb(251, 240, 124) 33%, rgb(228, 172, 59) 72%, rgb(111, 71, 12) 97%);
+
+}
+
+.image-museum {
+  border-radius: 25px 0 0 25px;
+  height: 600px;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+.form-item {
+  flex-grow: 2;
+  padding-right: 1rem;
+}
+
+.sidebyside {
+  display: flex;
+  justify-content: center;
+}
+
+.container-ex {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "card-1 card-2 card-3"
+    ". . ."
+    ". . .";
+}
+
+.card-1 { grid-area: card-1; }
+
+.card-2 { grid-area: card-2; }
+
+.card-3 { grid-area: card-3; }

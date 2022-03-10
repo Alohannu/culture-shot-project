@@ -1,13 +1,79 @@
-<h2>Dashboard</h2>
 
-<h2>Wishlist</h2>
-<ul>
-    <% @bookmarks.each do |bookmark| %>
-      <li>
-        <%= link_to bookmark.museum.name, museum_path(bookmark.museum) %>
-        <%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
-      </li>
+
+<div class="black-container grow-pad">
+  <div class="navbar-margin">
+    <%= render 'shared/navbar' %>
+  </div>
+  <div class="both-margin-banner sidebyside">
+    <div class="centered">
+      <div class="center-text left">
+        <% if current_user.photo.key %>
+          <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
+        <% end %>
+            <p class="profile-info neg-pad"><strong>Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <p class="profile-info"><strong>Email:</strong> <%= current_user.email %> </p>
+            <%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %>
+      </div>
+      <div class="right">
+        <h1>Hello, <%= current_user.first_name %>!</h1>
+        <p class="profile-description">On this page you find all museums of your wishlist and also all the reviews that you have written. You can also check and change your profile details.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="dashboard-infos">
+  <h2>All museums that you have saved</h2>
+
+    <% if @bookmarks.size.zero? %>
+      <p>You do not save any museum yet.</p>
+    <% else %>
+      <div class="mt-4 row">
+      <% @bookmarks.each do |bookmark| %>
+
+        <div class="col-12 col-md-4 mb-3 card-hover-effect">
+          <div class="cards-container">
+            <div class="card-museum">
+              <%= image_tag bookmark.museum.photo_url, class: "object-fit" %>
+              <div class="contentBx">
+                <h3><%= link_to bookmark.museum.name, museum_path(bookmark.museum) %> - <%= link_to "Delete", bookmark_path(bookmark), method: :delete %></h3>
+                <div class="location d-flex align-items-start">
+                  <i class="far fa-map"></i><p><%= bookmark.museum.address %></p>
+                </div>
+                <div class="price">
+                  <% if bookmark.museum.price == 0 %>
+                    <p class="inline-text">Free entrance</p>
+                  <% else %>
+                    <h5><%= link_to bookmark.museum.price.to_i, museum_path(bookmark.museum) %> € </h5>
+                  <% end %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+      </div>
     <% end %>
-</ul>
 
-<%= link_to "To the Homepage", root_path %>
+  <h2>All reviews that you wrote:</h2>
+    <% if @ratings.size.zero? %>
+      <p>You have not reviewed any museum yet.</p>
+    <% else %>
+      <ul>
+          <% @ratings.each do |rating| %>
+            <li>
+            <%= link_to rating.museum.name, museum_path(rating.museum) %>
+            <p><%= rating.stars %>
+            <%= 'Stars' %></p>
+            <h3> <%=  rating.title %></h3>
+            <p><%= rating.comment %></p>
+            <%= link_to "Delete", rating_path(rating), method: :delete %>
+            </li>
+          <% end %>
+      </ul>
+    <% end %>
+
+</div>

@@ -8,14 +8,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= favicon_link_tag asset_url('https://res.cloudinary.com/dpi7g4swb/image/upload/v1646733261/Scenic%20Photos%20for%20Homepage%20etc/marker_rwwgsq.png') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <div class="section">
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

@@ -1,104 +1,222 @@
-<h1><%= @museum.name%></h1>
 
-<h6><%= link_to "save for later", museum_bookmarks_path(@museum), method: :post %></h6>
 
-<h2>Details about the museum</h2>
-<p>Address: <%= @museum.address %></p>
-<p>Description: <%= @museum.description %></p>
+<div class="black-container pb-4">
+  <div class="navbar-margin">
+    <%= render 'shared/navbar' %>
+  </div>
 
-<%= link_to "Find an art buddy", museum_chatroom_path(@museum, @chatroom) %>
-<%= link_to "Buy your ticket", @museum.ticket_url %>
+  <div class="single-margin">
+    <div class="left">
 
-<h2>Reviews</h2>
+      <% if @bookmark.exists? %>
+        <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
+          <div class="d-flex align-items-center">
+            <div><i id="icon" class="fas fa-bookmark"></i></div>
+            <div><p class="inline-text">This museum is in your list</p></div>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
+          <div class="d-flex align-items-center">
+            <div><i id="icon" class="far fa-bookmark"></i></div>
+            <div><p class="inline-text">Save for later</p></div>
+          </div>
+        <% end %>
+      <% end %>
 
-<% if !@museum.ratings.size.zero? %>
+      <h1><%= @museum.name%></h1>
+      <p><%= @museum.description[0...300] %>. </p>
 
-  <%= @museum.average %>
-  <% @museum.average.to_i.times do %><i class="fas fa-star"></i><% end %>
-  <% if @museum.average.modulo(1) > 0.5 %><i class="fas fa-star-half-alt"></i><% end %>
-  <% @museum.average.modulo(1) > 0.5 ? total_star = 4 : total_star = 5 %>
-  <% (total_star - @museum.average.to_i).times do %><i class="far fa-star"></i><% end %>
+      <div class="d-flex align-items-center">
+        <div><i id="icon" class="fas fa-coins"></i></div>
+        <% if @museum.price == 0 %>
+          <div><p class="inline-text">Free entry</p></div>
+        <% else %>
+          <div><p class="inline-text">€ <%= @museum.price.to_i %> per adult (<%= @museum.price.to_i %> reduced price)</p></div>
+        <% end %>
+      </div>
 
-  <%= pluralize(@museum.ratings.size, 'review') %>
+      <div class="d-flex align-items-center icon-section">
+        <div><i id="icon" class="far fa-clock"></i></div>
+        <div><p class="inline-text"> <%= @museum.opening_hours %></p></div>
+      </div>
 
-  <% @museum.ratings.first(2).each do |rating|  %>
-    <p><strong><%= rating.user.first_name %><br>
-    <%= rating.title %>:</strong> <%= rating.comment %></p>
+      <div class="mt-4">
+      <%= link_to "Buy your ticket", museum_redirect_path(@museum), class: "white-btn" %>
+      <%= link_to "Back to all museums", museums_path, class: "white-btn" %>
+
+      </div>
+    </div>
+
+    <div class="right">
+      <%= image_tag @museum.photo_url, class: "image-museum" %>
+    </div>
+
+  </div>
+</div>
+
+<div class="both-margin">
+
+  <h2>What people say about this museum</h2>
+    <% if !@museum.ratings.size.zero? %>
+
+
+    <div class="reviews-container">
+      <div class="left stars-container">
+        <p><%= @museum.average %></p>
+        <div>
+          <% @museum.average.to_i.times do %><i id="star" class="fas fa-star"></i><% end %>
+          <% if @museum.average.modulo(1) > 0.5 %><i id="star" class="fas fa-star-half-alt"></i><% end %>
+          <% @museum.average.modulo(1) > 0.5 ? total_star = 4 : total_star = 5 %>
+          <% (total_star - @museum.average.to_i).times do %><i id="star" class="far fa-star"></i><% end %>
+        </div>
+        <%= pluralize(@museum.ratings.size, 'review') %>
+      </div>
+      <div class="right">
+        <% @museum.ratings.first(2).each do |rating|  %>
+            <p><strong><%= rating.user.first_name %><br>
+            <%= rating.title %>:</strong> <%= rating.comment %></p>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="reviews-btn-container">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn-reviews" data-bs-toggle="modal" data-bs-target="#potato">
+        See all reviews
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="potato" tabindex="-1" aria-labelledby="potatoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content change-color">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reviews</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <% @museum.ratings.first(6).each do |rating|  %>
+              <p><strong><%= rating.user.first_name %><br>
+              <%= rating.title %>:</strong> <%= rating.comment %></p>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% else %>
+    <div class="noreviews-container">
+      <p>This museum does not have any reviews yet</p>
+    </div>
   <% end %>
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#potato">
-    See all reviews
-  </button>
+  <div class="reviews-btn-container padding">
+    <!-- Button trigger modal -->
+    Did you visit this museum?
+    <button type="button" class="btn-no-bg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <span>Click here to write a review</span>
+    </button>
+  </div>
+
   <!-- Modal -->
-  <div class="modal fade" id="potato" tabindex="-1" aria-labelledby="potatoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content change-color">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Reviews</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add a rating</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
-          <% @museum.ratings.first(6).each do |rating|  %>
-            <p><strong><%= rating.user.first_name %><br>
-            <%= rating.title %>:</strong> <%= rating.comment %></p>
-          <% end %>
+                    <%= simple_form_for [@museum, @rating] do |f| %>
+                    <%= f.error_notification %>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="form-inputs" style="color:black">
+                      <%= f.input :title %>
 
-        </div>
-      </div>
-    </div>
-  </div>
+                      <%= f.input :comment %>
 
-<% else %>
-  <p>This museum do now have any review yet</p>
-<% end %>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add a rating
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a rating</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-                  <h2>Add your rating</h2>
-
-                  <%= simple_form_for [@museum, @rating] do |f| %>
-                  <%= f.error_notification %>
-
-                  <div class="form-inputs">
-                    <%= f.input :title %>
-
-                    <%= f.input :comment %>
-
-                    <%= f.input :stars, collection: 0..5 %>
+                      <%= f.input :stars, collection: 0..5 %>
+                    </div>
+                  <div class="btn-dark-white">
+                    <%= f.button :submit, "Add a Rating" , class: "white" %>
                   </div>
-                <div class="form-actions">
-                  <%= f.button :submit, "Add" %>
-                </div>
-                  <% end %>
+                    <% end %>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <br><br>
+
 </div>
 
+<div class="both-margin margin-vertical inline">
+  <!-- this one only shows the map without showing the location -->
+    <div class="map-museum left" style="width: 50%; height: 400px;"
+            data-controller="mapbox"
+            data-mapbox-markers-value="<%= @markers.to_json %>"
+            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <div class="right">
+      <h2>Getting here</h2>
+      <p>In this map you can see your current location. We'd also like to encourage visitors,
+      where possible, to walk, cycle or drive in to visit. </p>
+      <p><strong><i class="far fa-map"></i> </strong>  <%=  @museum.address %></p>
+    </div>
+</div>
 
-<%= link_to "All museums", museums_path %>
+  </div>
+
+<!-- Popup-chat -->
+<div class="chat-popup" data-controller="chatroom-popup">
+  <div class="container hidden chat-popup-top chatroom" data-chatroom-popup-target="chatPopUp"
+
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+    >
+
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+      <% end %>
+    </div>
+    <%= simple_form_for [@museum, @chatroom, @message],
+      remote: true,
+      html: {data: {chatroom_subscription_target: "form"}, class: "d-flex"} do |f|
+    %>
+      <%= f.input :content,
+        label: false,
+        input_html: { autocomplete: 'off' },
+        placeholder: "Enter your message...",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+    <% end %>
+  </div>
+  <%# BUTTON. TRIGGERS CHATROOM POPUP %>
+
+  <% if user_signed_in? %>
+    <div class="chat-button" onclick="this.classList.toggle('active')" id="chat-popup-btn" data-chatroom-popup-target="button" data-action="click->chatroom-popup#hide">
+      <div class="button-background"></div>
+      <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
+        <g class="bubble">
+          <path class="line line1" d="M 30.7873,85.113394 30.7873,46.556405 C 30.7873,41.101961
+          36.826342,35.342 40.898074,35.342 H 59.113981 C 63.73287,35.342
+          69.29995,40.103201 69.29995,46.784744" />
+          <path class="line line2" d="M 13.461999,65.039335 H 58.028684 C
+            63.483128,65.039335
+            69.243089,59.000293 69.243089,54.928561 V 45.605853 C
+            69.243089,40.986964 65.02087,35.419884 58.339327,35.419884" />
+        </g>
+        <circle class="circle circle1" r="1.9" cy="50.7" cx="42.5" />
+        <circle class="circle circle2" cx="49.9" cy="50.7" r="1.9" />
+        <circle class="circle circle3" r="1.9" cy="50.7" cx="57.3" />
+      </svg>
+    </div>
+  <% end %>
+</div>

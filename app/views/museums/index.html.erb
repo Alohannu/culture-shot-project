@@ -16,8 +16,8 @@
             <%= submit_tag "Search", class: "white-btn m-4", style: "font-family:'optima'" %>
           <% end %>
           <%= link_to "Open", museums_path(filter: "open"), class: "white-btn" %>
-          <%= link_to "Random", museum_path(rand(1..Museum.count)), class: "white-btn m-4" %>
-
+          <%# <%= link_to "Random", museum_path(rand(1..Museum.count)), class: "white-btn m-4" %>
+          <%= link_to "Random", museum_path(Museum.find(17)), class: "white-btn m-4" %>
           </div>
         <% end %>
       </div>

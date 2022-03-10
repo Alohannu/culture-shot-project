@@ -1,3 +1,5 @@
+# require 'watir'
+
 class MuseumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -36,6 +38,7 @@ class MuseumsController < ApplicationController
   end
 
   def show
+    # check_availability
     @museum = Museum.find(params[:id])
     @bookmark = Bookmark.where(user: current_user, museum: @museum)
     @rating = Rating.new
@@ -49,4 +52,30 @@ class MuseumsController < ApplicationController
         image_url: helpers.asset_url("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646733261/Scenic%20Photos%20for%20Homepage%20etc/marker_rwwgsq.png")
       }]
   end
+
+  def check_availability
+    browser = Watir::Browser.new
+
+    # Access website
+    browser.goto(@museum.ticket_url)
+
+    # Wait to load
+    sleep(3)
+
+    # Click on button for day 05
+    browser.button(text: "03").click
+
+    # Wait to load
+    sleep(3)
+
+    # Parse the page to a Nokogiri object
+    parsed_page = Nokogiri::HTML(browser.html)
+
+    # Search and print for alert
+    p parsed_page.search(".alert")
+
+    #close the browser
+    browser.close
+      end
+
 end

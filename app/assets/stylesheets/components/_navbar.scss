@@ -138,10 +138,13 @@
 .btn-navbar {
   display: flex;
   align-items: center;
-  width: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
   font-weight: 300;
   justify-content: space-evenly;
+  object-fit: cover;
+  padding: 8px 8px !important;
 }
 #idNavbarDropdown a:focus {
   color: black;

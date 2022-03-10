@@ -144,3 +144,68 @@
     transform:rotate(-360deg);
   }
 }
+
+
+
+
+
+.border-yellow {
+  display: flex !important;
+  justify-content: center;
+  margin:2em;
+  overflow:hidden;
+  border-radius: 2px;
+  blockquote {
+    background: rgba(16, 16, 16, 0.5);
+    // background-color: #101010;
+    border: solid 1px #ffd700;
+    text-shadow: 1px 1px black;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    border-radius: 2px;
+    font-size: large;
+    &:before {
+      animation:clockwise 30s infinite linear;
+      background: rgba(16, 16, 16, 0.5);
+      // background-color: #101010;
+
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    &:after {
+      animation:counter 30s infinite linear;
+      background: rgba(16, 16, 16, 0.5);
+      // background-color: #101010;
+
+      text-shadow: 1px 1px black;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

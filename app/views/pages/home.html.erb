@@ -1,3 +1,32 @@
+<div class="black-container">
+  <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646846782/Light-8-1_1_1_l6ykfn.png") %>)">
+    <div class="navbar-margin">
+      <%= render 'shared/navbar' %>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="centered_text">
+            <h1>Go to a museum anytime you want!</h1>
+          </div>
+          <div class="animated-border-quote">
+            <%# <div class="animated-border-quote"> %>
+              <blockquote>
+                <p><%= @quote.text %></p>
+                <cite><%= @quote.author %></cite>
+              </blockquote>
+            <%# </div> %>
+          <div>
+        </div>
+      </div>
+    </div>
+    </div>
+      <%# <p>explore berlin now</p><br> %>
+      <%= link_to "All Museums", museums_path, class: "btn-info p-2"%>
+    </div>
+  </div>
+</div>
+
 <div class="parallax-container">
   <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
   <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
@@ -14,39 +43,8 @@
 </div>
 
 
-<div class="black-container">
-  <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646846782/Light-8-1_1_1_l6ykfn.png") %>)">
-    <div class="navbar-margin">
-      <%= render 'shared/navbar' %>
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <div class="centered_text">
-            <h1>Go to a museum anytime you want!</h1>
-          </div>
-          <div class="col-12">
-            <div class="animated-border-quote">
-              <blockquote>
-                <p><%= @quote.text %></p>
-                <cite><%= @quote.author %></cite>
-              </blockquote>
-            </div>
-          <div>
-        </div>
-      </div>
-    </div>
-    </div>
-      <%# <p>explore berlin now</p><br> %>
-      <%= link_to "All Museums", museums_path, class: "btn-info p-2"%>
-    </div>
-  </div>
-</div>
 
-
-
-
-<div id="exhibitions" class="container">
+<div id="exhibitions" class="both-margin">
   <div class="row justify-content-center">
     <div class="col-4">
       <div class="card-trip-home">
@@ -83,20 +81,6 @@
             <p>The Gropius Bau in Berlin is dedicating the first retrospective in Germany to the South African activist and photographer Zanele Muholi.</p><a href="https://www.berlin.de/en/exhibitions/6772696-5202331-zanele-muholi.en.html" class= "article-link">more >></a>
           </div>
         </div>
-    </div>
-  </div>
-</div>
-
-<div class="white-container">
-  <div class="single-margin">
-    <div class="left">
-      <h2>Chat with fellow museum lovers!</h2>
-      <p>
-        A special feature that we are very proud of is our museum based chat function. With it you can connect with other fellow museum visitor who also happen to be interested to go. Maybe you make some new friends!
-      </p>
-    </div>
-
-    <%= image_tag("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646732858/Scenic%20Photos%20for%20Homepage%20etc/test2_1_ghooeu.png",class:"home-image") %>
     </div>
   </div>
 </div>

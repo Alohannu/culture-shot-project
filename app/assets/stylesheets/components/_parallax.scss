@@ -62,16 +62,16 @@ from{
 
 .parallax-container {
   :nth-child(1) {
-    @include parallax(-.4);
+    @include parallax(-1.4);
     width: 250px;
     top: 1000px;
-    left: 700px;
+    right: 635px;
   }
   :nth-child(2) {
     @include parallax(-.2);
     width: 350px;
-    top: 600px;
-    left: 350px;
+    top: 2176px;
+    left: 700px;
   }
   :nth-child(3) {
     @include parallax(-.3);
@@ -93,7 +93,7 @@ from{
     right: 2000px;
   }
   :nth-child(6) {
-    @include parallax(-.4);
+    @include parallax(-.6);
     width: 250px;
     top: 600px;
     right: 1500px;
@@ -102,10 +102,10 @@ from{
     @include parallax(-1);
     width: 250px;
     top: 1600px;
-    right: 150px
+    left: 530px;
   }
   :nth-child(8) {
-    @include parallax(-.4);
+    @include parallax(-.3);
     width: 250px;
     top: 1051px;
     right: 700px;
@@ -140,6 +140,6 @@ from{
 .picasso {
   @include parallax(-1);
   width: 300px;
-  top: 3000px;
+  top: 3200px;
   left: 1300px;
 }

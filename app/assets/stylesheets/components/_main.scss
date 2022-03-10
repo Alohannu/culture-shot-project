@@ -112,3 +112,12 @@ label {
 #user_date_of_birth_1i, #user_date_of_birth_2i, #user_date_of_birth_3i, #message_content {
   text-shadow: 0px 0px white;
 }
+
+
+.alert-info, .alert-warning {
+  border-radius: 1px solid #ffd700;
+  background-color: #101010;
+  color: white;
+  border-radius: 5px;
+  font-family: "Optima";
+}

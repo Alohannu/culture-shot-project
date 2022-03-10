@@ -20,6 +20,8 @@
                   <p>Thank you for using Culture Shot! 💛 </p>
                   <br>
                   <p>Enjoy a refreshing shot of art & history! 💛🥂 </p>
+                  <%= link_to "Back to home", root_path, class:"btn-info", id:"redirect-btn" %>
+
               </blockquote>
             </div>
           <div>
@@ -30,14 +32,18 @@ let count = 3;
 function anim() {
   const timerField = document.querySelector("#timer")
   console.log(timerField)
-    if (count > 0) {
+    if (count >= 0) {
         console.log(count);
         timerField.innerText = count
         count--;
         setTimeout(anim, 1000);
     }
     else {
-      window.location='<%= Museum.find(params[:museum_id]).ticket_url %>'
+    NewTab()
+        function NewTab() {
+            window.open(
+              "<%= Museum.find(params[:museum_id]).ticket_url %>", "_blank");
+        }
     }
 }
 anim();

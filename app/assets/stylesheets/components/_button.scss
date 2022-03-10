@@ -25,7 +25,7 @@
 }
 
 #Topics {
-  padding: 5px 8px;
+  padding: 5px 16px;
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid #ffd700;
@@ -47,4 +47,9 @@
     font-weight: 100;
     text-shadow: 1px 1px black;
     appearance: none;
+  }
+
+  #redirect-btn {
+    text-shadow: 0px 0px black !important;
+    margin: 2vh;
   }

@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def redirect
   end
+
+  def cn
+  end
 end

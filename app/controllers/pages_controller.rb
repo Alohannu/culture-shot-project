@@ -16,4 +16,10 @@ class PagesController < ApplicationController
 
   def redirect
   end
+
+  def cn
+    @quotes = Quote.all
+    @quote = Quote.find(rand(1..Quote.count))
+    @disable_nav = true
+  end
 end

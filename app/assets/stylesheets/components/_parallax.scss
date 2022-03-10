@@ -65,7 +65,7 @@ from{
     @include parallax(-1.4);
     width: 250px;
     right: -31vh;
-    top: 115vh;
+    top: 110vh;
   }
   :nth-child(2) { //done
     @include parallax(-.2);

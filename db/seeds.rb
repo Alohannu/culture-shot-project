@@ -732,11 +732,11 @@ Quote.create(author: "Michelangelo", text: "I saw the angel in the marble and ca
 Quote.create(author: "Paul Cézanne", text: "I want to make of Impressionism an art as solid as that of the museums.", chinese: "我想让印象派成为一种像博物馆一样坚实的艺术。")
 Quote.create(author: "George Orwell", text: "The most effective way to destroy people is to deny and obliterate their own understanding of their history.", chinese: "摧毁人最有效的方法是否认和抹杀他们对自己历史的理解。")
 Quote.create(author: "Andy Warhol", text: "You can’t do a painting without a drip.", chinese: "没有滴水你就不能画画。")
-Quote.create(author: "Shakira", text: "I’m a closet nerd. I love to study history and visit museums.", chinese: "I’m a closet nerd. I love to study history and visit museums.")
+Quote.create(author: "Shakira", text: "I’m a closet nerd. I love to study history and visit museums.", chinese: "我是个衣橱书呆子。 我喜欢研究历史和参观博物馆。")
 Quote.create(author: "Pablo Picasso", text: "Give me a museum, and I’ll fill it.", chinese: "给我一个博物馆，我会填满它。")
 Quote.create(author: "Vincent Van Gogh", text: "I am always doing what I cannot do yet, in order to learn how to do it.", chinese: "我总是在做我还不能做的事情，以便学习如何去做。")
 Quote.create(author: "Pablo Picasso", text: "Everything you can imagine is real.", chinese: "任何你能想象的事都是真实的。")
-Quote.create(author: "Leon Trotsky", text: "Art is not a mirror to hold up to society, but a hammer with which to shape it.", chinese: "Art is not a mirror to hold up to society, but a hammer with which to shape it.")
+Quote.create(author: "Leon Trotsky", text: "Art is not a mirror to hold up to society, but a hammer with which to shape it.", chinese: "艺术不是对立社会的镜子，而是塑造社会的锤子。")
 
 
 puts "Done!"

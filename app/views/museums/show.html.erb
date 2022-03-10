@@ -1,4 +1,6 @@
-
+<% content_for :meta_title, "#{@museum.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @museum.description %>
+<% content_for :meta_image, cl_image_path(@museum.photo_url) %>
 
 <div class="black-container pb-4">
   <div class="navbar-margin">

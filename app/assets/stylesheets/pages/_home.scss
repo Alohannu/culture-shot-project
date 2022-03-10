@@ -65,7 +65,8 @@
 }
 
 .animated-border-quote {
-  display:inline-block;
+  display: flex !important;
+  justify-content: center;
   margin:2em;
   max-width:80em;
   min-width:60em;
@@ -82,6 +83,7 @@
     padding: 1em;
     position: relative;
     border-radius: 2px;
+    font-size: large;
     &:before {
       animation:clockwise 30s infinite linear;
       background: rgba(16, 16, 16, 0.5);

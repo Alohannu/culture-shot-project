@@ -1,14 +1,16 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 40rem;
+  // height: 40rem;
   border-radius: 25px;
   text-align: center;
+  height: 100vh;
+  margin: -2rem -2% 0 -2%;
 }
 
 .centered_text {
   display: inline-block;
-  width: 30rem;
+  width: 60vh;
   text-align: center;
   margin-top: 3rem;
   h1 {

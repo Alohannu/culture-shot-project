@@ -64,14 +64,14 @@ from{
   :nth-child(1) {
     @include parallax(-1.4);
     width: 250px;
-    top: 1000px;
-    right: 635px;
+    right: -31vh;
+    top: 115vh;
   }
   :nth-child(2) { //done
     @include parallax(-.2);
     width: 350px;
-    top: 676px;
-    left: 700px;
+    top: 165vh;
+    left: 65vh;
   }
   :nth-child(3) {
     @include parallax(-.3);
@@ -83,14 +83,14 @@ from{
   :nth-child(4) {
     @include parallax(-.1);
     width: 250px;
-    top: 500px;
-    left: 650px;
+    top: 55vh;
+    left: 150vh;
   }
   :nth-child(5) {
     @include parallax(-2);
     width: 250px;
-    top: 1400px;
-    right: 2000px;
+    top: 103vh;
+    right: 270vh;
   }
   :nth-child(6) {
     @include parallax(-.6);
@@ -100,21 +100,22 @@ from{
   }
   :nth-child(7) {
     @include parallax(-1);
-    width: 250px;
-    top: 1600px;
-    left: 530px;
+    display: none;
+    width: 29vh;
+    top: 34vh;
+    left: 68vh;
   }
   :nth-child(8) {
     @include parallax(-.3);
     width: 250px;
-    top: 1051px;
+    top: 330px;
     right: 700px;
   }
   :nth-child(9) {
     @include parallax(-.4);
-    width: 300px;
-    top: 1300px;
-    left: 950px;
+    width: 38vh;
+    top: 46vh;
+    left: 136vh;
   }
   // :nth-child(10) {
   //   @include parallax(-1);
@@ -134,14 +135,14 @@ from{
 
 .dali {
   @include parallax(-1);
-  top: 1211px;
-  right: 755px;
+  top: 150vh;
+  right: 117vh;
 }
 .picasso {
   @include parallax(-1);
   width: 300px;
-  top: 1700px;
-  left: 1300px;
+  top: 191vh;
+  left: 162vh;
 }
 
 .display-none {

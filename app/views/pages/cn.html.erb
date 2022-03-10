@@ -1,18 +1,18 @@
 <div class="black-container">
   <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646846782/Light-8-1_1_1_l6ykfn.png") %>)">
     <div class="navbar-margin">
-      <%= render 'shared/navbar' %>
+      <%= render 'shared/navbar_cn' %>
     </div>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="centered_text">
-            <h1>Go to a museum anytime you want!</h1>
+            <h1>随时随地去博物馆!</h1>
           </div>
           <div class="animated-border-quote">
             <%# <div class="animated-border-quote"> %>
               <blockquote>
-                <p><%= @quote.text %></p>
+                <p><%= @quote.chinese %></p>
                 <cite><%= @quote.author %></cite>
               </blockquote>
             <%# </div> %>
@@ -22,7 +22,7 @@
     </div>
     </div>
       <br>
-      <%= link_to "All Museums", museums_path, class: "btn-info btn-homepage p-2"%>
+      <%= link_to "跟多博物馆", museums_path, class: "btn-info btn-homepage p-2"%>
     </div>
   </div>
 </div>
@@ -53,8 +53,8 @@
         <div class="card-trip-infos">
           <div>
             <h3>Alicja Kwade: In Abwesenheit</h3>
-            <p>18 September 2021 until 4 April 2022</p>
-            <p>Alicja Kwade's installations in the exhibition «In Abwesenheit» («In Absence») transform constructions into models for the perception of time, space and matter.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/5976680-5202331-alicja-kwade-in-abwesenheit-in-absence.en.html"> more >></a>
+            <p>2021年9月18号到2022年4月4号</p>
+            <p>Alicja Kwade 在展览 «In Abwesenheit» 中的装置将建筑转变为感知时间、空间和物质的模型.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/5976680-5202331-alicja-kwade-in-abwesenheit-in-absence.en.html"> 更 >></a>
           </div>
         </div>
       </div>
@@ -66,8 +66,8 @@
         <div class="card-trip-infos">
           <div>
             <h3>Zanele Muholi</h3>
-            <p>26 November 2021 until 13 March 2022</p>
-            <p>The Gropius Bau in Berlin is dedicating the first retrospective in Germany to the South African activist and photographer Zanele Muholi.</p><a href="https://www.berlin.de/en/exhibitions/6772696-5202331-zanele-muholi.en.html" class= "article-link">more >></a>
+            <p>2021年11月26号到2022年3月13号</p>
+            <p>柏林的 Gropius Bau 将在德国举办首次回顾展以纪念南非活动家和摄影师 Zanele Muholi.</p><a href="https://www.berlin.de/en/exhibitions/6772696-5202331-zanele-muholi.en.html" class= "article-link"> 更 >></a>
           </div>
         </div>
     </div>
@@ -79,11 +79,14 @@
       <div class="card-trip-infos">
         <div>
           <h3>Helmut Newton. Legacy</h3>
-          <p>18 September 2021 until 4 April 2022</p>
-          <p>To mark the 100th birthday of the master photographer, the exhibition "Helmut Newton. Legacy" at the Museum of Photography focuses on Newton's fashion photography, including numerous previously unknown or forgotten motifs.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/6336553-5202331-helmut-newton-one-hundred.en.html">more >></a>
+          <p>2021年9月18号到2022年4月4号</p>
+          <p>为纪念这位摄影大师诞辰 100 周年展览“赫尔穆特·牛顿。摄影博物馆的“遗产”专注于牛顿的时尚摄影包括许多以前不为人知或被遗忘的主题.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/6336553-5202331-helmut-newton-one-hundred.en.html">更 >></a>
         </div>
       </div>
     </div>
   </div>
 
-</div>
+</div></div>
+
+
+<%= render 'shared/footer_cn' %>

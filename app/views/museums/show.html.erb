@@ -99,10 +99,9 @@
           <div class="modal-body">
 
             <% @museum.ratings.first(6).each do |rating|  %>
-              <p><strong><%= rating.user.first_name %><br>
-              <%= rating.title %>:</strong> <%= rating.comment %></p>
+              <p style="font-weight: bold;"><%= rating.user.first_name %><br>
+              <%= rating.title %>:  <%= rating.comment %></p>
             <% end %>
-
           </div>
         </div>
       </div>

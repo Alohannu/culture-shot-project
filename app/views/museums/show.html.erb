@@ -158,14 +158,14 @@
 
 <div class="both-margin margin-vertical inline">
   <!-- this one only shows the map without showing the location -->
-    <div class="map-museum left" style="width: 50%; height: 400px;"
+    <div class="map-museum-left" style="width: 50%; height: 400px;"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
             data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
     <div class="right">
       <h2>Getting here</h2>
-      <p>In this map you can see your current location. We'd also like to encourage visitors,
+      <p>On this map you can see your current location. We'd also like to encourage visitors,
       where possible, to walk, cycle or drive in to visit. </p>
       <p><strong><i class="far fa-map"></i> </strong>  <%=  @museum.address %></p>
     </div>

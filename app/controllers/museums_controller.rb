@@ -1,4 +1,4 @@
-require 'watir'
+# require 'watir'
 
 class MuseumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
@@ -38,7 +38,7 @@ class MuseumsController < ApplicationController
   end
 
   def show
-    check_availability
+    # check_availability
     @museum = Museum.find(params[:id])
     @bookmark = Bookmark.where(user: current_user, museum: @museum)
     @rating = Rating.new

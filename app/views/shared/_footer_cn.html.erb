@@ -1,0 +1,44 @@
+<div class="footer-both-margin">
+  <div class="footer-container">
+
+    <div class="item item-1">
+      <h3><%= link_to "culture shot", "/", class: "footer-brand"%></h3>
+      <p>
+        Culture Shot 旨在减轻不得不单独检查每个博物馆网页的痛苦。它可以帮助您找到一个不错的博物馆来迷失自己!
+      </p>
+    </div>
+
+    <div class="item">
+      <h4>探索</h4>
+
+      <ul class="footer-ul">
+        <li>
+          <%= link_to "家", "/" %>
+        </li>
+        <li>
+          <%= link_to "关于", "/" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h4>我的账户</h4>
+      <ul class="footer-ul">
+        <li>
+          <% if user_signed_in? %>
+          <%= link_to "登出", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= link_to "登录", new_user_session_path %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "仪表板", dashboard_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="学分">
+    <p>版权所有 © 2022 CULTURE SHOT - 保留所有权利</p>
+  </div>
+</div>

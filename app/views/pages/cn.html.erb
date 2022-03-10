@@ -1,7 +1,7 @@
 <div class="black-container">
   <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646846782/Light-8-1_1_1_l6ykfn.png") %>)">
     <div class="navbar-margin">
-      <%= render 'shared/navbar' %>
+      <%= render 'shared/navbar_cn' %>
     </div>
     <div class="container">
       <div class="row justify-content-center">
@@ -12,7 +12,7 @@
           <div class="animated-border-quote">
             <%# <div class="animated-border-quote"> %>
               <blockquote>
-                <p><%= @quote.text %></p>
+                <p><%= @quote.chinese %></p>
                 <cite><%= @quote.author %></cite>
               </blockquote>
             <%# </div> %>
@@ -22,7 +22,7 @@
     </div>
     </div>
       <br>
-      <%= link_to "All Museums", museums_path, class: "btn-info btn-homepage p-2"%>
+      <%= link_to "跟多博物馆", museums_path, class: "btn-info btn-homepage p-2"%>
     </div>
   </div>
 </div>
@@ -87,3 +87,4 @@
   </div>
 
 </div>
+<%= render 'shared/footer_cn' %>

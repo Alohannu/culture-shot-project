@@ -11,7 +11,6 @@ class Museum < ApplicationRecord
 
   def average
     return 0 if ratings.pluck(:stars).sum.zero?
-
     (ratings.pluck(:stars).sum/ratings.size.to_f).round(1)
   end
 

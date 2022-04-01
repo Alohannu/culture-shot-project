@@ -1,73 +1,72 @@
-
-
 <div class="black-container grow-pad">
+
   <div class="navbar-margin">
     <%= render 'shared/navbar' %>
   </div>
+
   <div class="both-margin-banner sidebyside">
     <div class="centered">
       <div class="center-text left">
         <% if current_user.photo.key %>
           <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large" %>
         <% end %>
-            <p class="profile-info neg-pad"><strong>Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
-            <p class="profile-info"><strong>Email:</strong> <%= current_user.email %> </p>
-            <%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %>
+          <p class="profile-info neg-pad"><strong>Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+          <p class="profile-info"><strong>Email:</strong> <%= current_user.email %> </p>
+          <%= link_to "Edit My Profile", edit_user_registration_path, class: "white-btn" %>
       </div>
+
       <div class="right">
         <h1>Hello, <%= current_user.first_name %>!</h1>
         <p class="profile-description">On this page you find all museums of your wishlist and also all the reviews that you have written. You can also check and change your profile details.</p>
       </div>
+
     </div>
   </div>
-</div>
 </div>
 
 <div class="both-margin">
 
   <div class="dashboard-infos">
-
-      <% if @bookmarks.size.zero? %>
-        <p>You havent saved any museum yet.</p>
-      <% else %>
-        <div class="mt-4 row">
-        <h2 class="navbar-brand">Your bookmarks</h2><br>
-        <% @bookmarks.each do |bookmark| %>
-
-          <div class="col-12 col-md-4 mb-3 card-hover-effect">
-            <div class="cards-container">
-              <div class="card-museum">
-                <%= image_tag bookmark.museum.photo_url, class: "object-fit" %>
-                <div class="contentBx">
-                  <h3><%= link_to bookmark.museum.name, museum_path(bookmark.museum) %> <%= link_to bookmark_path(bookmark), method: :delete do %><i class="far fa-trash-alt" style="font-size: 14px;"></i><% end %></h3>
-                  <div class="location d-flex align-items-start">
-                    <i class="far fa-map"></i><p><%= bookmark.museum.address %></p>
-                  </div>
-                  <div class="price">
-                    <% if bookmark.museum.price == 0 %>
-                      <p class="inline-text">Free entrance</p>
-                    <% else %>
-                      <h5><%= link_to bookmark.museum.price.to_i, museum_path(bookmark.museum) %> € </h5>
-                    <% end %>
-                  </div>
-                </div>
+    <% if @bookmarks.size.zero? %>
+      <p>You havent saved any museum yet.</p>
+    <% else %>
+    <div class="mt-4 row">
+      <h2 class="navbar-brand">Your bookmarks</h2><br>
+      <% @bookmarks.each do |bookmark| %>
+      <div class="col-12 col-md-4 mb-3 card-hover-effect">
+        <div class="cards-container">
+          <div class="card-museum">
+            <%= image_tag bookmark.museum.photo_url, class: "object-fit" %>
+            <div class="contentBx">
+              <h3><%= link_to bookmark.museum.name, museum_path(bookmark.museum) %> <%= link_to bookmark_path(bookmark), method: :delete do %><i class="far fa-trash-alt" style="font-size: 14px;"></i><% end %></h3>
+              <div class="location d-flex align-items-start">
+                <i class="far fa-map"></i><p><%= bookmark.museum.address %></p>
               </div>
+
+              <div class="price">
+                <% if bookmark.museum.price == 0 %>
+                  <p class="inline-text">Free entrance</p>
+                <% else %>
+                  <h5><%= link_to bookmark.museum.price.to_i, museum_path(bookmark.museum) %> € </h5>
+                <% end %>
+              </div>
+
             </div>
           </div>
-
-        <% end %>
         </div>
+      </div>
       <% end %>
+    </div>
 
+    <% end %>
     <h2 class="navbar-brand">Your Reviews</h2>
     <% if @ratings.size.zero? %>
       <p>You have not reviewed any museum yet.</p>
     <% else %>
 
-      <div class="mt-4">
-        <% @ratings.each do |rating| %>
-        <div class="col-6">
-
+    <div class="mt-4">
+      <% @ratings.each do |rating| %>
+      <div class="col-6">
         <div class="ratings-container">
           <div class="d-flex w-100 justify-content-between">
             <h3 style="margin-bottom: 0;"><%= link_to rating.museum.name, museum_path(rating.museum) %> </h3>
@@ -75,16 +74,14 @@
               X</i>
             <% end %>
           </div>
-
-            <p style="font-weight: bold;"><%= rating.title %></p>
-            <p><%= '★' * rating.stars %></p>
-            <p> "<%= rating.comment %>"</p>
-
+          <p style="font-weight: bold;"><%= rating.title %></p>
+          <p><%= '★' * rating.stars %></p>
+          <p> "<%= rating.comment %>"</p>
         </div>
-
-        </div>
-        <% end %>
       </div>
+      <% end %>
+    </div>
     <% end %>
+
   </div>
 </div>

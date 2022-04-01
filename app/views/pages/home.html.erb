@@ -3,12 +3,14 @@
     <div class="navbar-margin">
       <%= render 'shared/navbar' %>
     </div>
+
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="centered_text">
             <h1>Go to a museum anytime you want!</h1>
           </div>
+
           <div class="animated-border-quote">
             <%# <div class="animated-border-quote"> %>
               <blockquote>
@@ -17,33 +19,19 @@
               </blockquote>
             <%# </div> %>
           <div>
+
         </div>
       </div>
     </div>
+
     </div>
       <br>
-      <%= link_to "All Museums", museums_path, class: "btn-info btn-homepage p-2"%>
+      <%= link_to "All Museums", museums_path, class: "btn-gold btn-homepage p-2"%>
     </div>
   </div>
 </div>
 
-
-<div class="parallax-container">
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4_frzyez.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b2_haq1e5.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
-    <img src="  https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/ecce_mono_fdhqgc.png
-" alt=" " />
- <img class="dali" src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646839502/salvador-dali-salvador-dali-museum-the-persistence-of-memory-surrealism-figueres-salvador-dali-png-clip-art_3_dgj5qs.png" alt=" " />
-    <img class="picasso" src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646838071/picasso-png-3_dia5pq.png" alt=" " />
-</div>
-
-
+<%= render 'shared/parallax' %>
 
 <div id="exhibitions" class="both-margin">
   <div class="row justify-content-center">
@@ -62,7 +50,7 @@
 
   <div class="col-4">
     <div class="card-trip-home">
-      <img src="https://www.berlin.de/binaries/asset/image_assets/6772792/source/1626767224/624x468/"   alt="zanele">
+      <img src="https://static2.abitare.it/wp-content/uploads/2020/07/Zanele-Muholi-10-Ntozakhe-II-Parktown-2016-p.jpg?v=424801/"   alt="zanele">
         <div class="card-trip-infos">
           <div>
             <h3>Zanele Muholi</h3>

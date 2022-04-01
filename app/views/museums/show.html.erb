@@ -9,14 +9,13 @@
 
   <div class="single-margin">
     <div class="left">
-
       <% if @bookmark.exists? %>
         <%= link_to bookmark_path(@bookmark.first, from_dashboard: false), method: :delete do %>
           <div class="d-flex align-items-center">
             <div><i id="icon" class="fas fa-bookmark"></i></div>
             <div><p class="inline-text">This museum is in your list</p></div>
           </div>
-        <% end %>
+      <% end %>
       <% else %>
         <%= link_to museum_bookmarks_path(@museum),class: "", method: :post do %>
           <div class="d-flex align-items-center">
@@ -26,7 +25,7 @@
         <% end %>
       <% end %>
 
-      <h1><%= @museum.name%></h1>
+      <h1 class="name"><%= @museum.name%></h1>
       <p><%= @museum.description[0...300] %>. </p>
 
       <div class="d-flex align-items-center">
@@ -44,10 +43,10 @@
       </div>
 
       <div class="mt-4">
-      <%= link_to "Get your ticket", museum_redirect_path(@museum), class: "white-btn" %>
-      <%= link_to "Back to all", museums_path, class: "white-btn" %>
-
+        <%= link_to "Get your ticket", museum_redirect_path(@museum), class: "btn-gold" %>
+        <%= link_to "Back to all", museums_path, class: "white-btn" %>
       </div>
+
     </div>
 
     <div class="right">
@@ -58,10 +57,8 @@
 </div>
 
 <div class="both-margin">
-
   <h2>What people say about this museum</h2>
     <% if !@museum.ratings.size.zero? %>
-
 
     <div class="reviews-container">
       <div class="left stars-container">
@@ -72,25 +69,26 @@
           <% @museum.average.modulo(1) > 0.5 ? total_star = 4 : total_star = 5 %>
           <% (total_star - @museum.average.to_i).times do %><i id="star" class="far fa-star"></i><% end %>
         </div>
-        <%= pluralize(@museum.ratings.size, 'review') %>
+          <%= pluralize(@museum.ratings.size, 'review') %>
       </div>
+
       <div class="right">
         <% @museum.ratings.first(2).each do |rating|  %>
-            <p><strong><%= rating.user.first_name %><br>
-            <%= rating.title %>:</strong> <%= rating.comment %></p>
+          <p><strong><%= rating.user.first_name %><br>
+          <%= rating.title %>:</strong> <%= rating.comment %></p>
         <% end %>
       </div>
+
     </div>
 
-
+<!-- Button trigger modal -->
     <div class="reviews-btn-container">
-      <!-- Button trigger modal -->
       <button type="button" class="btn-reviews" data-bs-toggle="modal" data-bs-target="#potato">
         See all reviews
       </button>
     </div>
 
-    <!-- Modal -->
+<!-- Modal -->
     <div class="modal fade" id="potato" tabindex="-1" aria-labelledby="potatoLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content change-color">
@@ -98,8 +96,8 @@
             <h5 class="modal-title" id="exampleModalLabel">Reviews</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
 
+          <div class="modal-body">
             <% @museum.ratings.first(6).each do |rating|  %>
               <p style="font-weight: bold;"><%= rating.user.first_name %><br>
               <%= rating.title %>:  <%= rating.comment %></p>
@@ -109,21 +107,21 @@
       </div>
     </div>
 
-  <% else %>
-    <div class="noreviews-container">
-      <p>This museum does not have any reviews yet</p>
-    </div>
-  <% end %>
+    <% else %>
+      <div class="noreviews-container">
+        <p>This museum does not have any reviews yet</p>
+      </div>
+    <% end %>
 
+<!-- Button trigger modal -->
   <div class="reviews-btn-container padding">
-    <!-- Button trigger modal -->
     Did you visit this museum?
     <button type="button" class="btn-no-bg" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <span>Click here to write a review</span>
     </button>
   </div>
 
-  <!-- Modal -->
+<!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content change-color">
@@ -131,24 +129,25 @@
           <h5 class="modal-title" id="exampleModalLabel">Add a rating</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+
         <div class="modal-body">
+          <%= simple_form_for [@museum, @rating] do |f| %>
+          <%= f.error_notification %>
 
-                    <%= simple_form_for [@museum, @rating] do |f| %>
-                    <%= f.error_notification %>
+          <div class="form-inputs" style="color:black">
+            <%= f.input :title %>
 
-                    <div class="form-inputs" style="color:black">
-                      <%= f.input :title %>
+            <%= f.input :comment %>
 
-                      <%= f.input :comment %>
+            <%= f.input :stars, collection: 0..5 %>
+          </div>
 
-                      <%= f.input :stars, collection: 0..5 %>
-                    </div>
-                  <div class="btn-dark-white">
-                    <%= f.button :submit, "Add a Rating" , class: "white" %>
-                  </div>
-                    <% end %>
-
+          <div class="btn-dark-white">
+            <%= f.button :submit, "Add a Rating" , class: "white" %>
+          </div>
+          <% end %>
         </div>
+
       </div>
     </div>
   </div>
@@ -157,47 +156,43 @@
 
 </div>
 
+<!-- this one only shows the map without showing the location -->
 <div class="both-margin margin-vertical inline">
-  <!-- this one only shows the map without showing the location -->
-    <div class="map-museum-left" style="width: 50%; height: 400px;"
-            data-controller="mapbox"
-            data-mapbox-markers-value="<%= @markers.to_json %>"
-            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-    <div class="right">
-      <h2>Getting here</h2>
-      <p>On this map you can see your current location. We'd also like to encourage visitors,
-      where possible, to walk, cycle or drive in to visit. </p>
-      <p><strong><i class="far fa-map"></i> </strong>  <%=  @museum.address %></p>
-    </div>
-</div>
-
+  <div class="map-museum-left" style="width: 50%; height: 400px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
+  <div class="right">
+    <h2>Getting here</h2>
+    <p>On this map you can see your current location. We'd also like to encourage visitors,
+    where possible, to walk, cycle or drive in to visit. </p>
+    <p><strong><i class="far fa-map"></i> </strong>  <%=  @museum.address %></p>
+  </div>
+</div>
 
 <!-- Popup-chat -->
 <div class="chat-popup" data-controller="chatroom-popup">
   <div class="container hidden chat-popup-top chatroom" data-chatroom-popup-target="chatPopUp"
-
     data-controller="chatroom-subscription"
-    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
-    >
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
+      <%= render "messages/message", message: message %>
       <% end %>
     </div>
+
     <%= simple_form_for [@museum, @chatroom, @message],
       remote: true,
-      html: {data: {chatroom_subscription_target: "form"}, class: "d-flex"} do |f|
-    %>
+      html: {data: {chatroom_subscription_target: "form"}, class: "d-flex"} do |f|%>
       <%= f.input :content,
         label: false,
         input_html: { autocomplete: 'off' },
         placeholder: "Enter your message...",
-        wrapper_html: {class: "flex-grow-1"}
-      %>
-    <% end %>
+        wrapper_html: {class: "flex-grow-1"}%>
+      <% end %>
   </div>
   <%# BUTTON. TRIGGERS CHATROOM POPUP %>
 

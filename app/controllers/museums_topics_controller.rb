@@ -7,5 +7,4 @@ class MuseumsTopicsController < ApplicationController
   def show
     @museums_topic = MuseumsTopic.find(params[:id])
   end
-
 end

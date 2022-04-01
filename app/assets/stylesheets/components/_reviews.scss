@@ -111,19 +111,13 @@ span:hover::before {
   transition: background-color 0.3s linear;
 }
 
-// .white {
-//   color: white;
-// }
-
 .modal-body {
   background-color: rgba(16, 16, 16, 0.7);
   border-left: 1px solid #ffd700;
   border-right: 1px solid #ffd700;
   border-bottom: 1px solid #ffd700;
   border-radius: 0px 0px 10px 10px;
-
 }
-
 
 .modal-header {
   background-color: rgba(16, 16, 16, 0.7);
@@ -132,27 +126,16 @@ span:hover::before {
   border-top: 1px solid #ffd700;
   border-radius: 10px 10px 0px 0px;
   border-bottom: 1px solid #ffd700;
-
 }
+
 .modal-content {
-background-color: rgba(16, 16, 16, 0.7);
+  background-color: rgba(16, 16, 16, 0.7);
 }
 
 
 #exampleModalLabel {
   font-family: "Optima";
   color: white;
-}
-#rating_comment {
-
-}
-
-#rating_title {
-
-}
-
-#rating_stars {
-
 }
 
 .form-label.string.required, .form-label.text.required, .form-label.select.required {

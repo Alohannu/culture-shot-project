@@ -10,5 +10,4 @@ export default class extends Controller {
   hide () {
     this.chatPopUpTarget.classList.toggle("hidden")
   }
-
 }

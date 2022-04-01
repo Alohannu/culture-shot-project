@@ -94,6 +94,9 @@ select {
 }
 .btn-gold:hover {
   transition: background-color 500ms linear;
+  color: #000;
+  background-color: #ffcf73;
+  border-color: #ffcc6b;
 }
 
 .btn-gold:active {

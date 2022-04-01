@@ -1,7 +1,7 @@
+<div class="navbar-margin">
+  <%= render 'shared/navbar' %>
+</div>
 
-  <div class="navbar-margin">
-    <%= render 'shared/navbar' %>
-  </div>
 <div class="container">
       <div class="row justify-content-center">
         <div class="col-6">
@@ -9,43 +9,35 @@
             <div class="border-yellow">
               <blockquote>
                 <p>You will be redirected in <span id="timer"></span> seconds</p>
-                  <br>
-                  <p>Thank you for using Culture Shot! 💛 </p>
-                  <br>
-                  <p>Enjoy a refreshing shot of art & history! 💛🥂 </p>
-                  <%= link_to "Back to home", root_path, class:"btn-info btn-homepage p-2", id:"redirect-btn" %>
-
+                <br>
+                <p>Thank you for using Culture Shot! 💛 </p>
+                <br>
+                <p>Enjoy a refreshing shot of art & history! 💛🥂 </p>
+                <%= link_to "Back to home", root_path, class:"btn-info btn-homepage p-2", id:"redirect-btn" %>
               </blockquote>
             </div>
           <div>
         </div>
       </div>
-<script>
-let count = 3;
-function anim() {
-  const timerField = document.querySelector("#timer")
-  console.log(timerField)
-    if (count >= 0) {
-        console.log(count);
-        timerField.innerText = count
-        count--;
-        setTimeout(anim, 1000);
-    }
-    else {
-    NewTab()
-        function NewTab() {
-            window.open(
-              "<%= Museum.find(params[:museum_id]).ticket_url %>", "_blank");
-        }
-    }
-}
-anim();
-</script>
 
-<%# <div class="parallax-container">
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
-</div> %>
+    <script>
+      let count = 3;
+      function anim() {
+        const timerField = document.querySelector("#timer")
+        console.log(timerField)
+          if (count >= 0) {
+              console.log(count);
+              timerField.innerText = count
+              count--;
+              setTimeout(anim, 1000);
+          }
+          else {
+            NewTab()
+              function NewTab() {
+                window.open(
+                  "<%= Museum.find(params[:museum_id]).ticket_url %>", "_blank");
+              }
+          }
+      }
+      anim();
+    </script>

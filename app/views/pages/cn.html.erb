@@ -1,52 +1,41 @@
 <div class="black-container">
   <div class="banner" style="background-image: url(<%= image_path("https://res.cloudinary.com/dpi7g4swb/image/upload/v1646846782/Light-8-1_1_1_l6ykfn.png") %>)">
+
     <div class="navbar-margin">
       <%= render 'shared/navbar_cn' %>
     </div>
+
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
+
           <div class="centered_text">
             <h1>随时随地参观博物馆!</h1>
           </div>
+
           <div class="animated-border-quote">
-            <%# <div class="animated-border-quote"> %>
-              <blockquote>
-                <p><%= @quote.chinese %></p>
-                <cite><%= @quote.author %></cite>
-              </blockquote>
-            <%# </div> %>
-          <div>
+            <blockquote>
+              <p><%= @quote.chinese %></p>
+              <cite><%= @quote.author %></cite>
+            </blockquote>
+          </div>
+
         </div>
       </div>
     </div>
+
+    <div>
+      <br><%= link_to "查看所有博物馆", museums_path, class: "btn-info btn-homepage p-2"%>
     </div>
-      <br>
-      <%= link_to "查看所有博物馆", museums_path, class: "btn-info btn-homepage p-2"%>
-    </div>
+
   </div>
 </div>
 
-
-<div class="parallax-container">
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_lu1qxd.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586136/Scenic%20Photos%20for%20Homepage%20etc/duchamp_jp0iu5.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/bust2_t5u27g.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b3_h1gnyf.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b6_1_tqnpaa.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4_frzyez.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b2_haq1e5.png" alt=" " />
-  <img src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646587328/Scenic%20Photos%20for%20Homepage%20etc/b4a_qqfl8u.png" alt=" " />
-    <img src="  https://res.cloudinary.com/dpi7g4swb/image/upload/v1646586137/Scenic%20Photos%20for%20Homepage%20etc/ecce_mono_fdhqgc.png
-" alt=" " />
- <img class="dali" src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646839502/salvador-dali-salvador-dali-museum-the-persistence-of-memory-surrealism-figueres-salvador-dali-png-clip-art_3_dgj5qs.png" alt=" " />
-    <img class="picasso" src="https://res.cloudinary.com/dpi7g4swb/image/upload/v1646838071/picasso-png-3_dia5pq.png" alt=" " />
-</div>
-
-
+<%= render 'shared/parallax' %>
 
 <div id="exhibitions" class="both-margin">
   <div class="row justify-content-center">
+
     <div class="col-4">
       <div class="card-trip-home">
         <img src="https://www.berlin.de/binaries/asset/image_assets/6773263/source/1626866631/624x468/" alt="alicja kwade">
@@ -60,33 +49,33 @@
       </div>
     </div>
 
-  <div class="col-4">
-    <div class="card-trip-home">
-      <img src="https://www.berlin.de/binaries/asset/image_assets/6772792/source/1626767224/624x468/"   alt="zanele">
+    <div class="col-4">
+      <div class="card-trip-home">
+        <img src="https://static2.abitare.it/wp-content/uploads/2020/07/Zanele-Muholi-10-Ntozakhe-II-Parktown-2016-p.jpg?v=424801/"   alt="zanele">
+          <div class="card-trip-infos">
+            <div>
+              <h3>Zanele Muholi</h3>
+              <p>2021年11月26号到2022年3月13号</p>
+              <p>柏林的马丁-格罗皮乌斯博物馆将在德国举办首次回顾展以纪念南非活动家和摄影师 Zanele Muholi.</p><a href="https://www.berlin.de/en/exhibitions/6772696-5202331-zanele-muholi.en.html" class= "article-link"> 点击查看 >></a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card-trip-home">
+        <img src="https://www.berlin.de/binaries/asset/image_assets/6336564/source/1643010204/624x468/" alt="helmut newton">
         <div class="card-trip-infos">
           <div>
-            <h3>Zanele Muholi</h3>
-            <p>2021年11月26号到2022年3月13号</p>
-            <p>柏林的马丁-格罗皮乌斯博物馆将在德国举办首次回顾展以纪念南非活动家和摄影师 Zanele Muholi.</p><a href="https://www.berlin.de/en/exhibitions/6772696-5202331-zanele-muholi.en.html" class= "article-link"> 点击查看 >></a>
+            <h3>Helmut Newton. Legacy</h3>
+            <p>2021年9月18号到2022年4月4号</p>
+            <p>为纪念这位摄影大师赫尔穆特·牛顿诞辰 100 周年，摄影博物馆将展出“遗产”系列特展，专注于摄影师的时尚摄影，以及许多以前不为人知或被遗忘的主题.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/6336553-5202331-helmut-newton-one-hundred.en.html">点击查看 >></a>
           </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="col-4">
-    <div class="card-trip-home">
-      <img src="https://www.berlin.de/binaries/asset/image_assets/6336564/source/1643010204/624x468/" alt="helmut newton">
-      <div class="card-trip-infos">
-        <div>
-          <h3>Helmut Newton. Legacy</h3>
-          <p>2021年9月18号到2022年4月4号</p>
-          <p>为纪念这位摄影大师赫尔穆特·牛顿诞辰 100 周年，摄影博物馆将展出“遗产”系列特展，专注于摄影师的时尚摄影，以及许多以前不为人知或被遗忘的主题.</p> <a class="article-link" href="https://www.berlin.de/en/exhibitions/6336553-5202331-helmut-newton-one-hundred.en.html">点击查看 >></a>
         </div>
       </div>
     </div>
+
   </div>
-
-</div></div>
-
+</div>
 
 <%= render 'shared/footer_cn' %>

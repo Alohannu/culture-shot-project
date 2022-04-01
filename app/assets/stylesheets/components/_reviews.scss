@@ -12,7 +12,6 @@
   }
 }
 
-
 .stars-container {
   justify-content: center;
   align-items: center;
@@ -35,29 +34,11 @@
 .reviews-btn-container {
   display: flex;
   justify-content: center;
-
 }
 
 .padding {
   padding-top: 0.9rem;
 }
-
-.btn-reviews {
-  background-color: white;
-  padding: 1rem 4rem;
-  border: none;
-  border-radius: 0.5rem;
-}
-
-.btn-no-bg {
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-weight: 700;
-}
-
-
-
 
 span {
   position: relative;
@@ -107,11 +88,6 @@ span:hover::before {
     flex: 1 0 35%;
   }
 }
-
-// .change-color {
-//   color: black;
-// }
-
 
 .btn-dark-white {
   background-color: white;

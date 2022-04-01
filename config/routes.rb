@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: 'pages#home'
+
   get '/cn', to: 'pages#cn'
   get '/dashboard', to: 'pages#dashboard'
   get '/my_profile', to: 'pages#my_profile'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :ratings, only: :destroy
+  resources :bookmarks, only: :destroy
+
   resources :museums, only: [:index, :show] do
     get '/redirect', to: 'pages#redirect'
     resources :bookmarks, only: :create
@@ -14,6 +19,4 @@ Rails.application.routes.draw do
       resources :messages, only: :create
     end
   end
-  resources :ratings, only: :destroy
-  resources :bookmarks, only: :destroy
 end

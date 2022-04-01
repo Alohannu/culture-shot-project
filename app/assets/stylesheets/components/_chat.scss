@@ -13,11 +13,6 @@
   display: none !important;
 }
 
-// .fab {
-//   font-size: 35px;
-//   color: rgb(52, 58, 59);
-// }
-
 // the wrapper for the chatroom(aka top part of the chat-popup)
 .chatroom {
   color: white;
@@ -69,21 +64,11 @@
   transition: box-shadow 0.3s;
   }
 
-
 .chatroom:hover {
   transition: transform 0.5s, box-shadow 0.3s;
   box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
   }
 
-
-// pop-up chat button
-
-// body {
-//   align-items: center;
-//   display: flex;
-//   justify-content: center;
-//   height: 100vh;
-// }
 .chat-button {
   display: flex;
   position: relative;
@@ -100,14 +85,17 @@
   top: 10px;
   width: 80px;
 }
+
 .chat-bubble {
   cursor: pointer;
   position: relative;
+
 }
 .bubble {
   transform-origin: 50%;
   transition: transform 500ms cubic-bezier(0.17, 0.61, 0.54, 0.9);
 }
+
 .line {
   fill: none;
   stroke: #000000;
@@ -115,29 +103,36 @@
   stroke-linecap: round;
   transition: stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .line1 {
   stroke-dasharray: 60 90;
   stroke-dashoffset: -20;
 }
+
 .line2 {
   stroke-dasharray: 67 87;
   stroke-dashoffset: -18;
 }
+
 .circle {
   fill: #000000;
   stroke: none;
   transform-origin: 50%;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .active .bubble {
   transform: translateX(24px) translateY(4px) rotate(45deg);
 }
+
 .active .line1 {
   stroke-dashoffset: 21;
 }
+
 .active .line2 {
   stroke-dashoffset: 30;
 }
+
 .active .circle {
   transform: scale(0);
 }

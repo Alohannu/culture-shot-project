@@ -5,7 +5,7 @@
 .black-container {
   background-color: #101010;
   border-radius: 25px;
-
+  z-index: -1;
 }
 
 .white-container {
@@ -42,7 +42,6 @@
 .map-museum {
   border-radius: 0px 60px 60px 60px;
   background: linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) 50% 50% / calc(100% - 1px) calc(100% - 1px) no-repeat, linear-gradient(59deg, rgb(195, 128, 39) 6%, rgb(251, 240, 124) 33%, rgb(228, 172, 59) 72%, rgb(111, 71, 12) 97%);
-
 }
 
 .map-museum-left {
@@ -57,7 +56,7 @@
 
 .mapboxgl-ctrl-group.button {
   padding: 0px !important;
-  }
+}
 
 .image-museum {
   border-radius: 25px 0 0 25px;

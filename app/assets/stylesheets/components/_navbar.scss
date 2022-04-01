@@ -33,16 +33,11 @@
 #query.form-control:focus, input:focus {
   color: white;
   font-weight: 200;
-
 }
 
 .text-shadow {
   text-shadow: 1px 1px black;
 
-}
-.form-control {
-  color: white;
-  font-weight: 300;
 }
 
 .fa-search, .fa-caret-down {
@@ -164,4 +159,30 @@
   color: #1e2125;
   background-color: #e9ecef;
   transition: background-color 0.3s linear;
+}
+
+
+
+.form-control-navbar {
+  color: white;
+  font-weight: 300;
+}
+
+#query.form-control-navbar {
+  padding: 5px 24px;
+  border-radius: 5px;
+  margin-left: 12px;
+  background-color: rgba(21, 21, 21, 0.3);
+  border: 1px solid #ffd700;
+  float: left;
+  min-width: 210px;
+}
+#query.form-control-navbar::placeholder {
+ color: white;
+ font-weight: 200;
+}
+
+#query.form-control-navbar:focus, input:focus {
+  color: white;
+  font-weight: 200;
 }

@@ -7,7 +7,6 @@
   transition: background-color 300ms linear;
 }
 
-
 .white-btn:hover {
   background-color: $dark-gray;
   color: #fff;
@@ -29,31 +28,120 @@
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid #ffd700;
-  }
+}
 
 #Topics::placeholder {
   color: white;
   font-weight: 300;
   text-shadow: 1px 1px black;
-  }
+}
 
-#Topics:focus, input:focus {
+#Topics:focus {
   color: white;
   font-weight: 300;
-  }
+}
 
-  select {
-    color: white;
-    font-weight: 100;
-    text-shadow: 1px 1px black;
-    appearance: none;
-  }
+select {
+  color: white;
+  font-weight: 100;
+  text-shadow: 1px 1px black;
+  appearance: none;
+}
 
-  #redirect-btn {
-    text-shadow: 0px 0px black !important;
-    margin: 2vh;
-  }
+#redirect-btn {
+  text-shadow: 0px 0px black !important;
+  margin: 2vh;
+}
 
 .btn-homepage {
   font-size: 25px !important;
+}
+
+.btn-gold {
+  padding: 5px 24px;
+  z-index: 300;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Optima";
+  background: rgba(16, 16, 16, 0.2);
+  border: 1px solid #ffd700;
+  font-size: 16px;
+  // padding: 9px !important;
+  cursor: pointer !important;
+  position: relative;
+  border-radius: 5px;
+  transition: background-color 500ms linear;
+}
+
+.btn-gold:before {
+  content: '';
+  background: linear-gradient(45deg, #ffd700, black, #fffb00, #ffd700);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 5px;
+}
+.btn-gold:hover {
+  transition: background-color 500ms linear;
+}
+
+.btn-gold:active {
+  color: #000
+}
+
+.btn-gold:active:after {
+  background: transparent;
+}
+
+.btn-gold:hover:before {
+  opacity: 1;
+}
+
+.btn-gold:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 1px;
+}
+
+.btn-reviews {
+  background-color: white;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn-no-bg {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: 700;
 }

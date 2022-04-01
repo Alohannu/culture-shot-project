@@ -26,7 +26,7 @@
         <% end %>
       <% end %>
 
-      <h1><%= @museum.name%></h1>
+      <h1 class="name"><%= @museum.name%></h1>
       <p><%= @museum.description[0...300] %>. </p>
 
       <div class="d-flex align-items-center">
@@ -44,7 +44,7 @@
       </div>
 
       <div class="mt-4">
-      <%= link_to "Get your ticket", museum_redirect_path(@museum), class: "white-btn" %>
+      <%= link_to "Get your ticket", museum_redirect_path(@museum), class: "btn-gold" %>
       <%= link_to "Back to all", museums_path, class: "white-btn" %>
 
       </div>
